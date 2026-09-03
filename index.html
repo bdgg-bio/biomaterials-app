@@ -250,9 +250,10 @@ button{font-family:inherit; font-size:inherit; color:inherit}
 .stack{display:flex; flex-direction:column; gap:14px}
 .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px}
 .panel.flat{background:none; border:none; padding:0}
-.panel-head{display:flex; align-items:baseline; gap:10px; margin-bottom:12px}
-.panel-head h2{font-size:15px}
-.panel-head .hint{font-size:11.5px; color:var(--ink-3); margin-left:auto; text-align:right}
+.panel-head{display:flex; align-items:baseline; gap:10px; margin-bottom:12px; flex-wrap:wrap}
+.panel-head h2{font-size:15px; flex:1 1 auto; min-width:min(100%,10ch)}
+.panel-head .hint{font-size:11.5px; color:var(--ink-3); margin-left:auto; text-align:right;
+  flex:0 1 auto}
 .label{
   font-family:var(--f-mono); font-size:10px; font-weight:500; letter-spacing:.12em;
   text-transform:uppercase; color:var(--ink-3);
@@ -657,6 +658,99 @@ const KB = {
     { product:"Synthetic biphasic CaP", brand:"Genoss OSTEON", country:"South Korea", pack:"0.5 cc", price:"~35 USD", source:"Indicative — value tier, often implant-bundled" }
   ],
 
+  /* ---------------------------------------------------------------
+     Claims discipline. What a rep may say, what needs sign-off, and
+     what should never leave the room without regulatory review.
+     --------------------------------------------------------------- */
+  claimTiers: [
+    { tier:"1", name:"Portfolio fact", risk:"low", tone:"good",
+      what:"Composition, origin, processing, dimensions, pack sizes, regulatory status.",
+      source:"The instructions for use and the technical file.",
+      rule:"State it freely, in the IFU's own words.",
+      example:"“cerabone is a sintered bovine hydroxyapatite processed above 1200 °C, with no organic residue.”" },
+    { tier:"2", name:"Mechanism or preclinical", risk:"medium", tone:"warn",
+      what:"How the material is designed to behave. Bench work, animal models, histology.",
+      source:"Preclinical studies and the technical file.",
+      rule:"Say what it is designed to do, or what was seen in preclinical models. Never convert that into a patient outcome.",
+      example:"Say “designed to remain volume-stable”. Do not say “it will keep your ridge stable”." },
+    { tier:"3", name:"Clinical outcome for our product", risk:"high", tone:"warn",
+      what:"Survival, success, volume retention or healing measured in patients, using this product.",
+      source:"Published clinical studies on this specific product. Nothing else counts.",
+      rule:"Only with a reference from the evidence library, and Medical Affairs sign-off for anything written or repeated at scale.",
+      example:"If you cannot name the study, its design, the patient number and the follow-up, you do not have the claim." },
+    { tier:"4", name:"Better than a named competitor", risk:"highest", tone:"threat",
+      what:"Any superiority claim against Bio-Oss, Bio-Gide, Cytoplast, Puros or any other named product.",
+      source:"Head-to-head clinical evidence on that exact comparison.",
+      rule:"Assume you cannot say it. Route it to Medical Affairs and regulatory before it is said once.",
+      example:"Comparable handling in a head-to-head study is not superiority. “Better value per case” is a commercial claim, not a clinical one, and is safer ground." }
+  ],
+
+  /* Claim AREAS, not citations. Written deliberately without authors,
+     years or numbers: the specifics belong in the evidence library,
+     entered by people who can verify them. */
+  evidenceAreas: [
+    { area:"Deproteinized bovine bone mineral in sinus floor augmentation", status:"Established",
+      evidence:"One of the largest bodies of work in the field: randomised trials, long-term cohorts, histomorphometry and multiple systematic reviews.",
+      say:"Bovine xenograft in sinus augmentation is one of the best-documented procedures in implant dentistry.",
+      avoid:"Attributing that whole body of work to cerabone specifically. Most of it was generated on Bio-Oss.",
+      ask:"Which sinus augmentation studies were run on cerabone itself, with what follow-up." },
+    { area:"Volume stability: sintered versus non-sintered xenograft", status:"Contested",
+      evidence:"Mechanistic and preclinical work on crystallinity and resorption behaviour. Clinical comparisons are fewer and heterogeneous.",
+      say:"High-temperature sintering produces a more crystalline, slower-resorbing scaffold — the mechanism is well characterised.",
+      avoid:"Presenting greater volume stability as a proven clinical advantage. That is a tier 4 claim.",
+      ask:"Head-to-head clinical data on graft volume retention, and whether the endpoint was radiographic or histological." },
+    { area:"Xenograft versus autogenous bone for implant survival", status:"Established",
+      evidence:"Systematic reviews across several indications generally find comparable implant survival, with autograft retaining advantages in specific defect types.",
+      say:"In many indications the literature does not show an implant survival penalty for xenograft against autograft.",
+      avoid:"“As good as autograft” as a blanket statement. It is indication-dependent.",
+      ask:"The reviews covering the indication in front of you, not augmentation in general." },
+    { area:"Human allograft in ridge preservation and augmentation", status:"Established",
+      evidence:"A substantial, largely North American literature on mineralised and demineralised allograft in socket and ridge work.",
+      say:"Allograft is a well-established option with a long clinical record, particularly in US practice.",
+      avoid:"Implying equivalence between our processing and any other bank's. Processing differs and matters.",
+      ask:"The processing and validation documentation for maxgraft, and what is published on that processing specifically." },
+    { area:"Biphasic calcium phosphate: resorption and bone substitution", status:"Established",
+      evidence:"Well-characterised mechanism, with resorption behaviour dependent on the HA to β-TCP ratio, plus clinical work across several ratios.",
+      say:"The HA to β-TCP ratio governs how quickly the scaffold gives way to bone; ours is formulated for a specific balance.",
+      avoid:"Quoting resorption timelines as if they were patient-specific predictions.",
+      ask:"What maxresorb's ratio was designed for and which clinical studies used that exact formulation." },
+    { area:"Native versus cross-linked collagen membranes", status:"Contested",
+      evidence:"A real trade-off in the literature between longer barrier function and tissue integration or exposure behaviour. Findings vary by material and cross-linking method.",
+      say:"There is a genuine trade-off between barrier duration and soft-tissue integration, and it is material-specific.",
+      avoid:"A blanket claim that longer barrier function is better. Reviewers will push back and they are right to.",
+      ask:"The barrier-duration data for Jason and collprotect, and how it was measured." },
+    { area:"Pericardium as a barrier membrane", status:"Emerging",
+      evidence:"Established surgical use with a smaller comparative clinical base than porcine dermis or the category leader.",
+      say:"Pericardium gives multi-directional tensile strength and a long barrier function.",
+      avoid:"Claiming a superior evidence base. On volume of published comparison, that is not where we are.",
+      ask:"Every clinical publication on Jason, and where the gaps against Bio-Gide are." },
+    { area:"dPTFE and intentionally exposed healing", status:"Established",
+      evidence:"Specific protocols for open-healing socket and ridge work are described in the literature and widely taught.",
+      say:"Dense PTFE supports protocols where the membrane is intentionally left exposed and removed later.",
+      avoid:"Extending that to our resorbable range. It is a property of the dPTFE, not of the brand.",
+      ask:"Which exposed-healing protocols permamem is validated for." },
+    { area:"Hyaluronic acid added to bone grafts", status:"Emerging",
+      evidence:"Handling benefits are readily demonstrable. Clinical outcome evidence is young and thinner than the enthusiasm around it.",
+      say:"Hyaluronate makes the graft cohesive and easier to place — a handling advantage you can show chairside.",
+      avoid:"Any suggestion of faster or better bone formation. The evidence is not there yet, and this is our most over-claimed area.",
+      ask:"Every clinical study on +HyA products, and what endpoints they actually measured." },
+    { area:"Soft-tissue matrices versus autologous connective tissue graft", status:"Contested",
+      evidence:"Reduced patient morbidity and shorter surgery are consistently reported. Equivalence of the tissue result is the contested part, and varies by indication.",
+      say:"A matrix avoids a palatal donor site, which reduces morbidity and chair time — that part is not controversial.",
+      avoid:"Claiming equivalence to a connective tissue graft across the board.",
+      ask:"The mucoderm evidence by indication, separating morbidity endpoints from tissue-outcome endpoints." },
+    { area:"Resorbable magnesium fixation and membranes", status:"Emerging",
+      evidence:"A genuinely new category with small datasets and short follow-up. Degradation behaviour and gas formation are the live questions.",
+      say:"Magnesium resorbs, so there is no removal surgery. It is a new category and we are open about the evidence being young.",
+      avoid:"Any long-term outcome claim. Follow-up does not exist yet. Overclaiming here will cost us credibility with the people most interested.",
+      ask:"All NOVAMag clinical data, degradation timelines, and how gas formation is characterised." },
+    { area:"Custom allogenic blocks versus titanium mesh", status:"Emerging",
+      evidence:"Case series and cohorts rather than randomised comparison, on both sides of the comparison.",
+      say:"A milled allograft block avoids a removal surgery and a donor site. The comparative literature is early.",
+      avoid:"Presenting bonebuilder as proven superior to Yxoss. Neither side has that evidence.",
+      ask:"The bonebuilder case series, resorption behaviour, and reported complication rates." }
+  ],
+
   sources: [
     { t:"iData Research — Global Dental Bone Graft Substitute & Biomaterials Market (2025–2032)", d:"Market at $2.33B (2025) rising to about $3.8B (2032), ~7.2% CAGR. Geistlich leads, BioHorizons second, ZimVie acquired by ARCHIMED in 2025.", u:"idataresearch.com" },
     { t:"Mordor Intelligence — Dental Bone Graft Substitutes Market", d:"Narrower definition: $0.87B (2025) to $1.28B (2030), 7.81% CAGR. Notes Bio-Oss as best-selling xenograft and Straumann's DrSmile divestment in 2024.", u:"mordorintelligence.com" },
@@ -679,13 +773,13 @@ const KIND_COLOR = {
    in this view the app keeps working against this device's local storage.
    ===================================================================== */
 
-const COLLECTIONS = ["prices", "notes", "learned"];
+const COLLECTIONS = ["prices", "notes", "learned", "evidence", "escalations"];
 const LOCAL_PREFIX = "botiss_ci_";
 
 const Store = {
   mode: "local",
   db: null,
-  data: { prices:[], notes:[], learned:[] },
+  data: { prices:[], notes:[], learned:[], evidence:[], escalations:[] },
   problem: null,
   _subs: [],
 
@@ -823,7 +917,9 @@ const ICON = {
   stop:'<rect x="7" y="7" width="10" height="10" rx="1.6"/>',
   info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><path d="M12 7.7v.4"/>',
   export:'<path d="M12 15.5V4.5"/><path d="M8 8l4-3.5L16 8"/><path d="M4.5 15v3.5a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5V15"/>',
-  spark:'<path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9Z"/>'
+  spark:'<path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9Z"/>',
+  science:'<path d="M9 3.5h6"/><path d="M10 3.5v5.2L5.8 17a2 2 0 0 0 1.8 3h8.8a2 2 0 0 0 1.8-3L14 8.7V3.5"/><path d="M7.4 14h9.2"/>',
+  claims:'<path d="M6 3.5h8.5L19 8v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z"/><path d="M14 3.5V8h5"/><path d="M8.5 13.5l2 2 3.5-4"/>'
 };
 const svg = (name, cls) =>
   '<svg viewBox="0 0 24 24" aria-hidden="true"' + (cls ? ' class="' + cls + '"' : '') + '>' + ICON[name] + '</svg>';
@@ -993,6 +1089,8 @@ function wirePositioningTip(){
 const NAV = [
   { id:"desk",     label:"Desk",     icon:"desk" },
   { id:"ask",      label:"Ask",      icon:"ask" },
+  { id:"science",  label:"Science",  icon:"science" },
+  { id:"claims",   label:"Claims",   icon:"claims" },
   { id:"rivals",   label:"Rivals",   icon:"rivals" },
   { id:"plays",    label:"Plays",    icon:"spark" },
   { id:"products", label:"Products", icon:"products" },
@@ -1025,12 +1123,16 @@ function viewDesk(){
       '</div>').join("") + '</div>' +
 
     '<div class="panel" style="background:var(--teal-wash);border-color:var(--teal-line)">' +
-      '<div class="panel-head"><h2 style="color:var(--teal-deep)">Ask the desk</h2></div>' +
+      '<div class="panel-head"><h2 style="color:var(--teal-deep)">Two desks on call</h2></div>' +
       '<p style="font-size:13px;color:var(--teal-deep);margin-bottom:12px">' +
-        'Brief yourself in the car park. The agent answers from this briefing plus everything the team has logged, and can log new intel back for everyone.' +
+        'Brief yourself in the car park. <strong>Ask</strong> handles the commercial ground — positioning, ' +
+        'objections, price, attach rate. <strong>Science</strong> handles whether you can actually say a thing ' +
+        'to a clinician, and what the safe wording is. Either one can hand work to the other.' +
       '</p>' +
-      '<div class="suggests">' + SUGGESTIONS.slice(0, 3).map(s =>
-        '<button data-jump="' + esc(s) + '">' + esc(s) + '</button>').join("") + '</div>' +
+      '<div class="suggests">' + SALES_SUGGESTIONS.slice(0, 2).map(s =>
+        '<button data-jump="' + esc(s) + '">' + esc(s) + '</button>').join("") +
+        '<button data-tab="science">Can I say cerabone is volume-stable? →</button>' +
+      '</div>' +
     '</div>' +
 
     positioningChart() +
@@ -1366,12 +1468,15 @@ function viewMethod(){
     "A briefing aid assembled from public sources in " + KB.asOf + ". Verify anything client-facing against the primary source before it leaves your mouth.") +
   '<div class="stack">' +
     '<div class="panel">' +
-      '<div class="panel-head"><h2>How the agent works</h2></div>' +
+      '<div class="panel-head"><h2>How the two desks work</h2></div>' +
       '<ul class="tight" style="font-size:13px">' +
-        '<li>It runs on <strong>your own Claude account</strong>. The first question in a session asks your permission, and the usage counts against your plan — not a shared key sitting in the page.</li>' +
-        '<li>Each question is answered from this briefing plus everything in <strong>Learned</strong> and <strong>Prices</strong>. It has no memory of its own between sessions and cannot browse the web.</li>' +
-        '<li>It can write back: log a price, save a field note, record a learning. Anything it writes is marked <span class="chip good">via agent</span> and can be deleted.</li>' +
-        '<li>A colleague without Claude access can still use every other tab — only the Ask tab needs it.</li>' +
+        '<li>Both run on <strong>your own Claude account</strong>. The first question in a session asks your permission, and the usage counts against your plan — not a shared key sitting in the page.</li>' +
+        '<li><strong>Ask</strong> is the commercial desk: positioning, objections, price, attach rate, account strategy. It answers from the briefing plus everything in Learned and Prices.</li>' +
+        '<li><strong>Science</strong> is the evidence desk: it grades a claim against the tiers in the Claims tab, gives you safe and unsafe wording, explains the material science in plain words, and cites <em>only</em> what is in the evidence library.</li>' +
+        '<li>Neither can browse the web or search PubMed. The science desk is built to say “I have no reference for that” and draft the request to Medical Affairs instead of inventing one. If it ever produces an author, year or number that is not in the library, treat that as a bug and tell us.</li>' +
+        '<li>They hand work to each other through the shared store: the commercial desk files an evidence question, the science desk answers it, and the answer lands in Learned where both read it.</li>' +
+        '<li>Anything a desk writes is marked <span class="chip good">via agent</span> and can be deleted.</li>' +
+        '<li>A colleague without Claude access can still use every other tab — only Ask and Science need it.</li>' +
       '</ul>' +
     '</div>' +
     '<div class="panel">' +
@@ -1404,24 +1509,16 @@ function viewMethod(){
 }
 
 /* =====================================================================
-   6. THE AGENT
+   6. THE TWO DESKS
+   One Claude connection, two agents over it: a commercial desk and a
+   scientific one. They share the team's store and hand work to each
+   other through it — the sales desk raises an evidence question, the
+   science desk answers it and files the answer where both can read it.
    ===================================================================== */
 
-const SUGGESTIONS = [
-  "How do I answer “we always use Bio-Oss”?",
-  "Cheapest credible answer to a Korean bundle?",
-  "Which product for a patient refusing animal-derived graft?",
-  "Brief me on Geistlich before a meeting",
-  "Where does maxgraft beat everything else?",
-  "What should I say about NOVAMag SHIELD?"
-];
-
-const Agent = {
-  fn:null, ready:false, tools:false, checked:false, done:false,
-  turns:[],       /* real conversation turns — what gets sent back as context */
-  activity:[],    /* what the tools did: shown to the rep, never fed to Claude */
-  streamed:"", lastError:null,
-  running:false, ctl:null,
+const AgentRuntime = {
+  fn:null, ready:false, tools:false, maxTools:8, checked:false, done:false,
+  active:null,
 
   async init(){
     if (this.checked) return;
@@ -1432,14 +1529,183 @@ const Agent = {
         this.ready = true;
         const lim = await this.fn.limits().catch(() => null);
         this.tools = !!lim?.tools;
+        if (lim?.tools?.maxCount) this.maxTools = lim.tools.maxCount;
       }
     } catch (e) { console.error(e); }
     this.done = true;
-    if (tab === "ask") renderChat();
+    if (tab === "ask" || tab === "science") { renderChat(SALES); renderChat(SCIENCE); }
   },
 
-  /* The standing instruction turn: rules, the static briefing, and the
-     team's live intel. Rebuilt on every send so new intel lands at once. */
+  errorCopy(code){
+    switch (code) {
+      case "not_granted":
+      case "sampling_disabled":
+        return "Claude access was declined for this app, so both desks are off for this session. Every other tab still works.";
+      case "rate_limited":
+        return "Your Claude usage is rate limited right now. Give it a few minutes and ask again.";
+      case "session_expired":
+        return "Your Claude session expired. Sign in again, then reload this app.";
+      case "prompt_too_large":
+        return "This conversation grew too long. Start a fresh one with Clear.";
+      case "refused":
+        return "Claude declined to answer that one. Try asking it a different way.";
+      case "empty_completion":
+        return "No answer came back. Try a narrower question.";
+      case "tools_unavailable":
+        return "This view cannot run the desk's tools, so it answered from its briefing only and could not file anything.";
+      case "cancelled":
+        return "";
+      default:
+        return "That did not get through (" + code + "). Try again in a moment.";
+    }
+  }
+};
+
+/* Conversation state and the send loop, shared by both desks. */
+function makeAgent(cfg){
+  return {
+    id:cfg.id,
+    cfg,
+    turns:[], activity:[], streamed:"", lastError:null, running:false, ctl:null,
+
+    async send(text){
+      const q = (text || "").trim();
+      if (!q || this.running || !AgentRuntime.ready) return;
+
+      this.turns.push({ role:"user", content:q });
+      /* Keep it short so the briefing always fits the input budget, and
+         never start on an assistant turn. */
+      while (this.turns.length > 10) this.turns.shift();
+      while (this.turns.length && this.turns[0].role !== "user") this.turns.shift();
+
+      this.activity = [];
+      this.streamed = "";
+      this.lastError = null;
+      this.running = true;
+      this.ctl = new AbortController();
+      AgentRuntime.active = this;
+      renderChat(this);
+
+      const opts = {
+        signal:this.ctl.signal,
+        cache:false,
+        onText:({ text }) => {
+          this.streamed = text;
+          const b = document.getElementById("stream-" + this.id);
+          if (b) { b.classList.remove("thinking"); b.textContent = text; scrollChat(this); }
+        }
+      };
+      if (AgentRuntime.tools) opts.tools = cfg.toolset().slice(0, AgentRuntime.maxTools);
+
+      try {
+        const { text:answer } = await AgentRuntime.fn(
+          [{ role:"user", content:cfg.briefing() }, ...this.turns], opts);
+        this.turns.push({ role:"assistant", content:answer });
+      } catch (e) {
+        if (e?.text) this.turns.push({ role:"assistant", content:e.text });
+        this.lastError = AgentRuntime.errorCopy(e?.code || "upstream_error");
+        if (e?.code === "not_granted" || e?.code === "sampling_disabled") AgentRuntime.ready = false;
+      } finally {
+        this.running = false;
+        this.ctl = null;
+        this.streamed = "";
+        if (AgentRuntime.active === this) AgentRuntime.active = null;
+        renderChat(this);
+      }
+    },
+
+    stop(){ this.ctl?.abort(); },
+    clear(){ this.turns = []; this.activity = []; this.lastError = null; renderChat(this); }
+  };
+}
+
+/* Tool progress, appended in place so it never disturbs a streaming answer. */
+function addSysLine(msg){
+  const a = AgentRuntime.active;
+  if (!a) return;
+  a.activity.push(msg);
+  const host = document.getElementById("activity-" + a.id);
+  if (host) {
+    host.innerHTML = a.activity.map(m => '<div class="msg sys">' + esc(m) + '</div>').join("");
+    scrollChat(a);
+  }
+}
+
+/* ---------- shared briefing fragments ---------- */
+
+function briefProducts(){
+  return KB.products.map(p =>
+    "• " + p.cat + " — ours: " + p.ours + ". " + p.why + " Rivals: " + p.rivals).join("\n");
+}
+
+function briefLearned(){
+  return Store.data.learned.slice(0, 40).map(r =>
+    "• " + (r.title || "untitled") + ": " + (r.body || "") +
+    " [" + (r.rep || "unattributed") + ", " +
+    new Date(r.ts || Date.now()).toISOString().slice(0, 10) + "]").join("\n") || "(none yet)";
+}
+
+function briefEvidence(){
+  return Store.data.evidence.slice(0, 40).map(r =>
+    "• [" + (r.id || "?") + "] " + (r.title || "untitled") +
+    " — " + (r.authors || "authors not recorded") +
+    ", " + (r.journal || "journal not recorded") + " " + (r.year || "year not recorded") +
+    (r.identifier ? " (" + r.identifier + ")" : "") +
+    ". Design: " + (r.studyType || "not recorded") +
+    ". Product: " + (r.product || "not recorded") +
+    ". Supports: " + (r.supports || "not recorded") +
+    ". Entered by " + (r.rep || "unattributed") +
+    (r.verifiedBy ? ", verified by " + r.verifiedBy : ", NOT yet verified by Medical Affairs")).join("\n")
+    || "(the evidence library is empty — you have no citable references at all yet)";
+}
+
+function briefEscalations(){
+  return Store.data.escalations.slice(0, 25).map(r =>
+    "• [" + (r.id || "?") + "] " + (r.question || "") +
+    (r.why ? " (context: " + r.why + ")" : "") +
+    " — raised by " + (r.rep || "unattributed")).join("\n") || "(no open questions)";
+}
+
+/* ---------- shared tools ---------- */
+
+function toolSaveLearning(){
+  return {
+    name:"save_learning",
+    description:"Record a durable fact the whole team should have from now on, and that you were told rather than already knew. It is added to every future briefing on both desks.",
+    inputSchema:{ type:"object", properties:{
+      title:{ type:"string" }, body:{ type:"string" },
+      tags:{ type:"array", items:{ type:"string" } }
+    }, required:["title","body"] },
+    async execute(input){
+      const tags = Array.isArray(input.tags) ? input.tags.slice(0, 6).map(t => String(t).slice(0, 24)) : [];
+      const res = await Store.add("learned", {
+        title:String(input.title || "").slice(0, 140),
+        body:String(input.body || "").slice(0, 1600),
+        tags, via:"agent"
+      });
+      if (!res.ok) throw new Error(res.why);
+      addSysLine("learned: " + (input.title || ""));
+      return { saved:true };
+    }
+  };
+}
+
+/* =====================================================================
+   The commercial desk
+   ===================================================================== */
+
+const SALES_SUGGESTIONS = [
+  "How do I answer “we always use Bio-Oss”?",
+  "Cheapest credible answer to a Korean bundle?",
+  "Which product for a patient refusing animal-derived graft?",
+  "Brief me on Geistlich before a meeting",
+  "Where does maxgraft beat everything else?",
+  "What should I say about NOVAMag SHIELD?"
+];
+
+const SALES = makeAgent({
+  id:"sales",
+
   briefing(){
     const rivals = KB.rivals.map(r =>
       "• " + r.name + " (" + r.tier + ", " + r.hq + "). " + r.line +
@@ -1447,9 +1713,6 @@ const Agent = {
       "\n  Recent: " + r.moves.join("; ") +
       "\n  Strong: " + r.strengths.join("; ") +
       "\n  Vulnerable: " + r.weaknesses.join("; ")).join("\n");
-
-    const products = KB.products.map(p =>
-      "• " + p.cat + " — ours: " + p.ours + ". " + p.why + " Rivals: " + p.rivals).join("\n");
 
     const plays = KB.plays.map(p => "• " + p.head + "\n  - " + p.moves.join("\n  - ")).join("\n");
     const markets = KB.markets.map(m => "• " + m.region + " (" + m.tone + "). " + m.notes).join("\n");
@@ -1463,36 +1726,36 @@ const Agent = {
       " [" + (r.source || "no source") + ", " + (r.rep || "unattributed") + ", " +
       new Date(r.ts || Date.now()).toISOString().slice(0, 10) + "]").join("\n") || "(none logged yet)";
 
-    const teamLearned = Store.data.learned.slice(0, 40).map(r =>
-      "• " + (r.title || "untitled") + ": " + (r.body || "") +
-      " [" + (r.rep || "unattributed") + ", " + new Date(r.ts || Date.now()).toISOString().slice(0, 10) + "]").join("\n") || "(none yet)";
-
     const teamNotes = Store.data.notes.slice(0, 30).map(r =>
       "• " + (r.topic || "note") + (r.competitor ? " (" + r.competitor + ")" : "") + ": " + (r.body || "") +
       " [" + (r.rep || "unattributed") + "]").join("\n") || "(none yet)";
 
     return [
-"You are the botiss CI Desk agent, a competitive-intelligence assistant for the botiss / Straumann dental regenerative-biomaterials sales team. The person asking is a botiss sales rep or manager, often on a phone between appointments.",
+"You are the commercial desk of the botiss CI Desk, a competitive-intelligence assistant for the botiss / Straumann dental regenerative-biomaterials sales team. The person asking is a botiss sales rep or manager, often on a phone between appointments.",
 "",
 "HOW TO ANSWER",
 "- Lead with the answer in one or two sentences, then at most five short bullets of substance. No preamble, no restating the question.",
 "- Ground every claim in the BRIEFING and TEAM INTEL below. If it is not there, say plainly that you do not know it and say what would settle it.",
-"- Never invent clinical evidence, study results, publication counts, regulatory clearances or prices. Those are the claims that get a rep into trouble.",
-"- Prices in this market are quote-based. Never present a figure as an official or list price; say whose quote it was and when.",
+"- Never invent clinical evidence, study results, publication counts, regulatory clearances or prices.",
+"- Prices in this market are quote-based. Never present a figure as official or list price; say whose quote it was and when.",
 "- Distinguish what is solid (portfolio facts, published launches) from what is an estimate (share splits, positioning scores).",
-"- No clinical, regulatory, legal or financial advice. If a claim would go to a clinician, say what needs verifying first.",
 "- Write in plain British English. Never use em dashes.",
 "",
+"WHERE YOUR REMIT ENDS",
+"- You handle commercial ground: positioning, objections, pricing, attach rate, account strategy.",
+"- Scientific and evidence questions belong to the science desk, which is a separate tab in this same app. That covers: what a study showed, whether a claim is defensible, what the literature says, anything a clinician would want a reference for.",
+"- When a question turns on evidence, answer the commercial part, then use ask_science to file the evidence question for the science desk and tell the rep you have done so. Do not answer it yourself by guessing what the literature says.",
+"",
 "WORKING WITH THE TEAM'S STORE",
-"- When the rep tells you something new from the field (a competitor price, an objection, a win or loss, a product sighting), save it: log_price_point for a price, log_field_note for an episode, save_learning for a durable fact worth keeping. Say in one line what you saved.",
-"- Ask before saving only if what they said is ambiguous. Do not save your own reasoning or general knowledge, only what the rep reports.",
-"- Use search_price_intel before answering any price question, and attach_rate_math for any revenue or attach-rate question rather than doing the arithmetic in your head.",
+"- When the rep reports something new from the field (a competitor price, an objection, a win or loss, a product sighting), save it: log_price_point for a price, log_field_note for an episode, save_learning for a durable fact. Say in one line what you saved.",
+"- Save only what the rep reports, never your own reasoning or general knowledge.",
+"- Use search_price_intel before answering any price question, and attach_rate_math for any revenue or attach-rate question rather than doing the arithmetic yourself.",
 "",
 "KEY FIGURES (researched " + KB.asOf + ")",
 figures,
 "",
 "BOTISS PORTFOLIO AGAINST RIVALS",
-products,
+briefProducts(),
 "",
 "RIVALS",
 rivals,
@@ -1506,11 +1769,11 @@ markets,
 "INDICATIVE PRICE ANCHORS (grey-market orientation, not official)",
 anchors,
 "",
-"TEAM INTEL — VERIFIED PRICES (logged by the team, this is the trusted layer)",
+"TEAM INTEL — VERIFIED PRICES (the trusted layer)",
 teamPrices,
 "",
-"TEAM INTEL — DURABLE LEARNINGS",
-teamLearned,
+"TEAM INTEL — DURABLE LEARNINGS (both desks write here)",
+briefLearned(),
 "",
 "TEAM INTEL — FIELD NOTES",
 teamNotes,
@@ -1520,7 +1783,6 @@ teamNotes,
   },
 
   toolset(){
-    const note = msg => addSysLine(msg);
     return [
       {
         name:"search_price_intel",
@@ -1535,13 +1797,13 @@ teamNotes,
             date:new Date(r.ts || Date.now()).toISOString().slice(0, 10), trust:"team-verified"
           }));
           const anchors = KB.anchors.filter(hit).slice(0, 8).map(a => ({ ...a, trust:"indicative-only" }));
-          note("searched price intel for “" + (input.query || "") + "”");
+          addSysLine("searched price intel for “" + (input.query || "") + "”");
           return { verified, anchors, verified_count:verified.length };
         }
       },
       {
         name:"log_price_point",
-        description:"Save a price the rep reports from the field to the team's shared store. Only call this for a figure the rep actually gives you, never an estimate of your own.",
+        description:"Save a price the rep reports from the field to the team's shared store. Only for a figure the rep actually gives you, never an estimate of your own.",
         inputSchema:{ type:"object", properties:{
           product:{ type:"string" }, brand:{ type:"string" }, country:{ type:"string" },
           pack:{ type:"string" }, price:{ type:"string" },
@@ -1561,13 +1823,13 @@ teamNotes,
             via:"agent"
           });
           if (!res.ok) throw new Error(res.why);
-          note("logged a price point: " + (input.product || "") + " " + (input.price || ""));
+          addSysLine("logged a price point: " + (input.product || "") + " " + (input.price || ""));
           return { saved:true, shared:Store.mode === "shared" };
         }
       },
       {
         name:"log_field_note",
-        description:"Save something that happened in the field: an objection heard, a competitor sighting, a win or loss and its reason. Use for episodes tied to a place or account.",
+        description:"Save something that happened in the field: an objection heard, a competitor sighting, a win or loss and its reason. For episodes tied to a place or account.",
         inputSchema:{ type:"object", properties:{
           topic:{ type:"string", description:"short headline" },
           body:{ type:"string", description:"the specifics: who, what product, what was said" },
@@ -1581,32 +1843,31 @@ teamNotes,
             via:"agent"
           });
           if (!res.ok) throw new Error(res.why);
-          note("saved a field note: " + (input.topic || ""));
+          addSysLine("saved a field note: " + (input.topic || ""));
           return { saved:true };
         }
       },
       {
-        name:"save_learning",
-        description:"Record a durable fact about the market that the whole team should have from now on, and that you were told rather than already knew. It is added to every future briefing.",
+        name:"ask_science",
+        description:"File an evidence or literature question for the science desk, which answers it with references. Use whenever an answer would need a study, a citation, or a judgement about whether a claim is defensible. Returns confirmation, not an answer.",
         inputSchema:{ type:"object", properties:{
-          title:{ type:"string" }, body:{ type:"string" },
-          tags:{ type:"array", items:{ type:"string" } }
-        }, required:["title","body"] },
+          question:{ type:"string", description:"the evidence question, phrased so it stands alone" },
+          why:{ type:"string", description:"the account or situation it came from" }
+        }, required:["question"] },
         async execute(input){
-          const tags = Array.isArray(input.tags) ? input.tags.slice(0, 6).map(t => String(t).slice(0, 24)) : [];
-          const res = await Store.add("learned", {
-            title:String(input.title || "").slice(0, 140),
-            body:String(input.body || "").slice(0, 1600),
-            tags, via:"agent"
+          const res = await Store.add("escalations", {
+            question:String(input.question || "").slice(0, 400),
+            why:String(input.why || "").slice(0, 400),
+            via:"agent"
           });
           if (!res.ok) throw new Error(res.why);
-          note("learned: " + (input.title || ""));
-          return { saved:true };
+          addSysLine("filed a question for the science desk");
+          return { filed:true, where:"the Science tab of this app" };
         }
       },
       {
         name:"attach_rate_math",
-        description:"Work out the incremental revenue from lifting an account's graft attach rate. Returns monthly and yearly figures and the case counts. Use this instead of doing arithmetic yourself.",
+        description:"Work out the incremental revenue from lifting an account's graft attach rate. Returns monthly and yearly figures and the case counts. Use instead of doing arithmetic yourself.",
         inputSchema:{ type:"object", properties:{
           implants_per_month:{ type:"number" }, current_pct:{ type:"number" },
           target_pct:{ type:"number" }, revenue_per_case:{ type:"number" }
@@ -1617,7 +1878,7 @@ teamNotes,
           const tgt = n(input.target_pct), rev = n(input.revenue_per_case);
           const casesNow = imp * cur / 100, casesTgt = imp * tgt / 100;
           const extra = Math.max(0, casesTgt - casesNow);
-          note("ran the attach-rate maths");
+          addSysLine("ran the attach-rate maths");
           return {
             grafted_cases_now:+casesNow.toFixed(1),
             grafted_cases_at_target:+casesTgt.toFixed(1),
@@ -1637,182 +1898,425 @@ teamNotes,
           const r = KB.rivals.find(x => x.name.toLowerCase().includes(q))
                  || KB.rivals.find(x => q.includes(x.name.toLowerCase().split(" ")[0]));
           if (!r) return { found:false, known:KB.rivals.map(x => x.name) };
-          note("pulled the " + r.name + " profile");
+          addSysLine("pulled the " + r.name + " profile");
           return r;
         }
-      }
+      },
+      toolSaveLearning()
     ];
-  },
-
-  errorCopy(code){
-    switch (code) {
-      case "not_granted":
-      case "sampling_disabled":
-        return "Claude access was declined for this app, so the agent is off for this session. Every other tab still works.";
-      case "rate_limited":
-        return "Your Claude usage is rate limited right now. Give it a few minutes and ask again.";
-      case "session_expired":
-        return "Your Claude session expired. Sign in again, then reload this app.";
-      case "prompt_too_large":
-        return "This conversation grew too long. Start a fresh one with the Clear button.";
-      case "refused":
-        return "Claude declined to answer that one. Try asking it a different way.";
-      case "empty_completion":
-        return "No answer came back. Try a narrower question.";
-      case "tools_unavailable":
-        return "This view cannot run the agent's tools, so it answered from the briefing only.";
-      case "cancelled":
-        return "";
-      default:
-        return "That did not get through (" + code + "). Try again in a moment.";
-    }
-  },
-
-  async send(text){
-    const q = text.trim();
-    if (!q || this.running || !this.ready) return;
-
-    this.turns.push({ role:"user", content:q });
-    /* Keep the conversation short so the briefing always fits inside the
-       64 KiB input budget, and never start on an assistant turn. */
-    while (this.turns.length > 10) this.turns.shift();
-    while (this.turns.length && this.turns[0].role !== "user") this.turns.shift();
-
-    this.activity = [];
-    this.streamed = "";
-    this.lastError = null;
-    this.running = true;
-    this.ctl = new AbortController();
-    renderChat();
-
-    const opts = {
-      signal:this.ctl.signal,
-      cache:false,
-      onText:({ text }) => {
-        this.streamed = text;
-        const b = document.getElementById("streamBubble");
-        if (b) { b.classList.remove("thinking"); b.textContent = text; scrollChat(); }
-      }
-    };
-    if (this.tools) opts.tools = this.toolset();
-
-    try {
-      const { text:answer } = await this.fn(
-        [{ role:"user", content:this.briefing() }, ...this.turns], opts);
-      this.turns.push({ role:"assistant", content:answer });
-    } catch (e) {
-      if (e?.text) this.turns.push({ role:"assistant", content:e.text });
-      this.lastError = this.errorCopy(e?.code || "upstream_error");
-      if (e?.code === "not_granted" || e?.code === "sampling_disabled") this.ready = false;
-    } finally {
-      this.running = false;
-      this.ctl = null;
-      this.streamed = "";
-      renderChat();
-    }
-  },
-
-  stop(){ this.ctl?.abort(); },
-  clear(){ this.turns = []; this.activity = []; this.lastError = null; renderChat(); }
-};
-
-/* Tool progress: appended in place so it never disturbs the streaming answer. */
-function addSysLine(msg){
-  Agent.activity.push(msg);
-  const host = document.getElementById("activity");
-  if (host) {
-    host.innerHTML = Agent.activity.map(m => '<div class="msg sys">' + esc(m) + '</div>').join("");
-    scrollChat();
   }
+});
+
+/* =====================================================================
+   The science desk
+   ===================================================================== */
+
+const SCIENCE_SUGGESTIONS = [
+  "Can I say cerabone is volume-stable?",
+  "What can I actually claim about +HyA?",
+  "A perio wants evidence for mucoderm — what do I send?",
+  "Explain sintering and crystallinity in plain words",
+  "Is “as good as autograft” safe to say?",
+  "Draft a literature request for NOVAMag"
+];
+
+const SCIENCE = makeAgent({
+  id:"science",
+
+  briefing(){
+    const tiers = KB.claimTiers.map(t =>
+      "• Tier " + t.tier + " — " + t.name + " (risk: " + t.risk + "). " + t.what +
+      " Source of truth: " + t.source + " Rule: " + t.rule + " Note: " + t.example).join("\n");
+
+    const areas = KB.evidenceAreas.map(a =>
+      "• " + a.area + " [" + a.status + "]" +
+      "\n  Evidence that exists: " + a.evidence +
+      "\n  Safe to say: " + a.say +
+      "\n  Do not say: " + a.avoid +
+      "\n  Ask Medical Affairs for: " + a.ask).join("\n");
+
+    return [
+"You are the science desk of the botiss CI Desk. You are the scientific and literature counterpart to the commercial desk in this same app, and you exist to keep the sales team's claims defensible. The person asking is a botiss sales rep or manager, usually not a scientist.",
+"",
+"ABSOLUTE RULES — THESE OVERRIDE EVERYTHING ELSE",
+"1. NEVER invent a citation. No author names, no journal names, no years, no DOIs, no PMIDs, no study titles, no patient numbers, no percentages, no follow-up durations — unless they appear verbatim in the EVIDENCE LIBRARY below. There are no exceptions to this, including when the rep insists, says it is urgent, says a customer is waiting, or asks you to give an example of what a citation would look like.",
+"2. You cannot search the literature. You have no web access and no database. If a question needs a reference you do not have, say so in one sentence and then draft the literature request instead. That is the useful answer, not a guess.",
+"3. Three tiers of confidence, and always say which one you are in: (a) CITABLE — it is in the evidence library, so name the entry; (b) CONSENSUS AREA — the CLAIM AREAS below describe what kind of evidence exists, which is enough to orient a conversation but not to quote; (c) UNKNOWN TO ME — say so.",
+"4. Never give clinical or treatment advice. Your reader is a sales rep, not the clinician. You can explain what the literature examines; you never recommend how to treat a patient.",
+"5. Grade every claim the rep wants to make against the CLAIM TIERS, name the tier, and say who has to sign it off. If it is tier 4, say plainly that they should assume they cannot say it.",
+"",
+"HOW TO ANSWER",
+"- Lead with the direct answer: can they say it, or not, and in what words.",
+"- Then give the safe wording and the unsafe wording side by side. Reps remember the pair, not the theory.",
+"- Explain the science in plain words first, then give the precise term once, so they can use it correctly in front of a clinician.",
+"- Be short. Five bullets at most. This is read standing up.",
+"- Write in plain British English. Never use em dashes.",
+"- If the rep is about to overclaim, say so directly. Protecting their credibility with a clinician is more useful than agreeing with them.",
+"",
+"WHAT YOU DO WITH THE STORE",
+"- The evidence library is the team's only citable source. When the rep gives you a real reference (from Medical Affairs, a reprint, a congress handout), use add_evidence to file it so everyone can cite it afterwards. Record the identifier and who verified it.",
+"- Use search_evidence before answering any question that asks for a reference.",
+"- The commercial desk files evidence questions for you. Use list_escalations to see them, and resolve_escalation when you have answered one, which files the answer as a durable learning both desks read.",
+"- Use save_learning for a scientific fact the whole team should carry.",
+"",
+"CLAIM TIERS",
+tiers,
+"",
+"CLAIM AREAS — what kind of evidence exists, by topic. Orientation only: none of this is a citation and none of it may be quoted as one.",
+areas,
+"",
+"THE PORTFOLIO (tier 1 facts you may state)",
+briefProducts(),
+"",
+"EVIDENCE LIBRARY — the ONLY references you may cite. Cite by title and identifier, and say if an entry is not yet verified by Medical Affairs.",
+briefEvidence(),
+"",
+"OPEN QUESTIONS FROM THE COMMERCIAL DESK",
+briefEscalations(),
+"",
+"TEAM LEARNINGS (both desks write here)",
+briefLearned(),
+"",
+"The rep's question follows."
+    ].join("\n");
+  },
+
+  toolset(){
+    return [
+      {
+        name:"search_evidence",
+        description:"Search the team's evidence library and the claim areas. Returns citable references separately from orientation-only claim areas. Use before answering any question that asks for a reference or for what a study showed.",
+        inputSchema:{ type:"object", properties:{ query:{ type:"string", description:"product, material, indication or claim" } }, required:["query"] },
+        execute(input){
+          const q = String(input.query || "").toLowerCase();
+          const hit = r => JSON.stringify(r).toLowerCase().includes(q);
+          const citable = Store.data.evidence.filter(hit).slice(0, 12).map(r => ({
+            id:r.id, title:r.title, authors:r.authors, journal:r.journal, year:r.year,
+            identifier:r.identifier, studyType:r.studyType, product:r.product,
+            supports:r.supports, verifiedBy:r.verifiedBy || null,
+            trust:r.verifiedBy ? "citable, verified" : "citable, NOT verified by Medical Affairs"
+          }));
+          const areas = KB.evidenceAreas.filter(hit).slice(0, 6).map(a => ({ ...a, trust:"orientation only, never quote as a citation" }));
+          addSysLine("searched the evidence library for “" + (input.query || "") + "”");
+          return { citable, citable_count:citable.length, claim_areas:areas,
+            reminder:citable.length ? "cite only these" : "nothing citable found — draft a literature request instead" };
+        }
+      },
+      {
+        name:"add_evidence",
+        description:"File a real reference the rep has given you into the team's evidence library, so it becomes citable for everyone. Only for a reference the rep actually supplies. Never file one from your own memory.",
+        inputSchema:{ type:"object", properties:{
+          title:{ type:"string" }, authors:{ type:"string", description:"as given, e.g. first author et al" },
+          journal:{ type:"string" }, year:{ type:"string" },
+          identifier:{ type:"string", description:"DOI or PMID if given" },
+          studyType:{ type:"string", description:"RCT, cohort, case series, systematic review, preclinical, and so on" },
+          product:{ type:"string", description:"which product it was run on" },
+          supports:{ type:"string", description:"what claim it can actually support" },
+          verifiedBy:{ type:"string", description:"who confirmed it, if anyone" }
+        }, required:["title","supports"] },
+        async execute(input){
+          const res = await Store.add("evidence", {
+            title:String(input.title || "").slice(0, 260),
+            authors:String(input.authors || "").slice(0, 160),
+            journal:String(input.journal || "").slice(0, 160),
+            year:String(input.year || "").slice(0, 12),
+            identifier:String(input.identifier || "").slice(0, 90),
+            studyType:String(input.studyType || "").slice(0, 60),
+            product:String(input.product || "").slice(0, 90),
+            supports:String(input.supports || "").slice(0, 600),
+            verifiedBy:String(input.verifiedBy || "").slice(0, 90),
+            via:"agent"
+          });
+          if (!res.ok) throw new Error(res.why);
+          addSysLine("filed a reference: " + (input.title || "").slice(0, 60));
+          return { saved:true, note:"marked unverified unless verifiedBy was given" };
+        }
+      },
+      {
+        name:"list_escalations",
+        description:"List the evidence questions the commercial desk has filed for you, with their ids. Use when the rep asks what is outstanding, or to pick up queued work.",
+        execute(){
+          addSysLine("checked the question queue");
+          return Store.data.escalations.slice(0, 25).map(r => ({
+            id:r.id, question:r.question, context:r.why, raisedBy:r.rep,
+            raised:new Date(r.ts || Date.now()).toISOString().slice(0, 10)
+          }));
+        }
+      },
+      {
+        name:"resolve_escalation",
+        description:"Close an evidence question from the commercial desk: files your answer as a durable learning both desks read, then removes it from the queue. Needs the id from list_escalations.",
+        inputSchema:{ type:"object", properties:{
+          id:{ type:"string" },
+          answer:{ type:"string", description:"the answer, including the safe wording and the tier" }
+        }, required:["id","answer"] },
+        async execute(input){
+          const id = String(input.id || "");
+          const row = Store.data.escalations.find(r => r.id === id);
+          if (!row) throw new Error("No open question with id " + id + ". Call list_escalations for the current ids.");
+          const saved = await Store.add("learned", {
+            title:"Evidence answer: " + String(row.question || "").slice(0, 110),
+            body:String(input.answer || "").slice(0, 1600),
+            tags:["evidence","science desk"], via:"agent"
+          });
+          if (!saved.ok) throw new Error(saved.why);
+          const gone = await Store.remove("escalations", id);
+          if (!gone.ok) throw new Error(gone.why);
+          addSysLine("answered a question from the commercial desk");
+          return { resolved:true };
+        }
+      },
+      toolSaveLearning()
+    ];
+  }
+});
+
+/* =====================================================================
+   Chat rendering, shared by both desks
+   ===================================================================== */
+
+function chatIntro(agent){
+  if (agent.id === "science") {
+    return '<div class="notice">' + svg("info") +
+      '<div><strong>This desk will not invent a citation.</strong> It cannot search the literature ' +
+      '— no web access, no database — so it cites only what is in the evidence library below, tells ' +
+      'you which claim tier you are in, and drafts the request to Medical Affairs when the reference ' +
+      'does not exist yet. Treat “no reference for that” as the useful answer it is.</div></div>';
+  }
+  return '<div class="notice info">' + svg("spark") +
+    '<div><strong>Runs on your own Claude account.</strong> The first question asks your permission. ' +
+    (AgentRuntime.tools
+      ? "It searches the team's price intel, logs new intel back for everyone, and hands evidence questions to the science desk."
+      : "Tool use is unavailable in this view, so it answers from the briefing without logging anything.") +
+    '</div></div>';
 }
 
-function viewAsk(){
-  return head("Ask the desk", "Your competitive intelligence, on call",
-    "Answers come from this briefing plus everything your team has logged. Tell it what you heard in the field and it saves that for everyone.") +
-    '<div class="chat" id="chat"></div>';
-}
-
-function renderChat(){
-  const host = document.getElementById("chat");
+function renderChat(agent){
+  const host = document.getElementById("chat-" + agent.id);
   if (!host) return;
 
-  if (!Agent.done) {
+  if (!AgentRuntime.done) {
     host.innerHTML = '<div class="panel"><div class="empty">Connecting to Claude…</div></div>';
     return;
   }
-  if (!Agent.ready) {
+  if (!AgentRuntime.ready) {
     host.innerHTML =
       '<div class="notice bad">' + svg("info") +
-        '<div><strong>The agent is not available in this view.</strong> ' +
-        esc(Agent.lastError || "This app needs permission to use your Claude account. If you declined the prompt, reload and allow it; if you opened this page outside Claude, open it from your Claude artifacts instead.") +
+        '<div><strong>The desks are not available in this view.</strong> ' +
+        esc(agent.lastError || "This app needs permission to use your Claude account. If you declined the prompt, reload and allow it; if you opened this page outside Claude, open it from your Claude artifacts instead.") +
         '</div></div>' +
       '<div class="notice info" style="margin-top:12px">' + svg("info") +
-        '<div>Everything else works without it: battlecards, the product map, prices, markets and the deal maths.</div></div>';
+        '<div>Everything else works without it: battlecards, the claims rubric, the product map, prices, markets and the deal maths.</div></div>';
     return;
   }
 
-  const msgs = Agent.turns.map(t =>
+  const suggestions = agent.id === "science" ? SCIENCE_SUGGESTIONS : SALES_SUGGESTIONS;
+
+  const msgs = agent.turns.map(t =>
     '<div class="msg ' + (t.role === "user" ? "me" : "bot") + '">' + esc(t.content) + '</div>').join("");
 
-  const activity = '<div id="activity">' + Agent.activity.map(m =>
+  const activity = '<div id="activity-' + agent.id + '">' + agent.activity.map(m =>
     '<div class="msg sys">' + esc(m) + '</div>').join("") + '</div>';
 
-  const streaming = Agent.running
-    ? '<div class="msg bot' + (Agent.streamed ? "" : " thinking") + '" id="streamBubble">' +
-      esc(Agent.streamed || "Thinking…") + '</div>' : "";
+  const streaming = agent.running
+    ? '<div class="msg bot' + (agent.streamed ? "" : " thinking") + '" id="stream-' + agent.id + '">' +
+      esc(agent.streamed || "Thinking…") + '</div>' : "";
 
-  const err = Agent.lastError
-    ? '<div class="msg err">' + esc(Agent.lastError) + '</div>' : "";
+  const err = agent.lastError ? '<div class="msg err">' + esc(agent.lastError) + '</div>' : "";
 
-  const chips = Agent.turns.length ? "" :
-    '<div class="suggests">' + SUGGESTIONS.map(s =>
-      '<button data-ask="' + esc(s) + '">' + esc(s) + '</button>').join("") + '</div>';
+  const chips = agent.turns.length ? "" :
+    '<div class="suggests">' + suggestions.map(s =>
+      '<button data-suggest="' + agent.id + '" data-text="' + esc(s) + '">' + esc(s) + '</button>').join("") + '</div>';
 
   host.innerHTML =
-    (Agent.turns.length || Agent.running ? "" :
-      '<div class="notice info">' + svg("spark") +
-        '<div><strong>Runs on your own Claude account.</strong> The first question asks your permission. ' +
-        (Agent.tools
-          ? "It can search the team's price intel and log new intel back for everyone."
-          : "Tool use is unavailable in this view, so it will answer from the briefing without logging anything.") +
-        '</div></div>') +
-    '<div class="transcript" id="transcript">' + msgs + activity + streaming + err + '</div>' +
+    (agent.turns.length || agent.running ? "" : chatIntro(agent)) +
+    '<div class="transcript" id="transcript-' + agent.id + '">' + msgs + activity + streaming + err + '</div>' +
     chips +
     '<div class="composer">' +
-      '<textarea id="askBox" rows="1" placeholder="What do you need to know?" ' +
-        (Agent.running ? "disabled" : "") + '></textarea>' +
-      (Agent.running
-        ? '<button class="btn" id="askStop" title="Stop">' + svg("stop") + '</button>'
-        : '<button class="btn primary" id="askSend" title="Send">' + svg("send") + '</button>') +
+      '<textarea id="box-' + agent.id + '" rows="1" placeholder="' +
+        (agent.id === "science" ? "What do you need to be able to say?" : "What do you need to know?") + '" ' +
+        (agent.running ? "disabled" : "") + '></textarea>' +
+      (agent.running
+        ? '<button class="btn" data-stop="' + agent.id + '" title="Stop">' + svg("stop") + '</button>'
+        : '<button class="btn primary" data-send="' + agent.id + '" title="Send">' + svg("send") + '</button>') +
     '</div>' +
-    (Agent.turns.length
-      ? '<div style="display:flex;justify-content:flex-end"><button class="btn sm" id="askClear">Clear conversation</button></div>'
+    (agent.turns.length
+      ? '<div style="display:flex;justify-content:flex-end">' +
+        '<button class="btn sm" data-clear="' + agent.id + '">Clear conversation</button></div>'
       : "");
 
-  const box = document.getElementById("askBox");
-  if (box && !Agent.running) {
+  const box = document.getElementById("box-" + agent.id);
+  if (box && !agent.running) {
     box.addEventListener("input", () => {
       box.style.height = "auto";
       box.style.height = Math.min(150, box.scrollHeight) + "px";
     });
     box.addEventListener("keydown", e => {
-      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submitAsk(); }
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submitAsk(agent); }
     });
   }
-  scrollChat();
+  scrollChat(agent);
 }
 
-function submitAsk(){
-  const box = document.getElementById("askBox");
+function submitAsk(agent){
+  const box = document.getElementById("box-" + agent.id);
   if (!box) return;
   const v = box.value;
   box.value = "";
-  Agent.send(v);
+  agent.send(v);
 }
 
-function scrollChat(){
-  const t = document.getElementById("transcript");
+function scrollChat(agent){
+  const t = document.getElementById("transcript-" + agent.id);
   if (t) t.scrollIntoView({ block:"end", behavior:"smooth" });
+}
+
+function agentById(id){ return id === "science" ? SCIENCE : SALES; }
+
+/* ---------- the two chat views ---------- */
+
+function viewAsk(){
+  return head("Commercial desk", "Your competitive intelligence, on call",
+    "Positioning, objections, pricing and account strategy, answered from this briefing plus everything the team has logged. Evidence questions get handed to the science desk.") +
+    '<div class="chat" id="chat-sales"></div>';
+}
+
+function viewScience(){
+  const open = Store.data.escalations;
+  const lib = Store.data.evidence;
+
+  return head("Science desk", "Keep the claim defensible",
+    "The scientific counterpart to the commercial desk. It grades what you want to say, gives you the safe wording, explains the material science in plain words, and cites only references the team has actually verified.") +
+  '<div class="stack">' +
+    (open.length
+      ? '<div class="panel" style="border-color:var(--teal-line)">' +
+          '<div class="panel-head"><h2>Questions from the field</h2>' +
+            '<span class="hint">' + open.length + ' waiting on evidence</span></div>' +
+          open.slice(0, 8).map(r =>
+            '<div class="feeditem">' +
+              '<div class="badge chip us">Q</div>' +
+              '<div class="body"><div class="t">' + esc(r.question || "") + '</div>' +
+                (r.why ? '<p>' + esc(r.why) + '</p>' : "") +
+                '<div class="meta">' + esc(r.rep || "unattributed") + ' · ' + esc(timeAgo(r.ts)) + '</div></div>' +
+              '<button class="btn quiet" data-del="escalations|' + esc(r.id) + '" aria-label="Remove question">' +
+                svg("trash") + '</button>' +
+            '</div>').join("") +
+          '<p style="font-size:11.5px;color:var(--ink-3);margin-top:10px">' +
+          'Ask the desk to “take the queue” and it will work through these, filing each answer where both desks read it.</p>' +
+        '</div>'
+      : "") +
+
+    '<div class="chat" id="chat-science"></div>' +
+
+    '<div class="panel">' +
+      '<div class="panel-head"><h2>Evidence library</h2>' +
+        '<span class="hint">' + lib.length + (lib.length === 1 ? " reference" : " references") + '</span></div>' +
+      (lib.length
+        ? lib.map(r =>
+          '<div class="feeditem">' +
+            '<div class="badge ' + (r.verifiedBy ? "chip good" : "chip warn") + '">' +
+              (r.verifiedBy ? "OK" : "?") + '</div>' +
+            '<div class="body">' +
+              '<div class="t">' + esc(r.title || "untitled") + '</div>' +
+              '<p>' + esc([r.authors, r.journal, r.year].filter(Boolean).join(" · ")) +
+                (r.identifier ? " · " + esc(r.identifier) : "") + '</p>' +
+              (r.supports ? '<p style="margin-top:4px"><strong>Supports:</strong> ' + esc(r.supports) + '</p>' : "") +
+              '<div class="chiprow" style="margin-top:6px">' +
+                (r.studyType ? '<span class="chip">' + esc(r.studyType) + '</span>' : "") +
+                (r.product ? '<span class="chip us">' + esc(r.product) + '</span>' : "") +
+                (r.verifiedBy
+                  ? '<span class="chip good">verified · ' + esc(r.verifiedBy) + '</span>'
+                  : '<span class="chip warn">not verified by Medical Affairs</span>') +
+              '</div>' +
+              '<div class="meta">' + esc(r.rep || "unattributed") + ' · ' + esc(timeAgo(r.ts)) + '</div>' +
+            '</div>' +
+            '<button class="btn quiet" data-del="evidence|' + esc(r.id) + '" aria-label="Remove reference">' +
+              svg("trash") + '</button>' +
+          '</div>').join("")
+        : '<div class="empty">Empty, which is why the desk will not cite anything yet.<br>' +
+          'Ask Medical Affairs for the reference list and add the entries here — then every answer can cite them.</div>') +
+    '</div>' +
+
+    '<div class="panel">' +
+      '<div class="panel-head"><h2>Add a reference</h2>' +
+        '<span class="hint">real sources only</span></div>' +
+      '<div class="formgrid">' +
+        '<div style="grid-column:1/-1"><label class="fld" for="ev_title">Title</label>' +
+          '<input id="ev_title" placeholder="paper title as printed"></div>' +
+        '<div><label class="fld" for="ev_authors">Authors</label>' +
+          '<input id="ev_authors" placeholder="First author et al"></div>' +
+        '<div><label class="fld" for="ev_journal">Journal</label>' +
+          '<input id="ev_journal" placeholder="journal"></div>' +
+        '<div><label class="fld" for="ev_year">Year</label>' +
+          '<input id="ev_year" placeholder="2024"></div>' +
+        '<div><label class="fld" for="ev_id">DOI or PMID</label>' +
+          '<input id="ev_id" placeholder="10.1111/… or 12345678"></div>' +
+        '<div><label class="fld" for="ev_type">Study design</label>' +
+          '<select id="ev_type">' +
+            ["Systematic review or meta-analysis","Randomised controlled trial","Prospective cohort",
+             "Retrospective cohort","Case series","Case report","Preclinical or animal",
+             "Bench or material testing","Consensus statement"]
+              .map(c => '<option>' + c + '</option>').join("") +
+          '</select></div>' +
+        '<div><label class="fld" for="ev_product">Product studied</label>' +
+          '<input id="ev_product" placeholder="cerabone, Jason, mucoderm…"></div>' +
+        '<div><label class="fld" for="ev_verified">Verified by</label>' +
+          '<input id="ev_verified" placeholder="who confirmed it — leave blank if nobody"></div>' +
+        '<div style="grid-column:1/-1"><label class="fld" for="ev_supports">What claim it can actually support</label>' +
+          '<textarea id="ev_supports" placeholder="Be strict. A handling study does not support a bone-formation claim."></textarea></div>' +
+      '</div>' +
+      '<button class="btn primary" id="ev_add" style="margin-top:13px">' + svg("plus") + 'Add reference</button>' +
+      '<div id="ev_msg" style="margin-top:10px" hidden></div>' +
+    '</div>' +
+  '</div>';
+}
+
+/* ---------- the claims rubric ---------- */
+
+function viewClaims(){
+  const tone = { low:"good", medium:"warn", high:"warn", highest:"threat" };
+  return head("Claims", "What you may say, and who has to sign it off",
+    "The rubric the science desk grades against. Worth knowing cold: it is the difference between a claim that survives a clinician's follow-up question and one that costs you the account.") +
+  '<div class="stack">' +
+    '<div class="stack">' + KB.claimTiers.map(t =>
+      '<div class="panel">' +
+        '<div class="panel-head">' +
+          '<h2>Tier ' + esc(t.tier) + ' · ' + esc(t.name) + '</h2>' +
+          '<span class="chip ' + (tone[t.risk] || "") + '">' + esc(t.risk) + ' risk</span>' +
+        '</div>' +
+        '<p style="font-size:13.5px;color:var(--ink-2)">' + esc(t.what) + '</p>' +
+        '<div class="assume" style="margin-top:12px">' +
+          '<div><span>Source of truth</span><span style="text-align:right;max-width:60%">' + esc(t.source) + '</span></div>' +
+          '<div><span>Rule</span><span style="text-align:right;max-width:60%">' + esc(t.rule) + '</span></div>' +
+        '</div>' +
+        '<p style="font-size:12.5px;color:var(--ink-3);margin-top:10px;font-style:italic">' + esc(t.example) + '</p>' +
+      '</div>').join("") + '</div>' +
+
+    '<div class="panel flat" style="margin-top:8px">' +
+      '<div class="panel-head"><h2>Where the evidence actually stands</h2>' +
+        '<span class="hint">topics, not citations</span></div>' +
+      '<div class="notice">' + svg("info") +
+        '<div><strong>Deliberately written without authors, years or numbers.</strong> Those belong in ' +
+        'the evidence library, entered by someone who can verify them. This map tells you what kind of ' +
+        'evidence exists in each area, so you know whether you are on firm ground before you open your mouth.</div></div>' +
+    '</div>' +
+
+    '<div class="stack">' + KB.evidenceAreas.map(a =>
+      '<div class="panel">' +
+        '<div class="panel-head" style="align-items:flex-start">' +
+          '<h2 style="flex:1">' + esc(a.area) + '</h2>' +
+          '<span class="chip ' + (a.status === "Established" ? "good" : a.status === "Contested" ? "threat" : "warn") + '">' +
+            esc(a.status) + '</span>' +
+        '</div>' +
+        '<p style="font-size:13px;color:var(--ink-2)">' + esc(a.evidence) + '</p>' +
+        '<div class="swot" style="margin-top:12px">' +
+          '<div class="s"><h4>Safe to say</h4><p style="font-size:12.5px;color:var(--ink-2)">' + esc(a.say) + '</p></div>' +
+          '<div class="w"><h4>Do not say</h4><p style="font-size:12.5px;color:var(--ink-2)">' + esc(a.avoid) + '</p></div>' +
+        '</div>' +
+        '<p style="font-size:12.5px;color:var(--ink-3);margin-top:11px">' +
+          '<strong style="color:var(--teal)">Ask Medical Affairs for:</strong> ' + esc(a.ask) + '</p>' +
+      '</div>').join("") + '</div>' +
+  '</div>';
 }
 
 /* =====================================================================
@@ -1820,7 +2324,8 @@ function scrollChat(){
    ===================================================================== */
 
 const VIEWS = {
-  desk:viewDesk, ask:viewAsk, rivals:viewRivals, plays:viewPlays, products:viewProducts,
+  desk:viewDesk, ask:viewAsk, science:viewScience, claims:viewClaims,
+  rivals:viewRivals, plays:viewPlays, products:viewProducts,
   prices:viewPrices, markets:viewMarkets, deal:viewDeal, learned:viewLearned, method:viewMethod
 };
 
@@ -1858,7 +2363,8 @@ function render(scrollTop){
     : "") + Rep.bar() + VIEWS[tab]();
 
   if (tab === "desk") wirePositioningTip();
-  if (tab === "ask") { Agent.init(); renderChat(); }
+  if (tab === "ask") { AgentRuntime.init(); renderChat(SALES); }
+  if (tab === "science") { AgentRuntime.init(); renderChat(SCIENCE); }
   if (scrollTop) window.scrollTo({ top:0 });
 }
 
@@ -1878,8 +2384,9 @@ function flash(id, text, kind){
 }
 
 document.addEventListener("click", async e => {
-  const t = e.target.closest("[data-tab],[data-rival],[data-ask],[data-jump],[data-del],[data-del-price]," +
-    "#p_add,#p_export,#n_add,#m_rep,#repPill,#repSave,#modePill,#askSend,#askStop,#askClear");
+  const t = e.target.closest("[data-tab],[data-rival],[data-suggest],[data-jump],[data-del]," +
+    "[data-del-price],[data-send],[data-stop],[data-clear]," +
+    "#p_add,#p_export,#n_add,#ev_add,#m_rep,#repPill,#repSave,#modePill");
   if (!t) return;
 
   if (t.dataset.tab) { tab = t.dataset.tab; render(true); return; }
@@ -1891,12 +2398,12 @@ document.addEventListener("click", async e => {
     render(); return;
   }
 
-  if (t.dataset.jump) { tab = "ask"; render(true); setTimeout(() => Agent.send(t.dataset.jump), 80); return; }
-  if (t.dataset.ask) { Agent.send(t.dataset.ask); return; }
+  if (t.dataset.jump) { tab = "ask"; render(true); setTimeout(() => SALES.send(t.dataset.jump), 80); return; }
+  if (t.dataset.suggest) { agentById(t.dataset.suggest).send(t.dataset.text || ""); return; }
 
-  if (t.id === "askSend") { submitAsk(); return; }
-  if (t.id === "askStop") { Agent.stop(); return; }
-  if (t.id === "askClear") { Agent.clear(); return; }
+  if (t.dataset.send) { submitAsk(agentById(t.dataset.send)); return; }
+  if (t.dataset.stop) { agentById(t.dataset.stop).stop(); return; }
+  if (t.dataset.clear) { agentById(t.dataset.clear).clear(); return; }
 
   if (t.id === "repPill" || t.id === "m_rep") { Rep.ask(); return; }
   if (t.id === "modePill") { tab = "method"; render(true); return; }
@@ -1926,6 +2433,23 @@ document.addEventListener("click", async e => {
     render();
     flash("p_msg", (Store.mode === "shared" ? "Logged and shared with the team." : "Logged on this device.") +
       (Rep.get() ? "" : " Set your name at the top so colleagues know whose figure this is."), "info");
+    return;
+  }
+
+  if (t.id === "ev_add") {
+    const g = id => document.getElementById(id)?.value.trim() || "";
+    if (!g("ev_title")) { flash("ev_msg", "The title, as printed on the paper.", "bad"); return; }
+    if (!g("ev_supports")) { flash("ev_msg", "Say what the reference can actually support — that is the whole point of the entry.", "bad"); return; }
+    const res = await Store.add("evidence", {
+      title:g("ev_title"), authors:g("ev_authors"), journal:g("ev_journal"), year:g("ev_year"),
+      identifier:g("ev_id"), studyType:g("ev_type"), product:g("ev_product"),
+      supports:g("ev_supports"), verifiedBy:g("ev_verified"), via:"manual"
+    });
+    if (!res.ok) { flash("ev_msg", res.why, "bad"); return; }
+    render();
+    flash("ev_msg", g("ev_verified")
+      ? "Added and marked verified. The science desk can cite it from now on."
+      : "Added. It is marked unverified until someone from Medical Affairs signs it off, and the desk will say so whenever it cites it.", "info");
     return;
   }
 
@@ -1973,11 +2497,12 @@ document.addEventListener("input", e => {
 /* boot */
 Store.onChange(() => {
   paintPills();
-  const livePages = tab === "desk" || tab === "prices" || tab === "learned" || tab === "method";
-  if (livePages && !isTyping()) render();
+  const livePages = ["desk", "prices", "learned", "science", "method"].includes(tab);
+  const busy = SALES.running || SCIENCE.running;
+  if (livePages && !isTyping() && !busy) render();
 });
 paintPills();
 render();
 Store.connect();
-Agent.init();
+AgentRuntime.init();
 </script>

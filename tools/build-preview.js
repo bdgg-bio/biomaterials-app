@@ -127,9 +127,9 @@ function buildInPage() {
     '<div class="notice info" style="margin-top:22px">' + svg("info") +
       '<div><strong>Preview copy — for review, not for use.</strong> This is one file with no login ' +
       'behind it, so two things are simulated and labelled as such: all intel shown is ' +
-      '<strong>example data</strong>, and the agent below is a <strong>worked example</strong> rather ' +
-      'than a live answer. Everything else is the real thing. In the working version the agent answers ' +
-      'your own questions and the whole team shares one live pool of intel.</div>' +
+      '<strong>example data</strong>, and the two agent conversations are <strong>worked examples</strong> ' +
+      'rather than live answers. Everything else is the real thing. In the working version the desks ' +
+      'answer your own questions and the whole team shares one live pool of intel.</div>' +
     '</div>';
 
   /* ---- 1. Desk ---- */
@@ -165,8 +165,8 @@ function buildInPage() {
 
   /* ---- 2. Ask ---- */
   const ask = S("ask",
-    head("The agent", "Your competitive intelligence, on call",
-      "In the working version this answers your own questions from the briefing plus everything the team has logged, and writes new intel back for everyone. It runs on each person's own Claude account.") +
+    head("Commercial desk", "Your competitive intelligence, on call",
+      "Positioning, objections, pricing and account strategy. In the working version it answers your own questions from the briefing plus everything the team has logged, writes new intel back for everyone, and hands evidence questions to the science desk below. It runs on each person's own Claude account.") +
     '<div class="notice">' + svg("info") +
       '<div><strong>The exchange below was written by hand to show the shape of it.</strong> ' +
       'It is an illustration, not a recorded answer — a file like this cannot reach Claude. ' +
@@ -177,6 +177,45 @@ function buildInPage() {
         ? '<div class="msg sys">' + esc(text) + '</div>'
         : '<div class="msg ' + (who === "me" ? "me" : "bot") + '">' + esc(text) + '</div>').join("") +
     '</div>');
+
+  /* ---- 2b. The science desk ---- */
+  const SCI_EXAMPLE = [
+    ["me", "Can I tell a perio that cerabone is volume-stable?"],
+    ["sys", "searched the evidence library for “cerabone volume stability”"],
+    ["bot",
+"Yes, as a tier 2 claim about design and mechanism. No, as a claim about what will happen in their patient.\n\n" +
+"• Safe: “cerabone is sintered above 1200 °C, which gives a highly crystalline hydroxyapatite designed to resorb very slowly and hold graft volume.” That is processing plus mechanism, and it is in the technical file.\n" +
+"• Not safe: “cerabone will keep your ridge volume.” That converts a mechanism into a patient outcome, which is tier 3 and needs a clinical study on this product.\n" +
+"• If they push for the study: the evidence library has nothing on cerabone volume retention yet, so I cannot give you a citation and I am not going to invent one.\n" +
+"• The honest line that keeps your credibility: “The mechanism is well characterised and I would rather send you our clinical data than paraphrase it — let me get that from Medical Affairs.”\n\n" +
+"Request to send: clinical studies on cerabone reporting graft volume or dimensional change, with the endpoint (radiographic or histological), follow-up duration and patient numbers stated."],
+    ["me", "Fair. Medical Affairs sent me a paper on it — how do I get it in here?"],
+    ["bot",
+"Give me the title, first author, journal, year and the DOI or PMID, and say what it actually measured. I will file it in the evidence library and mark who verified it.\n\n" +
+"One caution on what it will then support: if the endpoint was radiographic ridge width at six months, the claim it licenses is about radiographic dimensional change at six months, not about long-term volume stability in general. I will record it that narrowly, so nobody stretches it later."]
+  ];
+
+  const science = S("science",
+    head("Science desk", "Keep the claim defensible",
+      "The scientific counterpart to the commercial desk. It grades what you want to say, gives you the safe wording, explains the material science in plain words, and cites only references the team has actually verified.") +
+    '<div class="notice">' + svg("info") +
+      '<div><strong>It will not invent a citation.</strong> It cannot search the literature — no web ' +
+      'access, no database — so it cites only what is in the team\'s evidence library, tells you which ' +
+      'claim tier you are in, and drafts the request to Medical Affairs when the reference does not ' +
+      'exist yet. “I have no reference for that” is the answer working correctly, not failing.</div></div>' +
+    '<div class="notice info" style="margin-top:12px">' + svg("info") +
+      '<div>The exchange below was written by hand as an illustration, like the commercial one above. ' +
+      'The <strong>evidence library</strong> it refers to starts empty and is filled by whoever has the ' +
+      'reference list — every entry records what claim it can actually support, and whether Medical ' +
+      'Affairs has signed it off.</div></div>' +
+    '<div class="transcript" style="margin-top:14px">' +
+      SCI_EXAMPLE.map(([who, text]) => who === "sys"
+        ? '<div class="msg sys">' + esc(text) + '</div>'
+        : '<div class="msg ' + (who === "me" ? "me" : "bot") + '">' + esc(text) + '</div>').join("") +
+    '</div>');
+
+  /* ---- 2c. The claims rubric, straight from the app ---- */
+  const claims = S("claims", viewClaims());
 
   /* ---- 3. Rivals, as native disclosures ---- */
   const rivals = S("rivals",
@@ -378,7 +417,8 @@ function buildInPage() {
       '</div>' +
     '</div>');
 
-  const TOC = [["desk","Desk"],["ask","The agent"],["rivals","Battlecards"],["plays","Plays"],
+  const TOC = [["desk","Desk"],["ask","Commercial desk"],["science","Science desk"],
+    ["claims","Claims"],["rivals","Battlecards"],["plays","Plays"],
     ["products","Products"],["prices","Prices"],["markets","Markets"],["deal","Deal maths"],
     ["learned","Learned"],["feedback","Feedback"],["method","Method"]];
 
@@ -393,8 +433,8 @@ function buildInPage() {
   '<nav class="toc" aria-label="Sections">' +
     TOC.map(([id, label]) => '<a href="#' + id + '">' + esc(label) + '</a>').join("") +
   '</nav>' +
-  '<main class="doc">' + banner + desk + ask + rivals + plays + products + prices +
-    markets + dealSec + learned + feedback + method + '</main>' +
+  '<main class="doc">' + banner + desk + ask + science + claims + rivals + plays + products +
+    prices + markets + dealSec + learned + feedback + method + '</main>' +
   '<footer class="pv-foot">' +
     'botiss CI Desk — preview copy. Figures researched ' + esc(KB.asOf) +
     ' from iData Research, Mordor Intelligence and the Straumann Annual Report 2025. ' +
