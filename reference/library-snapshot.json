@@ -1,0 +1,570 @@
+[
+ {
+  "id": "allograft-vs-autograft-bundle",
+  "title": "Allograft as an alternative to autograft (four-reference bundle)",
+  "identifier": "see journal field",
+  "product": "Allograft generally, not maxgraft specifically",
+  "studyType": "Mixed — check each individually",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "allotec-eurofins",
+  "title": "NOT A STUDY — Allotec process virus inactivation validation report",
+  "identifier": "n/a",
+  "product": "maxgraft / Allotec process",
+  "studyType": "Laboratory validation report, not peer-reviewed literature",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "barone-2024-socket",
+  "title": "Socket preservation with cortico-cancellous allograft granules",
+  "identifier": "2024 Jan 4; online ahead of print",
+  "product": "maxgraft cortico-cancellous granules",
+  "studyType": "Case series, n=25, biopsies at ~3 months, 1 and 2 year follow-up",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "bcp-ratio-bundle",
+  "title": "Optimal hydroxyapatite to beta-TCP ratio in biphasic calcium phosphate (two references)",
+  "identifier": "10:199-204; 10:821-825",
+  "product": "Biphasic calcium phosphate generally",
+  "studyType": "Bench / materials science",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "berberi-2014",
+  "title": "Physicochemical characteristics of bone substitutes used in oral surgery in comparison to autogenous bone",
+  "identifier": "2014:320790",
+  "product": "Bone substitutes incl. cerabone, vs autogenous bone",
+  "studyType": "Bench / physicochemical characterisation",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "blaskovic-2023-novamag",
+  "title": "Combination of a magnesium membrane with bovine bone and hyaluronate",
+  "identifier": "13(8):691",
+  "product": "cerabone plus + NOVAMag membrane",
+  "studyType": "In vitro plus two clinical cases",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "block-2019",
+  "title": "Cited for preservation of alveolar ridge dimensions",
+  "identifier": "77(4):690-697",
+  "product": "Bone grafting, ridge preservation",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "calvo-guirado-2012",
+  "title": "Dissolution and incorporation of a biphasic synthetic graft",
+  "identifier": "vol. 23",
+  "product": "maxresorb",
+  "studyType": "Preclinical — design not stated in deck (timeline of 15/30/60 days suggests animal model)",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "case-aroca-periimplantitis",
+  "title": "Documented case: Reconstructive peri-implantitis treatment",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone plus",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-aslan-epp",
+  "title": "Documented case: Periodontal bone defects, entire papilla preservation technique",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft granules",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-blockveras-immediate",
+  "title": "Documented case: Immediate implant placement in the posterior",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone plus",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-disidoro-gbr",
+  "title": "Documented case: One-stage guided bone regeneration",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone plus + permamem",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-elad-novamag-shield",
+  "title": "Documented case: Immediate implantation, jumping gap and buccal wall reconstruction",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft granules + NOVAMag Shield",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-frosecchi-socket-maxresorb",
+  "title": "Documented case: Socket preservation",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxresorb",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-gargallo-sinus",
+  "title": "Documented case: Two-stage sinus augmentation",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone plus",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-giesenhagen-bonering",
+  "title": "Documented case: Simultaneous bone augmentation and implant placement",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft bonering",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-jedraszcyk-hya-xs",
+  "title": "Documented case: Immediate implant, filling the jumping gap",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft +HyA (XS) + mucoderm + SSA abutment",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-jones-esthetic",
+  "title": "Documented case: Bone augmentation and soft tissue support in the aesthetic zone",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone plus",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-kloss-cortico-shell",
+  "title": "Documented case: Horizontal augmentation, allogenic shell technique",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft cortico + maxgraft +HyA (S)",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-kloss-hya-esthetic",
+  "title": "Documented case: Two-stage GBR in the aesthetic zone",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft +HyA cortico-cancellous (S) + Jason membrane",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-maghaireh-contour",
+  "title": "Documented case: Contour augmentation in the aesthetic zone, layering technique",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone + maxgraft granules",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-maghaireh-layering",
+  "title": "Documented case: Layering technique, contour augmentation",
+  "identifier": "no publication; deck case documentation",
+  "product": "allogeneic bone + cerabone + Jason membrane",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-matejkowski-fast-reentry",
+  "title": "Documented case: Socket preservation with fast re-entry",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft / cerabone 65:35 + mucoderm",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-morger-hya-bisphosphonate",
+  "title": "Documented case: Ridge and socket preservation in a bisphosphonate patient",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft +HyA (S)",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-morger-hya-sinus",
+  "title": "Documented case: Sinus lift and lateral augmentation",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft +HyA (L) + cerabone (L) + Jason membrane",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-mota-novamag-shield",
+  "title": "Documented case: Immediate implantation, jumping gap and buccal wall reconstruction",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft granules + NOVAMag Shield",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-prado-sinus-prf",
+  "title": "Documented case: Sinus lift and lateral bone augmentation",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone + maxgraft granules + PRF",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-puisys-jumping-gap",
+  "title": "Documented case: Immediate implantation, grafting the jumping gap and thickening soft tissue",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft granules + mucoderm",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-puisys-socket-esthetic",
+  "title": "Documented case: Socket preservation in the aesthetic zone",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft granules + mucoderm",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-rothamel-sinus-cerabone",
+  "title": "Documented case: Two-stage lateral sinus floor elevation",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone + Jason membrane",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-rothamel-sinus-maxresorb",
+  "title": "Documented case: Two-stage sinus lift",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxresorb + Jason membrane",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-sanz-esporrin-perio",
+  "title": "Documented case: Reconstructive periodontal surgery",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone plus",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-schneider-hya-lateral",
+  "title": "Documented case: Implant placement with simultaneous lateral augmentation",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft +HyA (S)",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-shalash-layering-mandible",
+  "title": "Documented case: Implantation with simultaneous GBR, posterior mandible, layering technique",
+  "identifier": "no publication; deck case documentation",
+  "product": "autologous bone + maxgraft granules",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-steigmann-dehiscence",
+  "title": "Documented case: Dehiscence defect in the anterior region after extraction",
+  "identifier": "no publication; deck case documentation",
+  "product": "cerabone (1-2 mm vestibular) + Jason membrane + autologous chips",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-valenzuela-perio-hya",
+  "title": "Documented case: Periodontal defects, with and without an enamel matrix derivative",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft +HyA (XS), some cases with Emdogain",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "case-yuksel-bonebuilder",
+  "title": "Documented case: Ridge augmentation with a patient-specific CAD/CAM allograft block",
+  "identifier": "no publication; deck case documentation",
+  "product": "maxgraft bonebuilder",
+  "studyType": "Documented case from a botiss deck — not published literature",
+  "verifiedBy": "botiss Medical Affairs (approved deck content)"
+ },
+ {
+  "id": "demetter-2017",
+  "title": "Cortical versus cancellous versus 50/50 allograft in socket preservation, RCT",
+  "identifier": "88(9):860-868",
+  "product": "Cortical vs cancellous vs cortico-cancellous allograft",
+  "studyType": "Randomised controlled trial, three arms of 22, biopsies at 4.5-5 months",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "elahi-2023",
+  "title": "Cited for purity and biocompatibility of high-temperature treated bovine bone",
+  "identifier": "10(4):473",
+  "product": "High-temperature bovine bone",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "eskow-2014",
+  "title": "Cortical versus cancellous allograft in socket preservation",
+  "identifier": "85(4):514-524",
+  "product": "Cortical vs cancellous allograft",
+  "studyType": "Clinical, n=20 vs n=20, all grafts from a single donor, biopsies at ~4.5 months",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "fienitz-2017",
+  "title": "Cited for volume stability of high-temperature bovine bone",
+  "identifier": "21(3):787-794",
+  "product": "cerabone",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "heimes-2024-morbidity",
+  "title": "Allogeneic cortical shells versus autologous shells from the patient perspective",
+  "identifier": "doi:10.1111/cid.13242 · 26(1):170-182",
+  "product": "maxgraft cortico vs autologous bone shells",
+  "studyType": "Comparative clinical, maxgraft cortico n=20 vs autologous n=16, patient-reported outcomes",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "hya-biology-bundle",
+  "title": "Hyaluronic acid background biology (five-reference bundle)",
+  "identifier": "see journal field",
+  "product": "Hyaluronic acid as a molecule — NOT a botiss product",
+  "studyType": "Basic science, non-dental",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "hya-user-survey",
+  "title": "NOT A STUDY — customer survey on handling of hyaluronate-containing graft",
+  "identifier": "n/a",
+  "product": "cerabone plus",
+  "studyType": "Opinion survey, 156 clinicians — not clinical evidence",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "jelusic-2025-socket",
+  "title": "Histological and histomorphometric evaluation of natural bovine bone substitute with hyaluronate in socket preservation — a report of three cases",
+  "identifier": "36(1):3",
+  "product": "cerabone plus",
+  "studyType": "Case report (three cases), histology and histomorphometry at 5 months",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "kammerer-2022-cortico",
+  "title": "Allogeneic cortical bone plates for ridge augmentation: clinical evidence and handling",
+  "identifier": "doi:10.1186/s40729-022-00446-y · 8(1):48",
+  "product": "maxgraft cortico",
+  "studyType": "Large clinical evaluation, 372 cases / 656 implants, mean follow-up 3.5 years",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "khojasteh-2016",
+  "title": "Cited for implant survival in bovine bone grafted sites",
+  "identifier": "18(2):342-59",
+  "product": "cerabone",
+  "studyType": "Clinical — design not stated in deck (title suggests review)",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "kloss-2018-blocks",
+  "title": "Allogeneic bone blocks for ridge augmentation: efficiency and volume stability",
+  "identifier": "29:1163-1175",
+  "product": "maxgraft blocks",
+  "studyType": "Clinical, 1-year follow-up",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "kloss-2023-block-risk",
+  "title": "Complication risk factors in allogeneic block augmentation",
+  "identifier": "12(1):6",
+  "product": "maxgraft blocks",
+  "studyType": "Clinical, risk-factor analysis",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "kloss-2023-jcm-case",
+  "title": "Two-stage GBR with bovine bone mineral plus hyaluronate mixed with allograft",
+  "identifier": "12:6214",
+  "product": "cerabone plus + maxgraft cancellous granules + Jason membrane",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "kyyak-2021-osteoblasts",
+  "title": "Beneficial effects of hyaluronic acid biofunctionalisation on human osteoblasts",
+  "identifier": "14(11):2885",
+  "product": "cerabone plus vs cerabone",
+  "studyType": "In vitro — human osteoblast culture, 3/7/10 days",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "kyyak-2022-angiogenesis",
+  "title": "Cited for promotion of blood vessel formation",
+  "identifier": "15(11):3839",
+  "product": "cerabone plus",
+  "studyType": "In vitro / preclinical — not confirmed",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "lorean-2014",
+  "title": "Clinical outcome of implants placed in sinus grafted with bovine bone (cited for implant survival)",
+  "identifier": "29(3):705-8",
+  "product": "cerabone",
+  "studyType": "Clinical — design not stated in deck",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "maxgraft-hya-unpublished",
+  "title": "NOT YET PUBLISHED — retrospective comparison of maxgraft vs maxgraft +HyA in socket preservation",
+  "identifier": "none",
+  "product": "maxgraft +HyA vs maxgraft",
+  "studyType": "Retrospective comparative, 40 patients (19 maxgraft, 21 +HyA)",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "miron-2024-perio2000",
+  "title": "The development of non-resorbable bone allografts: Biological background and clinical perspectives",
+  "identifier": "94(1):161-179",
+  "product": "Sintered bone grafts generally",
+  "studyType": "Review",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "pabst-2024",
+  "title": "Cited for purity, biocompatibility and ridge-dimension preservation",
+  "identifier": "10(1):26",
+  "product": "High-temperature bovine bone",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "perez-2024-remodeling",
+  "title": "Histological analysis of core biopsies after allograft socket preservation",
+  "identifier": "12(2):42",
+  "product": "maxgraft granules",
+  "studyType": "Histological analysis of core biopsies at 5 months",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "puisys-2022",
+  "title": "Immediate versus early implant placement with allograft and soft tissue management",
+  "identifier": "doi:10.1111/clr.13924 · 33(6):634-655",
+  "product": "maxgraft granules (+ CTG, or 1:1 with autologous bone and Jason membrane)",
+  "studyType": "Clinical, 50 patients in two groups, 1-year follow-up",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "qasim-2024",
+  "title": "Cited for osteoblast stimulation by hyaluronate",
+  "identifier": "2024 Feb 12:1-18",
+  "product": "Hyaluronate-functionalised grafts",
+  "studyType": "In vitro / materials — not confirmed",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "rakasevic-2023-rct",
+  "title": "Reconstructive surgical peri-implantitis treatment: bovine bone graft with vs without hyaluronic acid",
+  "identifier": "14(3):149",
+  "product": "cerabone plus (test) vs cerabone (control), sites covered with mucoderm",
+  "studyType": "Randomised controlled clinical trial",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "riachi-2012",
+  "title": "Influence of material properties on rate of resorption of two bone graft materials after sinus lift using radiographic assessment",
+  "identifier": "2012:737262",
+  "product": "cerabone vs Bio-Oss",
+  "studyType": "Clinical, radiographic assessment",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "rothamel-2011-zzi",
+  "title": "Cited for volume stability of high-temperature bovine bone",
+  "identifier": "27(1):60",
+  "product": "cerabone",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "solakoglu-2019",
+  "title": "Cited for new vital bone around implants after allograft augmentation",
+  "identifier": "21(5):1002-1016",
+  "product": "maxgraft",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "tawil-2016-sinus",
+  "title": "Sinus Floor Elevation Using the Lateral Approach and Bone Window Repositioning I: Clinical and Radiographic Results in 102 Consecutively Treated Patients Followed from 1 to 5 Years",
+  "identifier": "doi:10.11607/jomi.4570 · 31(4):827-34",
+  "product": "cerabone",
+  "studyType": "Consecutive clinical case series, 1-5 year follow-up",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "tawil-2018",
+  "title": "Cited for volume stability of high-temperature bovine bone",
+  "identifier": "online 2018 Jun 12",
+  "product": "cerabone",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "trajkovski-2018-materials",
+  "title": "Hydrophilicity, Viscoelastic, and Physicochemical Properties Variations in Dental Bone Grafting Substitutes",
+  "identifier": "11(2):215",
+  "product": "cerabone vs low-temperature treated bovine bone",
+  "studyType": "Bench / material characterisation",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "tunkel-2020-splitmouth",
+  "title": "Allogeneic cortical shell versus autologous bone plate, split-mouth",
+  "identifier": "9(2):947-959 (also cited as 2020;00:1-13)",
+  "product": "maxgraft cortico vs autologous bone plate, relining with cerabone",
+  "studyType": "Split-mouth case series, 5 patients",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "tunkel-2023-surgtime",
+  "title": "Surgery time and complications with allogeneic cortical plates",
+  "identifier": "doi:10.1186/s40729-023-00505-y · 9(1):52",
+  "product": "maxgraft cortico",
+  "studyType": "Clinical, 117 patients / 229 implants",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "wen-2019",
+  "title": "Cited for new vital bone around implants after allograft augmentation",
+  "identifier": "2019 Aug 4 (online)",
+  "product": "maxgraft",
+  "studyType": "Not confirmed — check the paper",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "wen-2022-periimplantitis",
+  "title": "Surgical reconstructive treatment for infraosseous peri-implantitis defects with a submerged healing approach",
+  "identifier": "doi:10.1002/JPER.21-0161 · 93(2):195-207",
+  "product": "cerabone + maxgraft cortico-cancellous + autologous chips (60/20/20) with Ti-reinforced dPTFE",
+  "studyType": "Clinical, 30 implants, 8-month outcomes",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "yxoss-critique-refs",
+  "title": "Titanium mesh dehiscence rate references used against Yxoss / Re-Oss",
+  "identifier": "see journal field",
+  "product": "Competitor — customised titanium mesh (Yxoss CBR / Re-Oss)",
+  "studyType": "Case series (27 patients) and a narrative article",
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ }
+]

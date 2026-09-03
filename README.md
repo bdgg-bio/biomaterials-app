@@ -44,6 +44,25 @@ the browser's local storage and says so in the header — it never breaks.
 **CSV export** uses the `downloads` capability. The viewer confirms before
 anything is saved.
 
+## Bulk-importing published papers
+
+`tools/ingest_papers.py` turns a folder of paper PDFs into evidence-library
+entries, for the case where several hundred arrive at once:
+
+```
+pip install cffi pypdf
+node tools/snapshot-library.js                    # after exporting the library with read_db
+python3 tools/ingest_papers.py <pdf-dir> --out out \
+        --existing reference/library-snapshot.json
+```
+
+Bibliographic fields, study design and the product studied are extracted
+mechanically. The `supports` field — what the reference may actually license
+in a sales conversation — is **not** generated: each entry lands holding the
+paper's own abstract or conclusion verbatim, marked `SCOPE NOT YET WRITTEN`,
+for a human to scope. See [CLAUDE.md](CLAUDE.md) for the full workflow and the
+library's field conventions.
+
 ## Constraints that are real, not bugs
 
 - **Declaring `db` makes the artifact organization-internal.** It cannot be

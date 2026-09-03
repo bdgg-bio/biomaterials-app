@@ -1,0 +1,14 @@
+{
+  "authors": "Eurofins Pharma",
+  "identifier": "n/a",
+  "journal": "Test report, unpublished",
+  "product": "maxgraft / Allotec process",
+  "rep": "Branko T. · imported from botiss decks",
+  "studyType": "Laboratory validation report, not peer-reviewed literature",
+  "supports": "The source of \"all tested viruses have been successfully inactivated by the process; the most efficient step being the chemical treatment (EtOH)\" plus bactericidal, fungicidal and sporicidal properties. This is a validation report and belongs to the technical file, so it is tier 1 safety documentation rather than clinical evidence. Quote it as a validation report and get the current version from Medical Affairs — a 2010 report may have been superseded. Published data, cited in the botiss training decks and approved by botiss Medical Affairs.",
+  "title": "NOT A STUDY — Allotec process virus inactivation validation report",
+  "ts": 1788462414951,
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)",
+  "via": "import",
+  "year": "2010"
+}

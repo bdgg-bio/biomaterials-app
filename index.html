@@ -803,7 +803,11 @@ const Store = {
   _subscribe(){
     for (const c of COLLECTIONS) {
       try {
-        this.db.collection(c).orderBy("ts", "desc").limit(200).onSnapshot(
+        /* The evidence library is expected to run to several hundred
+           references, so it gets a much larger window than the field
+           collections. 1000 is the store's per-query maximum. */
+        const cap = c === "evidence" ? 1000 : 200;
+        this.db.collection(c).orderBy("ts", "desc").limit(cap).onSnapshot(
           snap => {
             this.data[c] = snap.docs.map(d => ({ id:d.id, ...d.data() }));
             this._emit();
@@ -1650,18 +1654,52 @@ function briefLearned(){
     new Date(r.ts || Date.now()).toISOString().slice(0, 10) + "]").join("\n") || "(none yet)";
 }
 
+/* Ranks a reference by the strength of its design, so the index the agent
+   sees leads with the studies worth citing rather than the newest import. */
+function evidenceRank(r){
+  const t = (r.studyType || "").toLowerCase();
+  if (/systematic|meta-analys/.test(t)) return 0;
+  if (/randomis|randomiz|\brct\b/.test(t)) return 1;
+  if (/cohort|consecutive|comparative|clinical evaluation|clinical,/.test(t)) return 2;
+  if (/clinical/.test(t)) return 3;
+  if (/case series/.test(t)) return 4;
+  if (/preclinical|animal|in vitro|bench|material/.test(t)) return 5;
+  if (/case report|documented clinical case/.test(t)) return 6;
+  if (/survey|validation report|not clinical/.test(t)) return 8;
+  return 7;
+}
+
+/* At a few hundred references the whole library no longer fits in one
+   prompt, so the agent gets a ranked INDEX and pulls full records through
+   search_evidence on demand. */
+const BRIEF_INDEX_SIZE = 60;
+
 function briefEvidence(){
-  return Store.data.evidence.slice(0, 40).map(r =>
-    "• [" + (r.id || "?") + "] " + (r.title || "untitled") +
-    " — " + (r.authors || "authors not recorded") +
-    ", " + (r.journal || "journal not recorded") + " " + (r.year || "year not recorded") +
-    (r.identifier ? " (" + r.identifier + ")" : "") +
-    ". Design: " + (r.studyType || "not recorded") +
-    ". Product: " + (r.product || "not recorded") +
-    ". Supports: " + (r.supports || "not recorded") +
-    ". Entered by " + (r.rep || "unattributed") +
-    (r.verifiedBy ? ", verified by " + r.verifiedBy : ", NOT yet verified by Medical Affairs")).join("\n")
-    || "(the evidence library is empty — you have no citable references at all yet)";
+  const rows = Store.data.evidence;
+  if (!rows.length) return "(the evidence library is empty — you have no citable references at all yet)";
+
+  const byProduct = {};
+  for (const r of rows) {
+    const key = String(r.product || "unspecified").split(/[,;(]|\svs\.?\s/)[0].trim().slice(0, 44) || "unspecified";
+    (byProduct[key] = byProduct[key] || []).push(r);
+  }
+  const counts = Object.entries(byProduct)
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([k, v]) => k + " (" + v.length + ")").join(" · ");
+
+  const index = [...rows].sort((a, b) => evidenceRank(a) - evidenceRank(b))
+    .slice(0, BRIEF_INDEX_SIZE)
+    .map(r => "• [" + (r.id || "?") + "] " + (r.year || "?") + " · " +
+      (r.studyType || "design not recorded") + " · " + (r.product || "product not recorded") +
+      " — " + String(r.title || "untitled").slice(0, 110)).join("\n");
+
+  return "Total references: " + rows.length + ". All are Medical Affairs approved unless an entry says otherwise." +
+    "\nBy product: " + counts +
+    "\n\nINDEX ONLY, ranked by strength of study design. These one-liners do NOT tell you what a reference may support — " +
+    "call search_evidence to pull the full record, including its scope and any caveat, BEFORE you cite it.\n" + index +
+    (rows.length > BRIEF_INDEX_SIZE
+      ? "\n(+ " + (rows.length - BRIEF_INDEX_SIZE) + " more references, reachable only through search_evidence — so search before concluding we have nothing on a topic.)"
+      : "");
 }
 
 function briefEscalations(){
@@ -1995,16 +2033,30 @@ briefLearned(),
         execute(input){
           const q = String(input.query || "").toLowerCase();
           const hit = r => JSON.stringify(r).toLowerCase().includes(q);
-          const citable = Store.data.evidence.filter(hit).slice(0, 12).map(r => ({
-            id:r.id, title:r.title, authors:r.authors, journal:r.journal, year:r.year,
-            identifier:r.identifier, studyType:r.studyType, product:r.product,
-            supports:r.supports, verifiedBy:r.verifiedBy || null,
-            trust:r.verifiedBy ? "citable, verified" : "citable, NOT verified by Medical Affairs"
-          }));
+          const matches = Store.data.evidence.filter(hit);
+          /* Ranked so a broad query returns the strongest designs, not
+             whatever was imported most recently. */
+          const citable = [...matches].sort((a, b) => evidenceRank(a) - evidenceRank(b))
+            .slice(0, 15).map(r => ({
+              id:r.id, title:r.title, authors:r.authors, journal:r.journal, year:r.year,
+              identifier:r.identifier, studyType:r.studyType, product:r.product,
+              supports:r.supports, verifiedBy:r.verifiedBy || null,
+              trust:r.verifiedBy ? "citable, verified" : "citable, NOT verified by Medical Affairs"
+            }));
           const areas = KB.evidenceAreas.filter(hit).slice(0, 6).map(a => ({ ...a, trust:"orientation only, never quote as a citation" }));
-          addSysLine("searched the evidence library for “" + (input.query || "") + "”");
-          return { citable, citable_count:citable.length, claim_areas:areas,
-            reminder:citable.length ? "cite only these" : "nothing citable found — draft a literature request instead" };
+          addSysLine("searched " + Store.data.evidence.length + " references for “" + (input.query || "") + "”");
+          return {
+            citable,
+            returned:citable.length,
+            total_matches:matches.length,
+            library_size:Store.data.evidence.length,
+            claim_areas:areas,
+            reminder:matches.length
+              ? (matches.length > citable.length
+                  ? "Strongest " + citable.length + " of " + matches.length + " matches, ranked by design. Search a narrower term if you need the rest. Cite only from these records."
+                  : "Cite only from these records.")
+              : "Nothing matched in the library. Say so and draft a literature request — do not fall back on memory."
+          };
         }
       },
       {
@@ -2186,6 +2238,63 @@ function viewAsk(){
     '<div class="chat" id="chat-sales"></div>';
 }
 
+/* The library is built to hold several hundred references, so it is
+   filtered and windowed rather than dumped in full. */
+let evFilter = "";
+const EV_PAGE = 25;
+
+function evidenceMatches(){
+  const s = evFilter.trim().toLowerCase();
+  const rows = Store.data.evidence;
+  if (!s) return rows;
+  return rows.filter(r =>
+    [r.title, r.authors, r.journal, r.year, r.identifier, r.studyType, r.product, r.supports]
+      .join(" ").toLowerCase().includes(s));
+}
+
+function evidenceRowHtml(r){
+  return '<div class="feeditem">' +
+    '<div class="badge ' + (r.verifiedBy ? "chip good" : "chip warn") + '">' +
+      (r.verifiedBy ? "OK" : "?") + '</div>' +
+    '<div class="body">' +
+      '<div class="t">' + esc(r.title || "untitled") + '</div>' +
+      '<p>' + esc([r.authors, r.journal, r.year].filter(Boolean).join(" · ")) +
+        (r.identifier ? " · " + esc(r.identifier) : "") + '</p>' +
+      (r.supports ? '<p style="margin-top:4px"><strong>Supports:</strong> ' + esc(r.supports) + '</p>' : "") +
+      '<div class="chiprow" style="margin-top:6px">' +
+        (r.studyType ? '<span class="chip">' + esc(r.studyType) + '</span>' : "") +
+        (r.product ? '<span class="chip us">' + esc(r.product) + '</span>' : "") +
+        (r.verifiedBy
+          ? '<span class="chip good">verified · ' + esc(r.verifiedBy) + '</span>'
+          : '<span class="chip warn">not verified by Medical Affairs</span>') +
+      '</div>' +
+      '<div class="meta">' + esc(r.rep || "unattributed") + ' · ' + esc(timeAgo(r.ts)) + '</div>' +
+    '</div>' +
+    '<button class="btn quiet" data-del="evidence|' + esc(r.id) + '" aria-label="Remove reference">' +
+      svg("trash") + '</button>' +
+  '</div>';
+}
+
+function evidenceListHtml(){
+  const all = Store.data.evidence;
+  if (!all.length) {
+    return '<div class="empty">Empty, which is why the desk will not cite anything yet.<br>' +
+      'Ask Medical Affairs for the reference list and add the entries here — then every answer can cite them.</div>';
+  }
+  const hits = evidenceMatches();
+  if (!hits.length) {
+    return '<div class="empty">Nothing matches “' + esc(evFilter) + '”.<br>' +
+      'The desk searches the full library even when this list does not show a match.</div>';
+  }
+  const shown = hits.slice(0, EV_PAGE);
+  return shown.map(evidenceRowHtml).join("") +
+    (hits.length > shown.length
+      ? '<p style="font-size:12px;color:var(--ink-3);margin-top:12px">Showing ' + shown.length +
+        ' of ' + hits.length + '. Filter to narrow it down — the desk searches all ' +
+        all.length + ' references regardless of what is listed here.</p>'
+      : "");
+}
+
 function viewScience(){
   const open = Store.data.escalations;
   const lib = Store.data.evidence;
@@ -2216,30 +2325,14 @@ function viewScience(){
     '<div class="panel">' +
       '<div class="panel-head"><h2>Evidence library</h2>' +
         '<span class="hint">' + lib.length + (lib.length === 1 ? " reference" : " references") + '</span></div>' +
-      (lib.length
-        ? lib.map(r =>
-          '<div class="feeditem">' +
-            '<div class="badge ' + (r.verifiedBy ? "chip good" : "chip warn") + '">' +
-              (r.verifiedBy ? "OK" : "?") + '</div>' +
-            '<div class="body">' +
-              '<div class="t">' + esc(r.title || "untitled") + '</div>' +
-              '<p>' + esc([r.authors, r.journal, r.year].filter(Boolean).join(" · ")) +
-                (r.identifier ? " · " + esc(r.identifier) : "") + '</p>' +
-              (r.supports ? '<p style="margin-top:4px"><strong>Supports:</strong> ' + esc(r.supports) + '</p>' : "") +
-              '<div class="chiprow" style="margin-top:6px">' +
-                (r.studyType ? '<span class="chip">' + esc(r.studyType) + '</span>' : "") +
-                (r.product ? '<span class="chip us">' + esc(r.product) + '</span>' : "") +
-                (r.verifiedBy
-                  ? '<span class="chip good">verified · ' + esc(r.verifiedBy) + '</span>'
-                  : '<span class="chip warn">not verified by Medical Affairs</span>') +
-              '</div>' +
-              '<div class="meta">' + esc(r.rep || "unattributed") + ' · ' + esc(timeAgo(r.ts)) + '</div>' +
-            '</div>' +
-            '<button class="btn quiet" data-del="evidence|' + esc(r.id) + '" aria-label="Remove reference">' +
-              svg("trash") + '</button>' +
-          '</div>').join("")
-        : '<div class="empty">Empty, which is why the desk will not cite anything yet.<br>' +
-          'Ask Medical Affairs for the reference list and add the entries here — then every answer can cite them.</div>') +
+      (lib.length > 8
+        ? '<div style="position:relative;margin-bottom:14px">' +
+            '<span style="position:absolute;left:11px;top:11px;color:var(--ink-3)">' + svg("prices") + '</span>' +
+            '<input id="ev_filter" value="' + esc(evFilter) + '" style="padding-left:34px" ' +
+            'placeholder="Filter by product, author, design, claim…" aria-label="Filter the evidence library">' +
+          '</div>'
+        : "") +
+      '<div id="ev_list">' + evidenceListHtml() + '</div>' +
     '</div>' +
 
     '<div class="panel">' +
@@ -2494,9 +2587,14 @@ document.addEventListener("click", async e => {
 
 document.addEventListener("input", e => {
   const k = e.target.dataset?.deal;
-  if (!k) return;
-  deal[k] = e.target.value;
-  paintDeal();
+  if (k) { deal[k] = e.target.value; paintDeal(); return; }
+
+  /* Repaint only the list, so the caret stays in the filter box. */
+  if (e.target.id === "ev_filter") {
+    evFilter = e.target.value;
+    const host = document.getElementById("ev_list");
+    if (host) host.innerHTML = evidenceListHtml();
+  }
 });
 
 /* boot */
