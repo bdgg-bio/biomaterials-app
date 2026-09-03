@@ -1,0 +1,309 @@
+<title>Membrane Evidence Request</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#EDF2F2; --surface:#FFFFFF; --surface-2:#F6F9F9; --sunk:#E3EAEA;
+  --line:#D3DEDE; --line-soft:#E6EDED;
+  --ink:#0C1416; --ink-2:#33454A; --ink-3:#5E7276;
+  --teal:#0B7A85; --teal-deep:#075A63; --teal-wash:#DFEEEF; --teal-line:#B9D9DC;
+  --crit:#B4402A; --crit-wash:#FAE7E2;
+  --warn:#8C6416; --warn-wash:#F8F0DC;
+  --good:#2E6A50; --good-wash:#E2EFE8;
+  --f-disp:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#131C1F; --surface-2:#182326; --sunk:#0E1618;
+    --line:#263438; --line-soft:#1D2A2D;
+    --ink:#E8F0F0; --ink-2:#B4C4C6; --ink-3:#84999D;
+    --teal:#3AA5AF; --teal-deep:#7FD0D6; --teal-wash:#12292C; --teal-line:#245055;
+    --crit:#E08268; --crit-wash:#2C1913;
+    --warn:#D9AC5A; --warn-wash:#2A2211;
+    --good:#6FB894; --good-wash:#12251C;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#131C1F; --surface-2:#182326; --sunk:#0E1618;
+  --line:#263438; --line-soft:#1D2A2D;
+  --ink:#E8F0F0; --ink-2:#B4C4C6; --ink-3:#84999D;
+  --teal:#3AA5AF; --teal-deep:#7FD0D6; --teal-wash:#12292C; --teal-line:#245055;
+  --crit:#E08268; --crit-wash:#2C1913;
+  --warn:#D9AC5A; --warn-wash:#2A2211;
+  --good:#6FB894; --good-wash:#12251C;
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:15px; line-height:1.55; overflow-x:hidden;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-disp); font-weight:600; letter-spacing:-.015em;
+  text-wrap:balance; margin:0}
+p{margin:0}
+
+.doc{max-width:820px; margin:0 auto; padding:34px 20px 80px}
+header.top{border-bottom:2px solid var(--teal); padding-bottom:18px; margin-bottom:26px}
+.eyebrow{font-family:var(--f-mono); font-size:10.5px; font-weight:500; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--teal)}
+h1{font-size:clamp(24px,5.5vw,33px); margin:8px 0 10px}
+.standfirst{font-size:15.5px; color:var(--ink-2); max-width:62ch}
+.meta{font-family:var(--f-mono); font-size:11px; color:var(--ink-3); margin-top:14px}
+
+section{margin-top:34px}
+h2{font-size:18px; margin-bottom:6px}
+h2 + .sub{font-size:13.5px; color:var(--ink-3); margin-bottom:16px; max-width:62ch}
+
+.callout{display:flex; gap:12px; padding:14px 16px; border-radius:10px; font-size:13.5px;
+  line-height:1.55; background:var(--warn-wash); color:var(--warn);
+  border:1px solid color-mix(in srgb, var(--warn) 22%, transparent)}
+.callout.info{background:var(--teal-wash); color:var(--teal-deep); border-color:var(--teal-line)}
+.callout strong{font-weight:600}
+.callout .mark{font-family:var(--f-mono); font-weight:500; flex-shrink:0}
+
+.ask{background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:18px; margin-bottom:14px}
+.ask.p1{border-left:3px solid var(--crit)}
+.ask.p2{border-left:3px solid var(--warn)}
+.ask.p3{border-left:3px solid var(--ink-3)}
+.ask-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:4px}
+.ask-head h3{font-size:16px; flex:1 1 auto; min-width:12ch}
+.prod{font-family:var(--f-mono); font-size:11px; color:var(--teal); letter-spacing:.04em}
+.chip{display:inline-flex; align-items:center; font-size:11px; font-weight:500;
+  padding:3px 8px; border-radius:6px; background:var(--sunk); color:var(--ink-2);
+  white-space:nowrap}
+.chip.t1{background:var(--good-wash); color:var(--good)}
+.chip.t2{background:var(--warn-wash); color:var(--warn)}
+.chip.t3{background:var(--warn-wash); color:var(--warn)}
+.chip.t4{background:var(--crit-wash); color:var(--crit)}
+.chip.pri{background:var(--crit-wash); color:var(--crit)}
+
+.rows{display:grid; gap:0; margin-top:12px}
+.row{display:grid; grid-template-columns:132px 1fr; gap:14px; padding:9px 0;
+  border-top:1px solid var(--line-soft); font-size:13.5px}
+.row:first-child{border-top:none}
+.row dt{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--ink-3); padding-top:2px}
+.row dd{margin:0; color:var(--ink-2)}
+@media (max-width:560px){ .row{grid-template-columns:1fr; gap:3px} .row dt{padding-top:0} }
+
+ul.tight{margin:0; padding-left:18px; color:var(--ink-2); font-size:13.5px}
+ul.tight li + li{margin-top:5px}
+ol.steps{margin:0; padding-left:20px; color:var(--ink-2); font-size:13.5px}
+ol.steps li + li{margin-top:7px}
+
+.two{display:grid; gap:14px}
+@media (min-width:640px){ .two{grid-template-columns:1fr 1fr} }
+.card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px}
+.card h3{font-size:14px; margin-bottom:9px}
+.card.no h3{color:var(--crit)}
+.card.yes h3{color:var(--good)}
+
+footer{margin-top:44px; padding-top:20px; border-top:1px solid var(--line);
+  font-size:12px; color:var(--ink-3); line-height:1.6}
+@media print{
+  body{background:#fff}
+  .ask,.card{break-inside:avoid}
+}
+</style>
+
+<div class="doc">
+
+<header class="top">
+  <div class="eyebrow">Request to Medical Affairs</div>
+  <h1>Membrane evidence request</h1>
+  <p class="standfirst">The CI Desk evidence library currently holds <strong>no references at all</strong> for
+  Jason membrane, collprotect, permamem or the NOVAMag membrane. Its science desk is built to refuse to
+  cite what it does not have, so today it answers every membrane question with "I have no reference for
+  that". This is the list that fixes it, ordered by what the field needs first.</p>
+  <p class="meta">botiss CI Desk · evidence library gap analysis · 42 literature entries loaded, 0 on membranes</p>
+</header>
+
+<div class="callout info">
+  <span class="mark">Why</span>
+  <div>The grafting range is now covered: 42 approved references across cerabone, cerabone plus,
+  maxgraft and maxresorb, extracted from the training decks. The membrane range has nothing, because
+  the membrane decks were not in that set. Everything below is a request for <strong>published
+  references</strong> — a reprint, a citation list or a DOI is enough. We do not need the brochures.</div>
+</div>
+
+<section>
+  <h2>Priority 1 — claims the field is already exposed on</h2>
+  <p class="sub">These are the questions a periodontist asks in the room. Without a reference, a rep
+  either says nothing or improvises, and improvising is what we are trying to stop.</p>
+
+  <div class="ask p1">
+    <div class="ask-head">
+      <h3>Barrier duration, with the method used to measure it</h3>
+      <span class="chip t2">Tier 2</span><span class="chip pri">P1</span>
+    </div>
+    <div class="prod">Jason membrane · collprotect</div>
+    <dl class="rows">
+      <div class="row"><dt>The claim</dt><dd>"Jason gives a long barrier function; collprotect integrates faster." The indication split between the two rests entirely on this.</dd></div>
+      <div class="row"><dt>What we need</dt><dd>The barrier-duration figure for each membrane <em>and how it was determined</em> — histological degradation in vivo, in vitro enzymatic assay, or clinical observation. The number alone is not usable; a reviewer will ask the method immediately.</dd></div>
+      <div class="row"><dt>Why it is urgent</dt><dd>This is the most common membrane overclaim in the industry ("longer is better"). We want reps armed with the trade-off rather than the slogan.</dd></div>
+    </dl>
+  </div>
+
+  <div class="ask p1">
+    <div class="ask-head">
+      <h3>Exposure and complication rates for each membrane</h3>
+      <span class="chip t3">Tier 3</span><span class="chip pri">P1</span>
+    </div>
+    <div class="prod">Jason membrane · collprotect · permamem</div>
+    <dl class="rows">
+      <div class="row"><dt>The claim</dt><dd>None yet — and that is the problem. Exposure is the practical driver of GBR failure, so it is the first thing a surgeon raises.</dd></div>
+      <div class="row"><dt>What we need</dt><dd>Any study reporting membrane exposure, dehiscence or complication rate for our membranes, with the number of cases and the follow-up. Studies with a comparator are far more valuable, but uncontrolled rates are still worth having.</dd></div>
+      <div class="row"><dt>Note</dt><dd>We will <strong>not</strong> turn this into a lower-exposure-than-competitor claim. Technique dominates the outcome and that would be tier 4. We want it so reps can answer the question honestly.</dd></div>
+    </dl>
+  </div>
+
+  <div class="ask p1">
+    <div class="ask-head">
+      <h3>All NOVAMag membrane clinical data, with follow-up durations</h3>
+      <span class="chip t3">Tier 3</span><span class="chip pri">P1</span>
+    </div>
+    <div class="prod">NOVAMag membrane</div>
+    <dl class="rows">
+      <div class="row"><dt>The claim</dt><dd>"It resorbs, so no removal surgery." The mechanism is safe; everything past it is not.</dd></div>
+      <div class="row"><dt>What we need</dt><dd>Every clinical publication, each with its patient number and follow-up. Separately: the degradation timeline, and how gas formation is characterised and managed.</dd></div>
+      <div class="row"><dt>Why it is urgent</dt><dd>Highest overclaim risk in the portfolio: a young evidence base meeting the most enthusiastic audience. The surgeons most interested in magnesium are the ones who will read the papers. Currently the library holds one in-vitro-plus-two-patient report, and it addresses compatibility with our grafts, not efficacy.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <h2>Priority 2 — the range's own logic</h2>
+  <p class="sub">Evidence that lets us explain why the range has four membranes instead of one.</p>
+
+  <div class="ask p2">
+    <div class="ask-head">
+      <h3>Clinical publications on Jason membrane, sorted by design</h3>
+      <span class="chip t3">Tier 3</span><span class="chip">P2</span>
+    </div>
+    <div class="prod">Jason membrane</div>
+    <dl class="rows">
+      <div class="row"><dt>What we need</dt><dd>The complete publication list, grouped by design: systematic reviews, RCTs, cohorts, case series, preclinical. Plus, honestly, a map of where the gaps sit against Bio-Gide.</dd></div>
+      <div class="row"><dt>Why</dt><dd>Reps need to know what we can and cannot match. Claiming a comparable evidence base to Bio-Gide when we cannot loses the room permanently.</dd></div>
+    </dl>
+  </div>
+
+  <div class="ask p2">
+    <div class="ask-head">
+      <h3>Clinical evidence for collprotect, and anything comparing it with Jason</h3>
+      <span class="chip t3">Tier 3</span><span class="chip">P2</span>
+    </div>
+    <div class="prod">collprotect</div>
+    <dl class="rows">
+      <div class="row"><dt>What we need</dt><dd>Publications on collprotect specifically, and any study putting the two side by side.</dd></div>
+      <div class="row"><dt>Why</dt><dd>The two are sold as an indication-matched pair. Without evidence for the split, reps default to treating them as interchangeable, which wastes the distinction we built the range on.</dd></div>
+    </dl>
+  </div>
+
+  <div class="ask p2">
+    <div class="ask-head">
+      <h3>Validated exposed-healing protocols for permamem</h3>
+      <span class="chip t1">Tier 1 / 3</span><span class="chip">P2</span>
+    </div>
+    <div class="prod">permamem</div>
+    <dl class="rows">
+      <div class="row"><dt>What we need</dt><dd>Which open-healing protocols permamem is validated for, the recommended in-situ duration, and the evidence behind removal timing. Part of this is IFU and technical file rather than literature — both are useful.</dd></div>
+      <div class="row"><dt>Why</dt><dd>Intentional exposure is the reason to choose dPTFE at all. Reps need the protocol boundaries, not a general statement that dense PTFE tolerates exposure.</dd></div>
+    </dl>
+  </div>
+
+  <div class="ask p2">
+    <div class="ask-head">
+      <h3>Cross-linking position</h3>
+      <span class="chip t2">Tier 2</span><span class="chip">P2</span>
+    </div>
+    <div class="prod">Jason membrane · collprotect</div>
+    <dl class="rows">
+      <div class="row"><dt>What we need</dt><dd>Our scientific position on native versus chemically cross-linked collagen, with the references behind it.</dd></div>
+      <div class="row"><dt>Why</dt><dd>Both our collagen membranes are native. That is a real differentiator against cross-linked competitors — but only if a rep can explain the trade-off rather than assert it.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <h2>Priority 3 — useful, not blocking</h2>
+
+  <div class="ask p3">
+    <div class="ask-head">
+      <h3>Head-to-head studies against Bio-Gide or Cytoplast</h3>
+      <span class="chip t4">Tier 4</span><span class="chip">P3</span>
+    </div>
+    <div class="prod">any membrane</div>
+    <dl class="rows">
+      <div class="row"><dt>What we need</dt><dd>Any direct comparison, with the endpoint and the comparator's exact product name.</dd></div>
+      <div class="row"><dt>Handling</dt><dd>Tier 4, so nothing here becomes a spoken superiority claim without regulatory sign-off. We want it recorded so the desk can tell a rep what does and does not exist, instead of leaving them to guess.</dd></div>
+    </dl>
+  </div>
+
+  <div class="ask p3">
+    <div class="ask-head">
+      <h3>Membrane plus graft combination data</h3>
+      <span class="chip t3">Tier 3</span><span class="chip">P3</span>
+    </div>
+    <div class="prod">Jason + cerabone · permamem + cerabone plus · NOVAMag + cerabone plus</div>
+    <dl class="rows">
+      <div class="row"><dt>What we need</dt><dd>Studies on the combinations the field actually uses, since almost every case pairs a membrane with a graft.</dd></div>
+      <div class="row"><dt>Note</dt><dd>The library already holds the NOVAMag plus cerabone plus compatibility report. A combination study supports a claim about the <em>combination</em>, never about either component alone — the desk enforces this, so combination papers do not fill single-product gaps.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <h2>What helps, and what does not</h2>
+  <div class="two">
+    <div class="card yes">
+      <h3>Send</h3>
+      <ul class="tight">
+        <li>PDFs of published papers, in any quantity — there is a pipeline for bulk import</li>
+        <li>A plain citation list, or just DOIs</li>
+        <li>IFU and technical-file extracts for dimensions, durations and handling</li>
+        <li>Validation reports, clearly labelled as such</li>
+        <li>An honest note where evidence does not exist yet</li>
+      </ul>
+    </div>
+    <div class="card no">
+      <h3>Do not bother sending</h3>
+      <ul class="tight">
+        <li>Brochures and sales decks — useful for tier 1 facts, but they are not citable evidence and we already have the grafting set</li>
+        <li>Case documentation already in the decks: 29 documented cases are loaded, at the lowest tier</li>
+        <li>Any figure without its endpoint, sample size and follow-up — it cannot be scoped, so it cannot be used</li>
+        <li>Claims text without the underlying reference</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How each reference gets recorded</h2>
+  <p class="sub">So you know what happens to what you send, and why the scope statement matters more than the citation.</p>
+  <ol class="steps">
+    <li><strong>Bibliographic fields</strong> — title, authors, journal, year, DOI or PMID — are extracted mechanically and checked against the page.</li>
+    <li><strong>Study design</strong> and <strong>which product was actually studied</strong> are recorded separately. This second field matters most: most classic xenograft literature was generated on Bio-Oss, and the two get conflated constantly.</li>
+    <li><strong>What the reference licenses</strong> is written by hand, stated narrowly. If the endpoint was radiographic ridge width at six months, that is what it says — not "volume stability".</li>
+    <li><strong>Who verified it</strong> is recorded. Until someone confirms the paper says what it is cited for, the desk flags it on every citation.</li>
+  </ol>
+</section>
+
+<div class="callout" style="margin-top:30px">
+  <span class="mark">Note</span>
+  <div><strong>Nothing in the library was generated.</strong> Every reference came from a citation
+  printed in an approved botiss deck. Where a source is not clinical evidence it is labelled — the
+  156-clinician handling survey, the Eurofins validation report, the trade-journal figures, the deck
+  case documentation. Approval makes a citation usable; it does not change what the source is.</div>
+</div>
+
+<footer>
+  Generated from the botiss CI Desk evidence library. Claim tiers: 1 portfolio fact · 2 mechanism or
+  preclinical · 3 clinical outcome for our product · 4 comparison with a named competitor.
+  Tier 3 needs a library reference and sign-off; tier 4 should be assumed unsayable until regulatory
+  clears it. This document is an internal evidence request, not a claims approval, and not clinical
+  or regulatory advice.
+</footer>
+
+</div>

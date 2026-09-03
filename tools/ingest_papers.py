@@ -123,6 +123,39 @@ DESIGNS = [
      r"\b(narrative review|consensus (report|statement|conference)|expert opinion|this review)\b"),
 ]
 
+# Indications and endpoints worth surfacing on the entry, because they are
+# what a rep or the science desk actually searches by. Membrane vocabulary is
+# included deliberately: barrier and exposure endpoints are what membrane
+# papers are about, and they do not appear in the design keywords above.
+TOPICS = [
+    ("sinus floor elevation", r"\bsinus (floor )?(elevation|lift|augmentation|grafting)\b|\bschneiderian\b"),
+    ("ridge preservation / socket", r"\b(socket|alveolar ridge) preservation\b|\bridge preservation\b|\bextraction socket\b"),
+    ("ridge augmentation", r"\b(ridge|alveolar) augmentation\b|\bhorizontal augmentation\b|\bvertical augmentation\b"),
+    ("guided bone regeneration", r"\bguided bone regeneration\b|\bgbr\b"),
+    ("guided tissue regeneration", r"\bguided tissue regeneration\b|\bgtr\b"),
+    ("peri-implantitis", r"\bperi-?implantitis\b|\bperi-?implant (bone )?defect\b"),
+    ("periodontal defect", r"\b(intrabony|infrabony|intraosseous) defect\b|\bperiodontal regeneration\b"),
+    ("immediate implant placement", r"\bimmediate (implant )?placement\b|\bimmediate implantation\b|\bjumping gap\b"),
+    ("soft tissue augmentation", r"\bsoft tissue (augmentation|thickening|graft)\b|\bkeratini[sz]ed (tissue|mucosa)\b|"
+                                 r"\bconnective tissue graft\b|\brecession coverage\b"),
+    ("implant survival", r"\bimplant (survival|success) rate\b|\bsurvival of implants\b"),
+    ("barrier function / membrane degradation",
+     r"\bbarrier (function|membrane|effect)\b|\bmembrane degradation\b|\bresorption time\b|"
+     r"\bcross-?link(ed|ing)\b|\bdegradation (rate|behaviou?r|time)\b|\bstanding time\b"),
+    ("membrane exposure / dehiscence",
+     r"\b(membrane|soft tissue|wound) (exposure|dehiscence)\b|\bpremature exposure\b|"
+     r"\bwound (dehiscence|breakdown)\b|\bflap dehiscence\b"),
+    ("volume / dimensional stability",
+     r"\b(volumetric|dimensional|volume) (stability|change|loss|shrinkage)\b|\bgraft resorption\b|"
+     r"\bridge width change\b|\bhorizontal bone loss\b"),
+    ("new bone formation / histomorphometry",
+     r"\b(new(ly)? formed bone|new bone formation|bone-?to-?implant contact|residual graft)\b|"
+     r"\bpercentage of (new )?bone\b"),
+    ("vascularisation / angiogenesis", r"\b(vasculari[sz]ation|angiogenesis|neovasculari[sz]ation|blood vessel formation)\b"),
+    ("patient-reported outcomes / morbidity",
+     r"\b(patient-?reported|morbidity|donor site|post-?operative pain|quality of life|\bvas\b)\b"),
+]
+
 DOI_RE = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Za-z0-9]+", re.I)
 PMID_RE = re.compile(r"PMID:?\s*(\d{6,8})", re.I)
 YEAR_RE = re.compile(r"\b(19[89]\d|20[0-4]\d)\b")
@@ -237,6 +270,13 @@ def guess_designs(full):
     return hits
 
 
+def guess_topics(full):
+    """Indications and endpoints, so the library is searchable the way a rep
+    asks: by procedure and by what was measured."""
+    low = clean(full).lower()
+    return [name for name, pat in TOPICS if re.search(pat, low, re.I)]
+
+
 def find_products(full):
     """Whole-word matching only, so 'maxgraft' does not match inside a
     longer token and ordinary words are not read as brands."""
@@ -299,6 +339,7 @@ def build_entry(path, existing_dois, existing_titles):
 
     ident = " · ".join(x for x in (("doi:" + doi) if doi else "", pmid) if x)
     designs = guess_designs(full)
+    topics = guess_topics(full)
     ours, theirs = find_products(full)
     quote = find_quote(full)
     year = guess_year(front, full)
@@ -327,6 +368,7 @@ def build_entry(path, existing_dois, existing_titles):
         "sourceFile": path.name,
         "pages": pages,
         "designsDetected": designs,
+        "topics": topics,
         "competitorsNamed": theirs,
     }
 
@@ -409,10 +451,12 @@ def main():
             "file_path": str((out / "entries" / (eid + ".json")).resolve()),
         } for eid, _ in chunk], indent=1))
 
-    by_design, by_product = {}, {}
+    by_design, by_product, by_topic = {}, {}, {}
     for _, e in entries:
         by_design[e["studyType"]] = by_design.get(e["studyType"], 0) + 1
         by_product[e["product"]] = by_product.get(e["product"], 0) + 1
+        for t in e.get("topics", []):
+            by_topic[t] = by_topic.get(t, 0) + 1
 
     lines = ["# Paper ingestion report", "",
              "PDFs found: **%d**  ·  entries built: **%d**  ·  unreadable: **%d**  ·  needing review: **%d**"
@@ -425,6 +469,11 @@ def main():
         lines.append("- %s — **%d**" % (k, v))
     lines += ["", "## By botiss product named", ""]
     for k, v in sorted(by_product.items(), key=lambda kv: -kv[1]):
+        lines.append("- %s — **%d**" % (k, v))
+    lines += ["", "## By indication and endpoint", "",
+              "Use this to see where the library is thin. A product with no papers under",
+              "an indication is a claim the science desk will refuse to support.", ""]
+    for k, v in sorted(by_topic.items(), key=lambda kv: -kv[1]):
         lines.append("- %s — **%d**" % (k, v))
     lines += ["", "## Batches to write", ""]
     for p in sorted((out / "batches").glob("*.json")):
