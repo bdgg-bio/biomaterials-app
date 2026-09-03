@@ -80,26 +80,39 @@ organisation, build a standalone file:
 node tools/build-preview.js     # -> dist/botiss-CI-Desk-preview.html
 ```
 
-That is one self-contained file (~117 KB). It opens by double-click or
-straight from an email attachment, on desktop or phone, with no install and
-no login. It is generated from `index.html` plus
-`tools/preview-overrides.js`, so it cannot drift from the real app.
+That is one self-contained file (~80 KB) containing **no JavaScript at
+all** — verified at build time, which fails the build if a `<script>` tag
+ever appears in the output.
+
+**Why no JavaScript.** A forwarded `.html` file is usually opened in a
+preview surface rather than a full browser. iOS Mail and the Files app
+render `.html` attachments in Quick Look, which draws HTML and CSS but
+never runs scripts. The app paints every pixel from JS, so in those viewers
+it showed a blank page. The preview therefore pre-renders everything to
+flat markup: one scrolling document, anchor-link navigation, `<details>`
+for the battlecards, and inline SVG for the charts.
+
+It is built by loading the real `index.html` in headless Chromium and
+calling the app's own view functions and `KB`, so the preview cannot drift
+from the app. Building requires Playwright.
 
 What the preview changes, and says on screen that it changes:
 
-- A banner on every tab stating it is a review copy where nothing is saved.
-- The tables carry **example** intel, each row labelled `EXAMPLE ROW`.
-- The Ask tab shows a hand-written worked exchange, explicitly labelled as
-  an illustration rather than a recorded answer, because a static file
-  cannot reach Claude. Asking is disabled rather than faked.
-- A **Feedback** tab: reviewers type notes and either copy them or open a
-  pre-filled mail draft (with no recipient, so they choose).
-- CSV export uses an ordinary browser download instead of the `downloads`
-  capability.
+- A banner stating it is a review copy where nothing is saved, and that two
+  things are simulated.
+- All intel is **example data**, marked with an `example data` label on
+  every table and list that carries it.
+- The agent section shows a hand-written worked exchange, explicitly
+  labelled as an illustration rather than a recorded answer.
+- The deal calculator shows its worked figures plus the four assumptions as
+  a static list, noting that the live version recalculates as you type.
+- A **Feedback** section listing what to comment on, asking reviewers to
+  reply to the email they got it in.
 
 Fonts come from Google Fonts over the network. Online, colleagues get
-Archivo and IBM Plex; offline or behind a blocking proxy the page falls
-back to system faces and still holds together.
+Archivo and IBM Plex; offline, behind a blocking proxy, or in a previewer
+that does not fetch remote CSS, it falls back to system faces and still
+holds together.
 
 ## Design notes
 
