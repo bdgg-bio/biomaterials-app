@@ -71,6 +71,36 @@ The knowledge base is the `KB` object near the top of the script. The UI renders
 from it and the agent is briefed from it, so editing one place updates both and
 they cannot drift apart.
 
+## Forwarding a preview to colleagues
+
+For review by people who have no Claude account and are not in the
+organisation, build a standalone file:
+
+```
+node tools/build-preview.js     # -> dist/botiss-CI-Desk-preview.html
+```
+
+That is one self-contained file (~117 KB). It opens by double-click or
+straight from an email attachment, on desktop or phone, with no install and
+no login. It is generated from `index.html` plus
+`tools/preview-overrides.js`, so it cannot drift from the real app.
+
+What the preview changes, and says on screen that it changes:
+
+- A banner on every tab stating it is a review copy where nothing is saved.
+- The tables carry **example** intel, each row labelled `EXAMPLE ROW`.
+- The Ask tab shows a hand-written worked exchange, explicitly labelled as
+  an illustration rather than a recorded answer, because a static file
+  cannot reach Claude. Asking is disabled rather than faked.
+- A **Feedback** tab: reviewers type notes and either copy them or open a
+  pre-filled mail draft (with no recipient, so they choose).
+- CSV export uses an ordinary browser download instead of the `downloads`
+  capability.
+
+Fonts come from Google Fonts over the network. Online, colleagues get
+Archivo and IBM Plex; offline or behind a blocking proxy the page falls
+back to system faces and still holds together.
+
 ## Design notes
 
 - Chart colours were validated for colour-vision deficiency separation in both
