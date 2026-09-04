@@ -41,6 +41,8 @@ PRODUCTS = {
     "lit_collacone": "collacone / collafleece (collagen cone and fleece)",
     "lit_ceraboneplus": "cerabone plus (bovine bone with hyaluronate)",
     "lit_maxresorb": "maxresorb / maxresorb inject (biphasic CaP)",
+    "lit_cerabone": "cerabone (sintered bovine bone)",
+    "lit_maxgraft": "maxgraft (processed human allograft)",
 }
 
 SECTION_RE = re.compile(
@@ -50,6 +52,21 @@ PAGEREF_RE = re.compile(r"\(p\.\s*\d+", re.I)
 HEADER_RE = re.compile(r"^\s*Most Relevant Publications", re.I)
 ENTRY_RE = re.compile(r"^\s*(\d{1,3})\.\s+(?=\S)")
 URL_RE = re.compile(r"https?://\S+")
+# The maxgraft list stamps its folio with the revision date — "2  Last update:
+# 04/2024" — so it is not a bare number and needs matching as a header.
+FOLIO_RE = re.compile(r"^\s*\d{1,4}\s+Last update:", re.I)
+# ...and it is the only list divided by product variant. Which maxgraft a
+# reference was run on is the single most load-bearing field in the record,
+# so keep the sub-heading rather than letting it fall into the body text.
+SUBSECTION_RE = re.compile(
+    r"^\s*(?:I{1,3}|IV|VI{0,3}|IX|XI{0,3})\.\s+([A-Za-z][^.]{2,60}?)\s*$")
+# Table-of-contents furniture. Two lists write it with a trailing page
+# reference — "1. Pre-clinical ... (p. 2 – 30)" — and two with dot leaders.
+# Either way it is a numbered line that reads exactly like an entry, and the
+# only reason it has not been showing up as one is that its block happened to
+# fall under the length filter. Skip it on purpose instead.
+TOC_LEADER_RE = re.compile(r"\.\s?\.\s?\.\s?\.")
+SECTION_LOOSE_RE = re.compile(r"^\s*\d+\.\s*(?:Pre-?clinical|Clinical studies)", re.I)
 
 # Where the author list begins. The title runs up to this point, and the
 # citation from it. Author lists in these lists take three shapes:
@@ -164,24 +181,42 @@ def split_entries(text):
     discriminator below.
     """
     lines = strip_page_footers(text.split("\n"))
-    section, buf, num, expected = "", [], None, 1
+    section, variant, buf, num, expected = "", "", [], None, 1
     out = []
 
     def flush():
         if buf and num is not None:
-            out.append((section, "\n".join(buf)))
+            out.append((section, variant, "\n".join(buf)))
 
     for raw in lines:
         line = raw.rstrip()
-        if HEADER_RE.match(line):
+        if HEADER_RE.match(line) or FOLIO_RE.match(line):
             continue
         m = SECTION_RE.match(line)
         if m and not PAGEREF_RE.search(line):
             flush()
             buf.clear()
             num, expected = None, 1
+            variant = ""
             section = ("Pre-clinical" if re.match(r"pre-?clinical", m.group(1), re.I)
                        else "Clinical")
+            continue
+        if TOC_LEADER_RE.search(line) or (
+                SECTION_LOOSE_RE.match(line) and PAGEREF_RE.search(line)):
+            continue
+        sm = SUBSECTION_RE.match(line)
+        if sm and "...." not in line:
+            # A variant sub-heading. It splits the section but not the entry
+            # numbering, which runs on across the whole list.
+            flush()
+            buf.clear()
+            # Drop the ® — the hand-curated records write "maxgraft cortico"
+            # plain, and the agent's per-product index counts by this string,
+            # so keeping the symbol would split one product into two tallies
+            # and understate both.
+            variant = re.sub(r"\s+", " ", clean(sm.group(1))
+                             .replace("®", "").replace("™", "")).strip()
+            num = None
             continue
         em = ENTRY_RE.match(line)
         if em and not SECTION_RE.match(line):
@@ -358,10 +393,17 @@ def main():
         text = f.read_text(encoding="utf-8")
         blocks = split_entries(text)
         kept = 0
-        for section, block in blocks:
+        for section, variant, block in blocks:
             if len(clean(block)) < 120:
                 continue
-            entry, flags = parse_entry(section or "Unclassified", block, product)
+            # A variant sub-heading names the product more precisely than the
+            # list does, so prefer it: "maxgraft cortico" is not interchangeable
+            # with "maxgraft bonering".
+            base = product.split()[0].lower()
+            paren = re.search(r"\(.*\)", product)
+            named = (variant + (" " + paren.group(0) if paren else "")
+                     if variant.lower().startswith(base) else product)
+            entry, flags = parse_entry(section or "Unclassified", block, named)
             if len(entry["title"]) < 12:
                 review.append({"product": product, "id": None,
                                "issues": ["discarded: no usable title"],

@@ -296,6 +296,862 @@
   "verifiedBy": "botiss Medical Affairs (approved deck content)"
  },
  {
+  "id": "cbn001",
+  "title": "In vitro comparison of the osteogenic capability of human pulp stem cells on alloplastic, allogeneic, and xenogeneic bone scaffolds",
+  "identifier": "doi:10.1186/s12903-023-02726-4 · PMID:36721114",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn002",
+  "title": "Cellular Behaviors of Periodontal Ligament Stem Cells in the Presence of Bone",
+  "identifier": "doi:10.3390/life13010089 · PMID:36676038",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn003",
+  "title": "Influence of loading and grafting on hard-and soft-tissue healing at immediately placed implants: An experimental study in minipigs",
+  "identifier": "doi:10.1111/jcpe.13734 · PMID:36217692",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn004",
+  "title": "Different responses of heterogeneous graft presentations in bone reconstructions during sinus lift elevation surgery: an immunolabeling and histomorphometric study performed in rabbits. de",
+  "identifier": "doi:10.21037/fomm-21-45",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn005",
+  "title": "LED photobiomodulation therapy combined with biomaterial as a scaffold promotes better bone quality in the dental alveolus in an experimental extraction model",
+  "identifier": "doi:10.1007/s10103-021-03407-w · PMID:34767116",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn006",
+  "title": "Histological and histomorphometrical evaluation of two types of bone substitutes in combination with i -PRF for bone regeneration in critical bone defects: An in vivo study Ribeiro de",
+  "identifier": "doi:10.23805/JO.2022.14.33",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn007",
+  "title": "Hyaluronic Acid with Bone Substitutes Enhance Angiogenesis In Vivo",
+  "identifier": "doi:10.3390/ma15113839",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Preclinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn008",
+  "title": "A novel pilot animal model for bone augmentation using osseous shell technique for preclinical in vivo studies",
+  "identifier": "doi:10.1002/cre2.644",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn009",
+  "title": "Structural and chemical features of xenograft bone substitutes: A systematic review of in vitro studies",
+  "identifier": "doi:10.1002/bab.2065 · PMID:33135215",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Systematic review or meta-analysis",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn010",
+  "title": "Scaffold-Type Structure Dental Ceramics with Different Compositions Evaluated through Physicochemical Characteristics and Biosecurity Profiles",
+  "identifier": "doi:10.3390/ma14092266 · PMID:33925656",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn011",
+  "title": "Physicochemical Properties of Torus Mandibularis and Palatinus Indicate a Source of Autogenous Bone Graft Martin",
+  "identifier": "doi:10.2174/1874210602115010357",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Material characterisation",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn012",
+  "title": "Sinus Muco sa Thinning and Perforations after Sinus Lifting Performed with Different Xenografts: A Histological Analysis in Rabbits",
+  "identifier": "doi:10.3390/dj10010002 · PMID:35049600",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn013",
+  "title": "Critical-size Defect Augmentation Using Sintered and Non-Sintered Bovine Bone Matrix - An Experimental Controlled Study in Minipigs",
+  "identifier": "doi:10.1016/j.joms.2021.03.025 · PMID:34051155",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn014",
+  "title": "Cytocompatibility of Bone Substitute Materials and Membranes",
+  "identifier": "doi:10.21873/invivo.12472 · PMID:34182478",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn015",
+  "title": "Osseointegration of different implant surfaces in areas grafted with deproteinized bovine bone associated or not with fresh bone marrow-Preclinical study in rabbits",
+  "identifier": "doi:10.1111/clr.13746 · PMID:33749041",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn016",
+  "title": "Effects of Different Bone Substitutes on Reactive Oxygen Species Release in Leukocytes in Vitro: A Pilot Study",
+  "identifier": "doi:10.11607/jomi.8592 · PMID:34115064",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn017",
+  "title": "In Vivo Analysis of the Biocompatibility and Bone Healing Capacity of a Novel Bone Grafting Material Combined with Hyaluronic Acid",
+  "identifier": "doi:10.3390/ijms22094818 · PMID:34062885",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn018",
+  "title": "The Influence of Hyaluronic Acid Biofunctionalization of a Bovine Bone Substitute on Osteoblast Activity In Vitro",
+  "identifier": "doi:10.3390/ma14112885 · PMID:34072146",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn019",
+  "title": "Microtomographic reconstruction of mandibular defects treated with xenografts and collagen-based membranes: A pre-clinical minipig model",
+  "identifier": "doi:10.4317/medoral.24811 · PMID:34564687",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn020",
+  "title": "Evaluation of air polishing with a sterile powder and mecha nical debridement during regenerative surgical periimplantitis treatment: a study in dogs",
+  "identifier": "doi:10.1007/s00784-020-03572-2 · PMID:32914269",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn021",
+  "title": "Possible Implications for Improved Osteogenesis? The Combination of Platelet- Rich Fibrin With Different Bone Substitute Materials",
+  "identifier": "doi:10.3389/fbioe.2021.640053 · PMID:33816452",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn022",
+  "title": "Activation of Human Osteoblasts via Different Bovine Bone Substitute Materials With and Without Injectable Platelet Rich Fibrin in vitro",
+  "identifier": "doi:10.3389/fbioe.2021.599224 · PMID:33681155",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn023",
+  "title": "A Novel Xenograft Bone Substitute Supports Stable Bone Formation in Circumferential Defects Around Dental Implants in Minipigs",
+  "identifier": "doi:10.11607/jomi.8265 · PMID:33270052",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn024",
+  "title": "The Impact of Compaction Force on Graft Consolidation in a Guided Bone Regeneration Model",
+  "identifier": "doi:10.11607/jomi.8082",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn025",
+  "title": "Albumin-impregnated bo ne granules modulate the interactions between mesenchymal stem cells and monocytes under in vitro inflammatory conditions",
+  "identifier": "doi:10.1016/j.msec.2020.110678 · PMID:32204105",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn026",
+  "title": "Bone regeneration in rabbit calvarial defects using PRGF and adipose -derived stem cells: histomorphometrical analysis",
+  "identifier": "doi:10.2217/rme-2019-0123 · PMID:32452715",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn027",
+  "title": "The Influence of Local Pamidronate Application on Alveolar Dimensional Preservation after Tooth Extraction—An Animal Experimental Study*",
+  "identifier": "doi:10.3390/ijms21103616",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn028",
+  "title": "Evaluation of efficacy of platelet-rich fibrin membrane and bone graft in coverage of immediate dental implant in esthetic zone: An in vivo study",
+  "identifier": "doi:10.4103/njms.NJMS_26_19 · PMID:33041580",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn029",
+  "title": "CSBD Healing in Rats after Application of Bovine Xenogeneic Biomaterial Enriched with Magnesium Alloy Jerbić Radetić AT, Zoričić",
+  "identifier": "doi:10.3390/ijms22169089 · PMID:34445794",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn030",
+  "title": "Does Platelet-Rich Fibrin Enhance the Early Angiogenetic Potential of Different Bone Substitute Materials? An In Vitro and In Vivo Analysis",
+  "identifier": "doi:10.3390/biomedicines9010061 · PMID:33435244",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn031",
+  "title": "Enamel matrix derivative in liquid form as adjunct to natural bovine bone grafting at buccal bone dehiscence defects at implant sites: An experimental study in beagle dogs",
+  "identifier": "doi:10.1111/clr.13512 · PMID:31319440",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn032",
+  "title": "Raman Spectroscopy: Application in Periodontal and Oral Regenerative Surgery for Bone",
+  "identifier": "doi:10.1016/j.irbm.2019.05.002",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Preclinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn033",
+  "title": "Osseointegration of Superhydrophilic Implants Placed in Defect Grafted Bones. El",
+  "identifier": "doi:10.11607/jomi.7172 · PMID:30703182",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn034",
+  "title": "Comparison of the effect of hemihydrate calcium sulfate granules and Cerabone on dental socket preservation: An animal experiment",
+  "identifier": "doi:10.15171/joddd.2018.037 · PMID:30774788",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn035",
+  "title": "Comparison of three different types of scaffolds preseeded with human bone marrow mononuclear cells on the bone healing in a femoral critical size defect model of the athymic rat",
+  "identifier": "doi:10.1002/term.2484 · PMID:28548246",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn036",
+  "title": "High-temperature sintering of xenogeneic bone substitutes leads to increased multinucleated giant cell formation: In vivo and preliminary clinical results.*",
+  "identifier": "doi:10.1563/aaid-joi-D-14-00168 · PMID:25105868",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn037",
+  "title": "Bone substitute material composition and morphology differentially modulate calcium and phosphate release through osteoclast-like cells",
+  "identifier": "doi:10.1016/j.ijom.2013.10.017 · PMID:24268900",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Material characterisation",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn038",
+  "title": "Biocompatibility and biodegradation of a native porcine pericardium membrane: results of in vitro and in vivo examinations",
+  "identifier": "PMID:22299091",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn039",
+  "title": "Effect of Guided Tissue Regeneration on Newly Formed Bone and Cementum in Periapical Tissue Healing after Endodontic Surgery: An In Vivo Study in the Cat",
+  "identifier": "doi:10.1016/j.joen.2011.10.002 · PMID:22244630",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn040",
+  "title": "Impact of Citric Acid Etching on Biocompatibility and Osseous Organisation of a Natural Bovine Bone Mineral: Preliminary Results of an In-Vitro/In-Vivo Study",
+  "identifier": "doi:10.1007/978-3-642-03891-4_69",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn041",
+  "title": "Comparison of different methods for the preparation of porous bone substitution materials and structural investigations by synchrotron μ-computer tomography",
+  "identifier": "doi:10.1002/mawe.200400730/abstract",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Preclinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn042",
+  "title": "A thorough physicochemical characterisation of 14 calcium phosphate-based bone substitution materials in comparison to natural bone",
+  "identifier": "doi:10.1016/s0142-9612(03)00621-5 · PMID:14615163",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Material characterisation",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn043",
+  "title": "Bone ingrowth in bFGF-coated hydroxyapatite ceramic implants",
+  "identifier": "doi:10.1016/s0142-9612(03)00354-5 · PMID:12951003",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn044",
+  "title": "Reconstructive Peri-Implantitis Therapy by Using Bovine Bone Substitute with or without Hyaluronic Acid: A Randomized Clinical Controlled Pilot Study Rakašević D, Šćepanović M, Mijailović I, Mišić T, Janjić B, Soldatović I, Marković A. J Funct Biomater",
+  "identifier": "doi:10.3390/jfb14030149",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn045",
+  "title": "Nasal Floor Elevation—An Option of Premaxilla Augmentation: A Case Report",
+  "identifier": "https://botiss.com/product/nasal-floor-elevation-an-option-of-premaxilla-augmentation-a-case-",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn046",
+  "title": "Comparison of Allogeneic Bone Plate and Guided Bone Regeneration Efficiency in Horizontally Deficient Maxillary Alveolar",
+  "identifier": "doi:10.3390/app122010518",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn047",
+  "title": "Dental Implant Placement in Focal Osteoporotic Bone Marrow Defect: a Case Report and Treatment Recommendations",
+  "identifier": "doi:10.5037/jomr.2022.13305",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn048",
+  "title": "Clinical and Radi ologic Evaluation of a Fully Tapered Implant with Immediate Placement in the Esthetic Zone: A Prospective Case Series Study",
+  "identifier": "doi:10.11607/prd.5682 · PMID:36044694",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn049",
+  "title": "Immediate Functional Loading with Full -Arch Fixed Implant -Retained Rehabilitation in Periodontal Patients: Clinical Study",
+  "identifier": "doi:10.3390/ijerph192013162 · PMID:36293738",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn050",
+  "title": "Alveolar ridge and keratinized gingiva preservation using collagen matrix and inorganic bone substitute in flapless extractions: A case series of exposed biomaterials Souza, Marian a & Martinez, Jesus & Carvalho, Valessa & Novaes, Arthur & Taba Jr, Mario",
+  "identifier": "https://www.perioiap.org/publications/62-october-2022/293-alveolar-ridge-and-keratinized-gingiva-",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn051",
+  "title": "Reconstruction of vertical alveolar ridge deficiencies utilizing a high -density polytetrafluoroethylene membrane /clinical impact of flap dehiscence on treatment outcomes: case series/",
+  "identifier": "doi:10.1186/s12903-022-02513-7",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn052",
+  "title": "A Novel Muco-Gingival Approach for Immediate Implant Placement to Obtain Soft-and Hard-Tissue",
+  "identifier": "doi:10.3390/jcm11174985",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn053",
+  "title": "Matrix Metalloproteinase 9 (MMP -9) and Interleukin -8 (IL -8) in Gingival Crevicular Fluid after Regenerative Therapy in Periodontal Intrabony Defects with and without Systemic Antibiotics-Randomized Clinical Trial. Dolińska E",
+  "identifier": "doi:10.3390/pathogens11101184 · PMID:36297241",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn054",
+  "title": "Apical approach in periodontal reconstructive surgery with enamel matrix derivate and enamel matrix derivate plus bone subst itutes: a randomized, controlled clinical trial Moreno",
+  "identifier": "doi:10.1007/s00784- · PMID:34791548",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn055",
+  "title": "Digital vs. conventional workflow for one -abutment one -time immediate restoration in the esthetic zone: a randomized controlled trial",
+  "identifier": "doi:10.1186/s40729-022-00406-6 · PMID:35129763",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn056",
+  "title": "Osseointegration at Implants Installed in Composite Bone: A Randomized Clinical Trial on Sinus Floor Elevation",
+  "identifier": "doi:10.3390/jfb13010022 · PMID:35323222",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn057",
+  "title": "Comparison of Injectable Biphasic Calcium Phosphate and a Bovine Xenograft in Socket Preservation: Qualitative and Quantitative Histologic Study in Humans Čandrlić M",
+  "identifier": "doi:10.3390/ijms23052539 · PMID:35269686",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn058",
+  "title": "Immediate implant placement combining socket seal abutment and peri-implant socket filling: A prospective case series",
+  "identifier": "doi:10.1111/clr.13852 · PMID:34551159",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn059",
+  "title": "Accuracy of half -guided implant placement with machine -driven or manual insertion: a prospective, randomized clinical study",
+  "identifier": "doi:10.1007/s00784-021-04087-0 · PMID:34401946",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn060",
+  "title": "Bone Dimensional Change Following Immediate Implant Placement in Posterior Teeth with CBCT: A 6-Month Prospective Clinical Study",
+  "identifier": "doi:10.3390/molecules27030608 · PMID:35163869",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn061",
+  "title": "Preliminary Study with the Use of a Titanium Mesh as Space Maker and Implant Primary Stabilization for One -Stage Sinus Lift in Cases with Less Than 1.5 mm Residual Bone",
+  "identifier": "doi:10.3390/jcm10214853 · PMID:34768375",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn062",
+  "title": "Sinus Mucosa Thickness Changes and Ostium Involvement after Maxillary Sinus Floor Elevation in Sinus with Septa. A Cone Beam Computed Tomography Study",
+  "identifier": "doi:10.3390/dj9080082 · PMID:34435994",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn063",
+  "title": "PRF versus xenograft in sinus augmentation in case of HA -coating implant placement: A 36-month retrospective study",
+  "identifier": "doi:10.17219/acem/134202 · PMID:33984195",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn064",
+  "title": "Effect of systemic antibiotics on the outcomes of regenerative periodontal surgery in intrabony defects: a randomized, controlled, clinical study",
+  "identifier": "doi:10.1007/s00784-020-03616-7 · PMID:33048260",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn065",
+  "title": "Two-Year Follow-Up of 4-mm-Long Implants Used as Distal Support of Full -Arch FDPs Compared to 10 -mm Implants Installed after Sinus Floor Elevation. A Randomized Clinical Trial",
+  "identifier": "doi:10.3390/ijerph18073846 · PMID:33917587",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn066",
+  "title": "Reconstructive surgical treatment of isolated deep intrabony defects with guided tissue regeneration using entire papilla preservation technique: A prospective case series",
+  "identifier": "doi:10.1002/JPER.20-0288",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn067",
+  "title": "Tomographic Assessment on the Influence of the Use of a Collagen Membrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
+  "identifier": "doi:10.11607/jomi.7843 · PMID:32142572",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn068",
+  "title": "Clinical comparison of different flap advancement techniques to per iosteal releasing incision in guided bone regeneration: A randomized controlled trial",
+  "identifier": "doi:10.1111/cid.12960 · PMID:33155422",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn069",
+  "title": "Alveolar ridge preservation in defect sockets in the maxillary aesthetic zone followed by single -tooth bone level tapered implants with immediate provisionalization: a 1-year prospective case series",
+  "identifier": "doi:10.1186/s40729-021-00292-4 · PMID:33604747",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn070",
+  "title": "Dimensional Change of Peri implant Soft Tissue Following Immediate Implant Placement and Customized Healing Abutment in Posterior Teeth",
+  "identifier": "https://www.semanticscholar.org/paper/Dimensional-Change-of-Peri-implant-Soft-Tissue-and-",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn071",
+  "title": "Alveolar ridge augmentation using the shell technique with allogeneic and autogenous bone plates in a split‐mouth design —A retrospective case report from five patients",
+  "identifier": "doi:10.1002/ccr3.3626",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn072",
+  "title": "Tomographic Assessment on the Influence of the Use of a Collagen Me mbrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
+  "identifier": "doi:10.11607/jomi.7843 · PMID:32142572",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn073",
+  "title": "Comparison of Regenerative Potential of Platelet -rich Fibrin Alone and in Combination with Bovine Bone Graft in Intraosseous Defect by Single Flap Approach: A Clinical and Radiographic Study",
+  "identifier": "doi:10.4103/jispcd.JISPCD_200_19",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn074",
+  "title": "Effect of Simvastatin on Bone Regeneration: A Histologic and Histomorphometric Analysis*",
+  "identifier": "doi:10.1016/j.joms.2020.01.016 · PMID:32084353",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn075",
+  "title": "Histological evaluation of two different anorganic bovine bone matrixes in lateral wall sinus elevation procedure: A retrospective study",
+  "identifier": "doi:10.4103/njms.NJMS_81_19",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn076",
+  "title": "Impact of fully or partially guided surgery on the position of single implants immediately placed in maxillary incisor sockets: A randomized controlled clinical trial",
+  "identifier": "doi:10.1111/cid.12941 · PMID:32875722",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn077",
+  "title": "Influence of the type of bone substitute materials on the rates of bone regeneration in sinus lift grafting with lateral approach and delayed implant placement",
+  "identifier": "doi:10.1111/clr.189_13644",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn078",
+  "title": "Radiological changes in maxillary sinus morphology after lateral sinus floor augmentation",
+  "identifier": "doi:10.5604/01.3001.0014.1679 · PMID:32831187",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn079",
+  "title": "Extramaxillary Zygomatic Implants: An Alternative Approach for the Reconstruction of the Atrophic Maxilla",
+  "identifier": "doi:10.4103/ams.ams_157_19 · PMID:32855928",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn080",
+  "title": "Open-Healing Socket Preservation with a Novel Dense Polytetrafluoroethylene (dPTFE) Membrane: A Retrospective Clinical Study",
+  "identifier": "doi:10.3390/medicina56050216",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn081",
+  "title": "Clinical outcomes of the entire papilla preservation technique with and without biomaterials in the treatment of isolated intrabony defects: A randomized controlled clinical trial",
+  "identifier": "doi:10.1111/jcpe.13255 · PMID:31925811",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn082",
+  "title": "Horizontal ridge augmentation using native collagen membrane vs titanium mesh in atrophic maxillary ridges: Randomized clinical trial",
+  "identifier": "doi:10.1111/cid.12892",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn083",
+  "title": "Esthetic outcome of immediately placed and nonfunctionally loaded implants in the anterior maxilla utilizing a definitive abutment: A pilot clinical trial",
+  "identifier": "PMID:32435430",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn084",
+  "title": "Implant stability in patients treated with platelet -rich fibrin and bovine bone substitute for alveolar ridge preservation is associated with peripheral blood cells and coagulation factors",
+  "identifier": "doi:10.1002/cre2.263 · PMID:32250570",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn085",
+  "title": "Three-dimensional analysis of dimensional changes after alveolar ridge preservation with bone substitutes or plasma rich in growth factors: Randomized and controlled clinical trial",
+  "identifier": "doi:10.1111/cid.12950 · PMID:33084205",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn086",
+  "title": "Evaluation Of Anterior Maxillary Horizontal Ridge Augmentation With Simultaneous Implant Placement Using Cerabone® Versus Cerabone® Combined With Platelet Rich Plasma – RCT",
+  "identifier": "doi:10.21608/adjalexu.2020.88461",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn087",
+  "title": "Stability of Tissue Augmented with Deproteinized Bovine Bone Mineral Particles Associated with Implant Placement in Anterior Maxilla",
+  "identifier": "https://www.hindawi.com/journals/crid/2019/5431752/",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn088",
+  "title": "Regeneration of Peri-implantitis Infrabony Defects: Report on Three Cases",
+  "identifier": "doi:10.11607/prd.4275 · PMID:31449569",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn089",
+  "title": "Digitalized CAD/CAM protocol for the fabrication of customized sealing socket healing abutments in immediate implants in molar sites.*",
+  "identifier": "PMID:31134225",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn090",
+  "title": "Buccal fat pad-derived stem cells with anorganic bovine bone mineral scaffold for augmentation of atrophic posterior mandible: An exploratory prospective clinical study",
+  "identifier": "doi:10.1111/cid.12729 · PMID:30821120",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn091",
+  "title": "Can placement of an immediate bone level tapered implant and subperiosteal xenograft help maintain bone architecture in esthetic areas?",
+  "identifier": "https://www.sciencedirect.com/science/article/pii/S221242681830304X",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn092",
+  "title": "Bone Graft Displacement After Maxillary Sinus Floor Augmentation With or Without Covering Barrier Membrane: A Retrospective Computed Tomographic Image Evaluation",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/30521657",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn093",
+  "title": "Nonincised Papillae Surgical Approach (NIPSA) in Periodontal Regeneration: Preliminary Results of a Case Series. Moreno",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/30118534",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn094",
+  "title": "Dimensional changes in the sinus membrane following maxillary sinus augmentation",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/30264057",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn095",
+  "title": "Buccal fat pad-derived stem cells in three-dimensional rehabilitation of large alveolar defects: A report of two cases",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/30280966",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn096",
+  "title": "Sinus Floor Elevation Using the Lateral Approach and Window Repositioning and a Xenogeneic Bone Substitute as a Grafting Material: A Histologic, Histomorphometric, and Radiographic Analysis",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/29894551",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn097",
+  "title": "Periosteal Envelope Flap as a Technique for Horizontal Bone Augmentation: A Case Series Study",
+  "identifier": "https://benthamopen.com/FULLTEXT/TODENTJ-12-995",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn098",
+  "title": "Effectiveness of naturally derived bovine hydroxyapatite (CeraboneTM) combined with platelet-rich fibrin matrix in socket preservation: A randomized controlled clinical trial",
+  "identifier": "doi:10.4103/jisp.jisp_400_18",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn099",
+  "title": "The influence of initial alveolar ridge defect morphology on the outcome of implants in augmented atrophic posterior mandible: an exploratory retrospective study",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/27804178",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn100",
+  "title": "Cortical lamina technique: A therapeutic approach for lateral ridge augmentation using guided bone regeneration",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/28149458",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn101",
+  "title": "Presurgical Cone Beam Computed Tomography Bone Quality Evaluation for Predictable Immediate Implant Placement and Restoration in Esthetic Zone",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/28321342",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn102",
+  "title": "Histological and radiological evaluation of sintered and non-sintered deproteinized bovine bone substitute materials in sinus augmentation procedures. A prospective, randomized-controlled, clinical multicenter study.*",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/27129584",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn103",
+  "title": "Tuberosity-alveolar block as a donor site for localised augmentation of the maxilla: a retrospective clinical study",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/27453038",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn104",
+  "title": "Management of acute maxillary sinusitis after sinus bone grafting procedures with simultaneous dental implants placement-a retrospective study. Chirilă L",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/27169511",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn105",
+  "title": "Histological and histomorphometric study using an ultrasonic crestal sinus grafting procedure. A multicenter case study.*",
+  "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/26946203",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn106",
+  "title": "Comparison of two different xenografts in bilateral sinus augmentation: Radiographic and histologic findings",
+  "identifier": "http://www.ncbi.nlm.nih.gov/pubmed/25699296",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "cbn107",
+  "title": "Sinus floor elevation using a sintered, natural bone mineral - A histological case report study.*# Rothamel, D, Smeets, R, Happe, A, Fienitz, T, Mazor, Z, Schwarz, F",
+  "identifier": "http://www.online-jdi.com/media/article/2011/1/00365097-4D06-438D-A1E8-",
+  "product": "cerabone (sintered bovine bone)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
   "id": "cbp001",
   "title": "Early Osteogenic and Stromal Marker Responses of Osteoblast -like and Bone - Marrow Stromal Cell Lines to a Hyaluronic Acid -Coated Xenogeneic Bone Graft: An Exploratory In Vitro Analysis",
   "identifier": "doi:10.3390/dj14050290 · PMID:42187668",
@@ -1317,7 +2173,7 @@
   "identifier": "doi:10.1111/cid.13242 · 26(1):170-182",
   "product": "maxgraft cortico vs autologous bone shells",
   "studyType": "Comparative clinical, maxgraft cortico n=20 vs autologous n=16, patient-reported outcomes",
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list"
  },
  {
   "id": "hya-biology-bundle",
@@ -2125,7 +2981,7 @@
   "identifier": "doi:10.1186/s40729-022-00446-y · 8(1):48",
   "product": "maxgraft cortico",
   "studyType": "Large clinical evaluation, 372 cases / 656 implants, mean follow-up 3.5 years",
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list"
  },
  {
   "id": "khojasteh-2016",
@@ -2190,6 +3046,382 @@
   "product": "maxgraft +HyA vs maxgraft",
   "studyType": "Retrospective comparative, 40 patients (19 maxgraft, 21 +HyA)",
   "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+ },
+ {
+  "id": "mgr001",
+  "title": "Bone Allograft Acid Lysates Change the Genetic Signature of Gingival",
+  "identifier": "doi:10.3390/ijms242216181 · PMID:38003371",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr002",
+  "title": "In vitro comparison of the osteogenic capability of human pulp stem cells on alloplastic, allogeneic, and xenogeneic bone scaffolds",
+  "identifier": "PMID:36721114",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr003",
+  "title": "Correlations between radiological and histological findings of bone remodelling and root resorption in a rodent cleft model",
+  "identifier": "doi:10.1186/s13005-022-00338-x · PMID:36357936",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr004",
+  "title": "Lyophilized Human Bone Allograft as an Antibiotic Carrier: An In Vitro and In Vivo Study",
+  "identifier": "doi:10.3390/antibiotics11070969 · PMID:35884224",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr005",
+  "title": "Evaluation of different grafting materials for alveolar cleft repair in the context of orthodontic tooth movement in rats",
+  "identifier": "doi:10.1038/s41598-021-93033-x · PMID:34193933",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr006",
+  "title": "Does Platelet-Rich Fibrin Enhance the Early Angiogenetic Potential of Different Bone Substitute Materials? An In Vitro and In Vivo Analysis",
+  "identifier": "PMID:33435244",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr007",
+  "title": "Influence of Different Rehydration Protocols on Biomechanical Properties of Allogeneic Cortical Bone Plates: A Combined in-vitro/in-vivo",
+  "identifier": "doi:10.1080/08941939.2020.1767735 · PMID:32441171",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr008",
+  "title": "Combination of an allogenic and a xenogenic bone substitute material with injectable platelet-rich fibrin – A comparative in vitro study",
+  "identifier": "PMID:32237950",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr009",
+  "title": "Balancing Purification and Ultrastructure of Naturally Derived Bone Blocks for Bone Regeneration: Report of the Purification Effort of Two Bone Blocks",
+  "identifier": "PMID:31581651",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr010",
+  "title": "Beneficial Effects of Vitamins K and D3 on Redox Balance of Human Osteoblasts Cultured with Hydroxyapatite-Based Biomaterials Ambrożewicz E, Muszyńska M",
+  "identifier": "doi:10.3390/cells8040325 · PMID:30965604",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "In vitro / cell culture",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr011",
+  "title": "Comparison of autogenous and allograft bone rings in surgically created vertical bone defects around implants in a sheep model",
+  "identifier": "PMID:30281857",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "Animal / in vivo preclinical",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr012",
+  "title": "Three-dimensional scanning electron microscopy of maxillofacial biomaterials",
+  "identifier": "doi:10.1016/j.bjoms.2017.05.010 · PMID:28624164",
+  "product": "maxgraft (processed human allograft)",
+  "studyType": "Material characterisation",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr013",
+  "title": "Alveolar Ridge Preservation Procedures Performed with a Freeze-Dried Bone Allograft: Clinical and Histologic Outcomes in a Case Series: Part II",
+  "identifier": "doi:10.11607/prd.6953 · PMID:38175917",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr014",
+  "title": "Evaluation of crestal sinus floor elevation in cases exhibiting an oblique sinus floor with a residual bone height of 4.0-7.0 mm using Densah burs with simultaneous implant placement: a prospective clinical study",
+  "identifier": "doi:10.1186/s40729-023-00510-1 · PMID:37917214",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Prospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr015",
+  "title": "Comparision between cortico-cancellous allograft and bovine xenograft for sinus augmentation: a radiographic, histologic and histomorphometric clinical study",
+  "identifier": "doi:10.11607/prd.6900 · PMID:37819845",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr016",
+  "title": "Alveolar Ridge Preservation Procedures Performed with a Freeze-Dried Bone Allograft: Histologic Outcomes in a Cohort",
+  "identifier": "PMID:37347612",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr017",
+  "title": "Full mouth oral rehabilitation of a severely worn dentition based on a fully digital workflow",
+  "identifier": "doi:10.1111/jerd.13020 · PMID:36715027",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr018",
+  "title": "First Clinical Case Report of a Xenograft-Allograft Combination for Alveolar Ridge Augmentation Using a Bovine Bone Substitute Material with Hyaluronate (Cerabone® Plus) Combined with Allogeneic Bone Granules (Maxgraft®)",
+  "identifier": "doi:10.3390/jcm12196214 · PMID:37834860",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr019",
+  "title": "Resorbable magnesium metal membrane for sinus lift procedures: a case series",
+  "identifier": "doi:10.1186/s12903-023-03695-4 · PMID:38097992",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr020",
+  "title": "Retrospective analysis of dental implants immediately placed in extraction sockets with periapical pathology: immediate implant placement in infected areas",
+  "identifier": "doi:10.1186/s12903-023- · PMID:37208620",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr021",
+  "title": "Histological and immunohistochemical comparison of two different allogeneic bone grafting materials for alveolar ridge reconstruction: A prospective randomized trial in humans Solakoglu Ö",
+  "identifier": "PMID:31424173",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr022",
+  "title": "Four-year post-loading results of full-arch rehabilitation with immediate placement and immediate loading implants: A retrospective controlled study",
+  "identifier": "PMID:28294200",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Controlled clinical trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr023",
+  "title": "A 3-year prospective randomized clinical trial of alveolar bone crest response and clinical parameters through 1, 2, and 3 years of clinical function of implants placed 4 months after alveolar ridge preservation using two different allogeneic bone-grafting materials Solakoglu Ö, Ofluoğlu D",
+  "identifier": "doi:10.1186/s40729-022-00402-w · PMID:35102440",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr024",
+  "title": "Connective tissue graft vs porcine collagen matrix after immediate implant placement in esthetic area: A randomized clinical trial",
+  "identifier": "doi:10.1111/cid.13058 · PMID:35324053",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr025",
+  "title": "Decompression technique — A modified approach for lateral alveolar ridge augmentation: A case report",
+  "identifier": "PMID:33768821",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr026",
+  "title": "Time analysis of alveolar ridge preservation using a combination of mineralized bone-plug and dense-polytetrafluoroethylene membrane: A histomorphometric study",
+  "identifier": "doi:10.1002/JPER.19-0142 · PMID:31378923",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr027",
+  "title": "Lateral bone augmentation in narrow posterior mandibles, description of a novel approach, and analysis of results",
+  "identifier": "PMID:29316182",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr028",
+  "title": "The use of mineralized bone allograft as a single grafting material in maxillary sinus lifting with severely atrophied alveolar ridge (1-3 mm) and immediately inserted dental implants. A 3- up to 8-year retrospective study",
+  "identifier": "PMID:29858723",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr029",
+  "title": "Bone augmentation and simultaneous soft tissue thickening with collagen tissue matrix derivate membrane in an aesthetic area. A case report Puišys A, Žukauskas S",
+  "identifier": "PMID:29243686",
+  "product": "maxgraft granules (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr030",
+  "title": "Regeneration of Horizontal Bone Defect in Edentulous Maxilla Using the Allogenic Bone-Plate Shell Technique and a Composite Bone Graft-A Case",
+  "identifier": "doi:10.3390/medicina59030494 · PMID:36984495",
+  "product": "maxgraft cortico (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr031",
+  "title": "Comparison of Allogeneic Bone Plate and Guided Bone Regeneration Efficiency in Horizontally Deficient Maxillary Alveolar Ridges",
+  "identifier": "doi:10.3390/app122010518",
+  "product": "maxgraft cortico (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr032",
+  "title": "Allogeneic cortical struts and bone granules for challenging alveolar reconstructions: An innovative approach toward an established technique Würdinger R and",
+  "identifier": "PMID:32920939",
+  "product": "maxgraft cortico (processed human allograft)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr033",
+  "title": "Alveolar ridge augmentation using the shell technique with allogeneic and autogenous bone plates in a split-mouth design—A retrospective case report from five patients",
+  "identifier": "PMID:33598278",
+  "product": "maxgraft cortico (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr034",
+  "title": "Clinical and Biological Validation of an Allogeneous Cancellous Bone Block for Alveolar Maxillary Ridge Reconstruction: A Case",
+  "identifier": "doi:10.3390/dj12020042 · PMID:38392246",
+  "product": "maxgraft blocks (processed human allograft)",
+  "studyType": "Case series",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr035",
+  "title": "Risk Factors for Complications Following Staged Alveolar Ridge Augmentation and Dental Implantation: A Retrospective Evaluation of 151 Cases with Allogeneic and 70 Cases with Autogenous Bone",
+  "identifier": "doi:10.3390/jcm12010006 · PMID:36614811",
+  "product": "maxgraft blocks (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr036",
+  "title": "Comparison of allogeneic and autogenous bone grafts for augmentation of alveolar ridge defects – a 12-month retrospective radiographic evaluation",
+  "identifier": "PMID:30303581",
+  "product": "maxgraft blocks (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr037",
+  "title": "A Novel Approach to Assess and Measure Resorption of Allograft Cancellous Blocks. A Clinical Pilot",
+  "identifier": "doi:10.23805/JO.2023.604",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr038",
+  "title": "Efficacy and volume stability of a customized allogeneic bone block for the reconstruction of advanced alveolar ridge deficiencies at the anterior maxillary region: a retrospective radiographic evaluation",
+  "identifier": "doi:10.1007/s00784-023-05015-0 · PMID:37055540",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Retrospective clinical study",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr039",
+  "title": "Volumetric Changes of a Customized Allogeneic Bone Block Measured by Two Image Matching Tools: Introduction of a Novel Assessment Technique for Graft Resorption",
+  "identifier": "PMID:35001936",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr040",
+  "title": "Ridge Augmentation Using Customized Allogeneic Bone Block: A 3-Year Follow-up of Two Case Reports",
+  "identifier": "PMID:33151194",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr041",
+  "title": "Customized allogeneic bone grafts for maxillary horizontal augmentation: A 5-year follow-up radiographic and histologic evaluation",
+  "identifier": "PMID:32477540",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Histological / histomorphometric",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr042",
+  "title": "Bilateral maxillary augmentation using CAD/CAM manufactured allogenic bone blocks for restoration of congenitally missing teeth: A case report",
+  "identifier": "doi:10.1111/jerd.12454 · PMID:30756449",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr043",
+  "title": "Reconstruction of a Unilateral Alveolar Cleft Using a Customized Allogenic Bone Block and Subsequent Dental Implant Placement in an Adult Patient",
+  "identifier": "doi:10.1016/j.joms.2019.05.021 · PMID:31276656",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr044",
+  "title": "Custom-milled individual allogeneic bone grafts for alveolar cleft osteoplasty—A technical note",
+  "identifier": "doi:10.1016/j.jcms.2017.09.011 · PMID:29066039",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr045",
+  "title": "Vertical alveolar bone augmentation of atrophied posterior mandibular regions with simultaneous dental implant placement using allogeneic bone rings vs autogenous bone rings: a randomized controlled clinical trial Ragab",
+  "identifier": "doi:10.3290/j.qi.b4867849 · PMID:38224105",
+  "product": "maxgraft bonering (processed human allograft)",
+  "studyType": "Randomised controlled trial",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr046",
+  "title": "One Stage Vertical Ridge Augmentation and Dental Implantation with Allograft Bonerings: Results One Year after Surgery",
+  "identifier": "PMID:31536460",
+  "product": "maxgraft bonering (processed human allograft)",
+  "studyType": "Clinical, design not stated",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
+ },
+ {
+  "id": "mgr047",
+  "title": "Vertical bone augmentation in a single-tooth gap with an allogenic bone ring: Clinical considerations",
+  "identifier": "doi:10.1111/jerd.12392 · PMID:30070751",
+  "product": "maxgraft bonering (processed human allograft)",
+  "studyType": "Case report",
+  "verifiedBy": "botiss Medical Affairs (product literature list)"
  },
  {
   "id": "miron-2024-perio2000",
@@ -3437,7 +4669,7 @@
   "identifier": "doi:10.1111/clr.13924 · 33(6):634-655",
   "product": "maxgraft granules (+ CTG, or 1:1 with autologous bone and Jason membrane)",
   "studyType": "Clinical, 50 patients in two groups, 1-year follow-up",
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list"
  },
  {
   "id": "qasim-2024",
@@ -3461,7 +4693,7 @@
   "identifier": "2012:737262",
   "product": "cerabone vs Bio-Oss",
   "studyType": "Clinical, radiographic assessment",
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list"
  },
  {
   "id": "rothamel-2011-zzi",
@@ -3533,7 +4765,7 @@
   "identifier": "doi:10.1002/JPER.21-0161 · 93(2):195-207",
   "product": "cerabone + maxgraft cortico-cancellous + autologous chips (60/20/20) with Ti-reinforced dPTFE",
   "studyType": "Clinical, 30 implants, 8-month outcomes",
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)"
+  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list"
  },
  {
   "id": "yxoss-critique-refs",

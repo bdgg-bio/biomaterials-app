@@ -30,6 +30,9 @@ const PREFIX = [
   [/^collacone/i, "coc"],
   [/^cerabone plus/i, "cbp"],
   [/^maxresorb/i, "mxr"],
+  // After "cerabone plus" above, so the plus line keeps its own prefix.
+  [/^cerabone/i, "cbn"],
+  [/^maxgraft/i, "mgr"],
 ];
 const prefixFor = p => (PREFIX.find(([re]) => re.test(p || "")) || [, "oth"])[1];
 

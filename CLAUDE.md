@@ -19,8 +19,8 @@ the runtime capabilities below.
 | `tools/parse_literature_lists.py` | Turns the botiss "Most Relevant Publications" list PDFs into evidence-library entries. |
 | `tools/compact-batches.js` | Re-keys parsed entries onto short product-prefixed ids and writes the `write_db` batch manifests. |
 | `reference/evidence-import/` | The 42 literature entries imported from the botiss training decks, as committed JSON. |
-| `reference/lit/` | The 372 entries from the eight product literature lists, plus `parse-report.md` and `parse-review.md`. |
-| `reference/library-snapshot.json` | Six fields per record for all 443 references. `ingest_papers.py --existing` dedupes against it. |
+| `reference/lit/` | The 526 entries from the ten product literature lists, plus `parse-report.md` and `parse-review.md`. |
+| `reference/library-snapshot.json` | Six fields per record for all 597 references. `ingest_papers.py --existing` dedupes against it. |
 | `reference/BotissCIWorkspace.jsx` | The original React workspace. Superseded, kept for provenance. |
 
 ## The two desks
@@ -72,8 +72,13 @@ Shared `db` collection `evidence`. Field conventions:
 - `studyType` — drives `evidenceRank()`, which orders both the agent's index
   and search results by strength of design. Use the wording already in use so
   the ranking keeps working.
-- `product` — which product it was actually run on. This matters more than
-  anything else in the record: cerabone evidence and Bio-Oss evidence get
+- `product` — which product it was actually run on, written **without** the ®:
+  the agent's per-product index counts by this exact string, so "maxgraft®
+  cortico" and "maxgraft cortico" would tally as two products and understate
+  both. The maxgraft list is the only one divided by variant (granules,
+  cortico, blocks, bonebuilder, bonering) and the parser carries the variant
+  through, because "maxgraft bonering" is not interchangeable with "maxgraft
+  granules". This field matters more than anything else in the record: cerabone evidence and Bio-Oss evidence get
   conflated constantly, and most of the classic xenograft literature was
   generated on Bio-Oss.
 - `supports` — **the judgement field.** What the reference licenses, stated
@@ -169,8 +174,9 @@ node tools/compact-batches.js out/all-entries-deduped.json --out reference/lit
 
 **Always reconcile before writing.** Count the numbered lines in the source,
 subtract the table-of-contents and section headings, and require the parsed
-total to match exactly. The eight lists reconcile as 397 numbered lines − 20
-headings = 377 entries. A count that is merely *close* is the signature of the
+total to match exactly. The ten lists reconcile as 397 − 20 = 377 for the
+first eight, 112 for cerabone and 52 for maxgraft: 541 parsed, 15 merged into
+records already held, 526 imported. A count that is merely *close* is the signature of the
 two bugs this parser has already had: a citation wrapping mid-page-range splits
 one entry into two, and a title starting with a digit ("3D-Printed…",
 "2-year…") gets swallowed by the entry above it — which then carries the
@@ -210,11 +216,14 @@ both briefings stay well inside 64 KiB. The preview build fails on its own if a
 
 - No viewer-identity capability, so the name on logged intel is self-declared
   per device and unverified.
-- No literature list yet for **cerabone** or **maxgraft** — the two products
-  the team sells hardest are the two whose lists have not been imported.
 - **NOVAMag has 19 references and is the highest risk**: the youngest evidence
-  base and the most enthusiastic audience. permamem (24) and cerabone plus (21)
-  are the next thinnest.
+  base and the most enthusiastic audience. maxgraft bonering (4), maxgraft
+  blocks (5) and maxgraft bonebuilder (9) are thinner still, though they are
+  narrower indications; permamem (24) and cerabone plus (31) come next.
+- Much of the cerabone list is xenograft literature generally rather than
+  cerabone specifically, and the same is true of the allograft literature on
+  the maxgraft list. The boilerplate in `supports` says so, but only a written
+  scope statement settles what each one licenses.
 - Nearly every imported entry still holds `SCOPE NOT YET WRITTEN` in `supports`,
   wrapping the paper's own abstract or conclusion verbatim. The desk can cite
   them, but nothing tells it what each one narrowly licenses until a person

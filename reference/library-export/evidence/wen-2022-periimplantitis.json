@@ -1,14 +1,14 @@
 {
-  "authors": "Wen et al. (Hom-Lay Wang group)",
-  "identifier": "doi:10.1002/JPER.21-0161 · 93(2):195-207",
-  "journal": "J Periodontol",
-  "product": "cerabone + maxgraft cortico-cancellous + autologous chips (60/20/20) with Ti-reinforced dPTFE",
-  "rep": "Branko T. · imported from botiss decks",
-  "studyType": "Clinical, 30 implants, 8-month outcomes",
-  "supports": "Peri-implantitis GBR: significant clinical vertical defect fill averaging 3.22 ± 0.41 mm at 8 months, all affected implants saved. IMPORTANT: this is a 60/20/20 MIXTURE, so it does not license a cerabone-alone or maxgraft-alone claim. Published data, cited in the botiss training decks and approved by botiss Medical Affairs.",
-  "title": "Surgical reconstructive treatment for infraosseous peri-implantitis defects with a submerged healing approach",
-  "ts": 1788462414986,
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)",
-  "via": "import",
-  "year": "2022"
+ "authors": "Wen et al. (Hom-Lay Wang group)",
+ "identifier": "doi:10.1002/JPER.21-0161 · 93(2):195-207",
+ "journal": "J Periodontol",
+ "product": "cerabone + maxgraft cortico-cancellous + autologous chips (60/20/20) with Ti-reinforced dPTFE",
+ "rep": "Branko T. · imported from botiss decks",
+ "studyType": "Clinical, 30 implants, 8-month outcomes",
+ "supports": "Peri-implantitis GBR: significant clinical vertical defect fill averaging 3.22 ± 0.41 mm at 8 months, all affected implants saved. IMPORTANT: this is a 60/20/20 MIXTURE, so it does not license a cerabone-alone or maxgraft-alone claim. Published data, cited in the botiss training decks and approved by botiss Medical Affairs. — Also in the botiss product literature list. Authors' conclusion, verbatim: “Reconstruction of infraosseous peri -implantitis defects is feasible with thorough detoxification of implant sites, and a submerged regenerative healing approach”",
+ "title": "Surgical reconstructive treatment for infraosseous peri-implantitis defects with a submerged healing approach",
+ "ts": 1788462414986,
+ "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list",
+ "via": "import",
+ "year": "2022"
 }

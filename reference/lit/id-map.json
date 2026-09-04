@@ -1,4 +1,539 @@
 {
+ "cbn001": {
+  "title": "In vitro comparison of the osteogenic capability of human pulp stem cells on alloplastic, allogeneic, and xenogeneic bone scaffolds",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "in-vitro-comparison-of-the-osteogenic-capability-of-hu-2023"
+ },
+ "cbn002": {
+  "title": "Cellular Behaviors of Periodontal Ligament Stem Cells in the Presence of Bone",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "cellular-behaviors-of-periodontal-ligament-stem-cells-2022"
+ },
+ "cbn003": {
+  "title": "Influence of loading and grafting on hard-and soft-tissue healing at immediately placed implants: An experimental study in minipigs",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "influence-of-loading-and-grafting-on-hard-and-soft-tis-2023"
+ },
+ "cbn004": {
+  "title": "Different responses of heterogeneous graft presentations in bone reconstructions during sinus lift elevation surgery: an immunolabeling and histomorphometric study performed in rabbits. de",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "different-responses-of-heterogeneous-graft-presentatio-2022"
+ },
+ "cbn005": {
+  "title": "LED photobiomodulation therapy combined with biomaterial as a scaffold promotes better bone quality in the dental alveolus in an experimental extraction model",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "led-photobiomodulation-therapy-combined-with-biomateri-2022"
+ },
+ "cbn006": {
+  "title": "Histological and histomorphometrical evaluation of two types of bone substitutes in combination with i -PRF for bone regeneration in critical bone defects: An in vivo study Ribeiro de",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "histological-and-histomorphometrical-evaluation-of-two-2022"
+ },
+ "cbn007": {
+  "title": "Hyaluronic Acid with Bone Substitutes Enhance Angiogenesis In Vivo",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "hyaluronic-acid-with-bone-substitutes-enhance-angiogen-2022"
+ },
+ "cbn008": {
+  "title": "A novel pilot animal model for bone augmentation using osseous shell technique for preclinical in vivo studies",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "a-novel-pilot-animal-model-for-bone-augmentation-using-2022"
+ },
+ "cbn009": {
+  "title": "Structural and chemical features of xenograft bone substitutes: A systematic review of in vitro studies",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "structural-and-chemical-features-of-xenograft-bone-sub-2021"
+ },
+ "cbn010": {
+  "title": "Scaffold-Type Structure Dental Ceramics with Different Compositions Evaluated through Physicochemical Characteristics and Biosecurity Profiles",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "scaffold-type-structure-dental-ceramics-with-different-2021"
+ },
+ "cbn011": {
+  "title": "Physicochemical Properties of Torus Mandibularis and Palatinus Indicate a Source of Autogenous Bone Graft Martin",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "physicochemical-properties-of-torus-mandibularis-and-p-2021"
+ },
+ "cbn012": {
+  "title": "Sinus Muco sa Thinning and Perforations after Sinus Lifting Performed with Different Xenografts: A Histological Analysis in Rabbits",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "sinus-muco-sa-thinning-and-perforations-after-sinus-li-2021"
+ },
+ "cbn013": {
+  "title": "Critical-size Defect Augmentation Using Sintered and Non-Sintered Bovine Bone Matrix - An Experimental Controlled Study in Minipigs",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "critical-size-defect-augmentation-using-sintered-and-n-2021"
+ },
+ "cbn014": {
+  "title": "Cytocompatibility of Bone Substitute Materials and Membranes",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021"
+ },
+ "cbn015": {
+  "title": "Osseointegration of different implant surfaces in areas grafted with deproteinized bovine bone associated or not with fresh bone marrow-Preclinical study in rabbits",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "osseointegration-of-different-implant-surfaces-in-area-2021"
+ },
+ "cbn016": {
+  "title": "Effects of Different Bone Substitutes on Reactive Oxygen Species Release in Leukocytes in Vitro: A Pilot Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "effects-of-different-bone-substitutes-on-reactive-oxyg-2021"
+ },
+ "cbn017": {
+  "title": "In Vivo Analysis of the Biocompatibility and Bone Healing Capacity of a Novel Bone Grafting Material Combined with Hyaluronic Acid",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "in-vivo-analysis-of-the-biocompatibility-and-bone-heal-2021"
+ },
+ "cbn018": {
+  "title": "The Influence of Hyaluronic Acid Biofunctionalization of a Bovine Bone Substitute on Osteoblast Activity In Vitro",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "the-influence-of-hyaluronic-acid-biofunctionalization-2021"
+ },
+ "cbn019": {
+  "title": "Microtomographic reconstruction of mandibular defects treated with xenografts and collagen-based membranes: A pre-clinical minipig model",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "microtomographic-reconstruction-of-mandibular-defects-2021"
+ },
+ "cbn020": {
+  "title": "Evaluation of air polishing with a sterile powder and mecha nical debridement during regenerative surgical periimplantitis treatment: a study in dogs",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "evaluation-of-air-polishing-with-a-sterile-powder-and-2021"
+ },
+ "cbn021": {
+  "title": "Possible Implications for Improved Osteogenesis? The Combination of Platelet- Rich Fibrin With Different Bone Substitute Materials",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "possible-implications-for-improved-osteogenesis-the-co-2021"
+ },
+ "cbn022": {
+  "title": "Activation of Human Osteoblasts via Different Bovine Bone Substitute Materials With and Without Injectable Platelet Rich Fibrin in vitro",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "activation-of-human-osteoblasts-via-different-bovine-b-2021"
+ },
+ "cbn023": {
+  "title": "A Novel Xenograft Bone Substitute Supports Stable Bone Formation in Circumferential Defects Around Dental Implants in Minipigs",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "a-novel-xenograft-bone-substitute-supports-stable-bone-2020"
+ },
+ "cbn024": {
+  "title": "The Impact of Compaction Force on Graft Consolidation in a Guided Bone Regeneration Model",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "the-impact-of-compaction-force-on-graft-consolidation-2020"
+ },
+ "cbn025": {
+  "title": "Albumin-impregnated bo ne granules modulate the interactions between mesenchymal stem cells and monocytes under in vitro inflammatory conditions",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "albumin-impregnated-bo-ne-granules-modulate-the-intera-2020"
+ },
+ "cbn026": {
+  "title": "Bone regeneration in rabbit calvarial defects using PRGF and adipose -derived stem cells: histomorphometrical analysis",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "bone-regeneration-in-rabbit-calvarial-defects-using-pr-2020"
+ },
+ "cbn027": {
+  "title": "The Influence of Local Pamidronate Application on Alveolar Dimensional Preservation after Tooth Extraction—An Animal Experimental Study*",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "the-influence-of-local-pamidronate-application-on-alve-2020"
+ },
+ "cbn028": {
+  "title": "Evaluation of efficacy of platelet-rich fibrin membrane and bone graft in coverage of immediate dental implant in esthetic zone: An in vivo study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "evaluation-of-efficacy-of-platelet-rich-fibrin-membran-2020"
+ },
+ "cbn029": {
+  "title": "CSBD Healing in Rats after Application of Bovine Xenogeneic Biomaterial Enriched with Magnesium Alloy Jerbić Radetić AT, Zoričić",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "csbd-healing-in-rats-after-application-of-bovine-xenog-2021"
+ },
+ "cbn030": {
+  "title": "Does Platelet-Rich Fibrin Enhance the Early Angiogenetic Potential of Different Bone Substitute Materials? An In Vitro and In Vivo Analysis",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "does-platelet-rich-fibrin-enhance-the-early-angiogenet-2021"
+ },
+ "cbn031": {
+  "title": "Enamel matrix derivative in liquid form as adjunct to natural bovine bone grafting at buccal bone dehiscence defects at implant sites: An experimental study in beagle dogs",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "enamel-matrix-derivative-in-liquid-form-as-adjunct-to-2019"
+ },
+ "cbn032": {
+  "title": "Raman Spectroscopy: Application in Periodontal and Oral Regenerative Surgery for Bone",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "raman-spectroscopy-application-in-periodontal-and-oral-2019"
+ },
+ "cbn033": {
+  "title": "Osseointegration of Superhydrophilic Implants Placed in Defect Grafted Bones. El",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "osseointegration-of-superhydrophilic-implants-placed-i-2019"
+ },
+ "cbn034": {
+  "title": "Comparison of the effect of hemihydrate calcium sulfate granules and Cerabone on dental socket preservation: An animal experiment",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-the-effect-of-hemihydrate-calcium-sulfat-2018"
+ },
+ "cbn035": {
+  "title": "Comparison of three different types of scaffolds preseeded with human bone marrow mononuclear cells on the bone healing in a femoral critical size defect model of the athymic rat",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-three-different-types-of-scaffolds-prese-2018"
+ },
+ "cbn036": {
+  "title": "High-temperature sintering of xenogeneic bone substitutes leads to increased multinucleated giant cell formation: In vivo and preliminary clinical results.*",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "high-temperature-sintering-of-xenogeneic-bone-substitu-2015"
+ },
+ "cbn037": {
+  "title": "Bone substitute material composition and morphology differentially modulate calcium and phosphate release through osteoclast-like cells",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "bone-substitute-material-composition-and-morphology-di-2014"
+ },
+ "cbn038": {
+  "title": "Biocompatibility and biodegradation of a native porcine pericardium membrane: results of in vitro and in vivo examinations",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "biocompatibility-and-biodegradation-of-a-native-porcin-2012"
+ },
+ "cbn039": {
+  "title": "Effect of Guided Tissue Regeneration on Newly Formed Bone and Cementum in Periapical Tissue Healing after Endodontic Surgery: An In Vivo Study in the Cat",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "effect-of-guided-tissue-regeneration-on-newly-formed-b-2012"
+ },
+ "cbn040": {
+  "title": "Impact of Citric Acid Etching on Biocompatibility and Osseous Organisation of a Natural Bovine Bone Mineral: Preliminary Results of an In-Vitro/In-Vivo Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "impact-of-citric-acid-etching-on-biocompatibility-and-2009"
+ },
+ "cbn041": {
+  "title": "Comparison of different methods for the preparation of porous bone substitution materials and structural investigations by synchrotron μ-computer tomography",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-different-methods-for-the-preparation-of-2004"
+ },
+ "cbn042": {
+  "title": "A thorough physicochemical characterisation of 14 calcium phosphate-based bone substitution materials in comparison to natural bone",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "a-thorough-physicochemical-characterisation-of-14-calc-2004"
+ },
+ "cbn043": {
+  "title": "Bone ingrowth in bFGF-coated hydroxyapatite ceramic implants",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "bone-ingrowth-in-bfgf-coated-hydroxyapatite-ceramic-im-2003"
+ },
+ "cbn044": {
+  "title": "Reconstructive Peri-Implantitis Therapy by Using Bovine Bone Substitute with or without Hyaluronic Acid: A Randomized Clinical Controlled Pilot Study Rakašević D, Šćepanović M, Mijailović I, Mišić T, Janjić B, Soldatović I, Marković A. J Funct Biomater",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "reconstructive-peri-implantitis-therapy-by-using-bovin-2023"
+ },
+ "cbn045": {
+  "title": "Nasal Floor Elevation—An Option of Premaxilla Augmentation: A Case Report",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "nasal-floor-elevationan-option-of-premaxilla-augmentat-2022"
+ },
+ "cbn046": {
+  "title": "Comparison of Allogeneic Bone Plate and Guided Bone Regeneration Efficiency in Horizontally Deficient Maxillary Alveolar",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-allogeneic-bone-plate-and-guided-bone-re-2022"
+ },
+ "cbn047": {
+  "title": "Dental Implant Placement in Focal Osteoporotic Bone Marrow Defect: a Case Report and Treatment Recommendations",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "dental-implant-placement-in-focal-osteoporotic-bone-ma-2022"
+ },
+ "cbn048": {
+  "title": "Clinical and Radi ologic Evaluation of a Fully Tapered Implant with Immediate Placement in the Esthetic Zone: A Prospective Case Series Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "clinical-and-radi-ologic-evaluation-of-a-fully-tapered-2022"
+ },
+ "cbn049": {
+  "title": "Immediate Functional Loading with Full -Arch Fixed Implant -Retained Rehabilitation in Periodontal Patients: Clinical Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "immediate-functional-loading-with-full-arch-fixed-impl-2022"
+ },
+ "cbn050": {
+  "title": "Alveolar ridge and keratinized gingiva preservation using collagen matrix and inorganic bone substitute in flapless extractions: A case series of exposed biomaterials Souza, Marian a & Martinez, Jesus & Carvalho, Valessa & Novaes, Arthur & Taba Jr, Mario",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "alveolar-ridge-and-keratinized-gingiva-preservation-us-2022"
+ },
+ "cbn051": {
+  "title": "Reconstruction of vertical alveolar ridge deficiencies utilizing a high -density polytetrafluoroethylene membrane /clinical impact of flap dehiscence on treatment outcomes: case series/",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "reconstruction-of-vertical-alveolar-ridge-deficiencies-2022"
+ },
+ "cbn052": {
+  "title": "A Novel Muco-Gingival Approach for Immediate Implant Placement to Obtain Soft-and Hard-Tissue",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "a-novel-muco-gingival-approach-for-immediate-implant-p-2022"
+ },
+ "cbn053": {
+  "title": "Matrix Metalloproteinase 9 (MMP -9) and Interleukin -8 (IL -8) in Gingival Crevicular Fluid after Regenerative Therapy in Periodontal Intrabony Defects with and without Systemic Antibiotics-Randomized Clinical Trial. Dolińska E",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "matrix-metalloproteinase-9-mmp-9-and-interleukin-8-il-2022"
+ },
+ "cbn054": {
+  "title": "Apical approach in periodontal reconstructive surgery with enamel matrix derivate and enamel matrix derivate plus bone subst itutes: a randomized, controlled clinical trial Moreno",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "apical-approach-in-periodontal-reconstructive-surgery-2022"
+ },
+ "cbn055": {
+  "title": "Digital vs. conventional workflow for one -abutment one -time immediate restoration in the esthetic zone: a randomized controlled trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "digital-vs-conventional-workflow-for-one-abutment-one-2022"
+ },
+ "cbn056": {
+  "title": "Osseointegration at Implants Installed in Composite Bone: A Randomized Clinical Trial on Sinus Floor Elevation",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "osseointegration-at-implants-installed-in-composite-bo-2022"
+ },
+ "cbn057": {
+  "title": "Comparison of Injectable Biphasic Calcium Phosphate and a Bovine Xenograft in Socket Preservation: Qualitative and Quantitative Histologic Study in Humans Čandrlić M",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-injectable-biphasic-calcium-phosphate-an-2022"
+ },
+ "cbn058": {
+  "title": "Immediate implant placement combining socket seal abutment and peri-implant socket filling: A prospective case series",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "immediate-implant-placement-combining-socket-seal-abut-2022"
+ },
+ "cbn059": {
+  "title": "Accuracy of half -guided implant placement with machine -driven or manual insertion: a prospective, randomized clinical study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "accuracy-of-half-guided-implant-placement-with-machine-2022"
+ },
+ "cbn060": {
+  "title": "Bone Dimensional Change Following Immediate Implant Placement in Posterior Teeth with CBCT: A 6-Month Prospective Clinical Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "bone-dimensional-change-following-immediate-implant-pl-2022"
+ },
+ "cbn061": {
+  "title": "Preliminary Study with the Use of a Titanium Mesh as Space Maker and Implant Primary Stabilization for One -Stage Sinus Lift in Cases with Less Than 1.5 mm Residual Bone",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "preliminary-study-with-the-use-of-a-titanium-mesh-as-s-2021"
+ },
+ "cbn062": {
+  "title": "Sinus Mucosa Thickness Changes and Ostium Involvement after Maxillary Sinus Floor Elevation in Sinus with Septa. A Cone Beam Computed Tomography Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "sinus-mucosa-thickness-changes-and-ostium-involvement-2021"
+ },
+ "cbn063": {
+  "title": "PRF versus xenograft in sinus augmentation in case of HA -coating implant placement: A 36-month retrospective study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "prf-versus-xenograft-in-sinus-augmentation-in-case-of-2021"
+ },
+ "cbn064": {
+  "title": "Effect of systemic antibiotics on the outcomes of regenerative periodontal surgery in intrabony defects: a randomized, controlled, clinical study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "effect-of-systemic-antibiotics-on-the-outcomes-of-rege-2021"
+ },
+ "cbn065": {
+  "title": "Two-Year Follow-Up of 4-mm-Long Implants Used as Distal Support of Full -Arch FDPs Compared to 10 -mm Implants Installed after Sinus Floor Elevation. A Randomized Clinical Trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "two-year-follow-up-of-4-mm-long-implants-used-as-dista-2021"
+ },
+ "cbn066": {
+  "title": "Reconstructive surgical treatment of isolated deep intrabony defects with guided tissue regeneration using entire papilla preservation technique: A prospective case series",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "reconstructive-surgical-treatment-of-isolated-deep-int-2021"
+ },
+ "cbn067": {
+  "title": "Tomographic Assessment on the Influence of the Use of a Collagen Membrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020"
+ },
+ "cbn068": {
+  "title": "Clinical comparison of different flap advancement techniques to per iosteal releasing incision in guided bone regeneration: A randomized controlled trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "clinical-comparison-of-different-flap-advancement-tech-2021"
+ },
+ "cbn069": {
+  "title": "Alveolar ridge preservation in defect sockets in the maxillary aesthetic zone followed by single -tooth bone level tapered implants with immediate provisionalization: a 1-year prospective case series",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "alveolar-ridge-preservation-in-defect-sockets-in-the-m-2021"
+ },
+ "cbn070": {
+  "title": "Dimensional Change of Peri implant Soft Tissue Following Immediate Implant Placement and Customized Healing Abutment in Posterior Teeth",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "dimensional-change-of-peri-implant-soft-tissue-followi-2021"
+ },
+ "cbn071": {
+  "title": "Alveolar ridge augmentation using the shell technique with allogeneic and autogenous bone plates in a split‐mouth design —A retrospective case report from five patients",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "alveolar-ridge-augmentation-using-the-shell-technique-2020"
+ },
+ "cbn072": {
+  "title": "Tomographic Assessment on the Influence of the Use of a Collagen Me mbrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020-2"
+ },
+ "cbn073": {
+  "title": "Comparison of Regenerative Potential of Platelet -rich Fibrin Alone and in Combination with Bovine Bone Graft in Intraosseous Defect by Single Flap Approach: A Clinical and Radiographic Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-regenerative-potential-of-platelet-rich-2020"
+ },
+ "cbn074": {
+  "title": "Effect of Simvastatin on Bone Regeneration: A Histologic and Histomorphometric Analysis*",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "effect-of-simvastatin-on-bone-regeneration-a-histologi-2020"
+ },
+ "cbn075": {
+  "title": "Histological evaluation of two different anorganic bovine bone matrixes in lateral wall sinus elevation procedure: A retrospective study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "histological-evaluation-of-two-different-anorganic-bov-2020"
+ },
+ "cbn076": {
+  "title": "Impact of fully or partially guided surgery on the position of single implants immediately placed in maxillary incisor sockets: A randomized controlled clinical trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "impact-of-fully-or-partially-guided-surgery-on-the-pos-2020"
+ },
+ "cbn077": {
+  "title": "Influence of the type of bone substitute materials on the rates of bone regeneration in sinus lift grafting with lateral approach and delayed implant placement",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "influence-of-the-type-of-bone-substitute-materials-on-2020"
+ },
+ "cbn078": {
+  "title": "Radiological changes in maxillary sinus morphology after lateral sinus floor augmentation",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "radiological-changes-in-maxillary-sinus-morphology-aft-2020"
+ },
+ "cbn079": {
+  "title": "Extramaxillary Zygomatic Implants: An Alternative Approach for the Reconstruction of the Atrophic Maxilla",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "extramaxillary-zygomatic-implants-an-alternative-appro-2020"
+ },
+ "cbn080": {
+  "title": "Open-Healing Socket Preservation with a Novel Dense Polytetrafluoroethylene (dPTFE) Membrane: A Retrospective Clinical Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "open-healing-socket-preservation-with-a-novel-dense-po-2020"
+ },
+ "cbn081": {
+  "title": "Clinical outcomes of the entire papilla preservation technique with and without biomaterials in the treatment of isolated intrabony defects: A randomized controlled clinical trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "clinical-outcomes-of-the-entire-papilla-preservation-t-2020"
+ },
+ "cbn082": {
+  "title": "Horizontal ridge augmentation using native collagen membrane vs titanium mesh in atrophic maxillary ridges: Randomized clinical trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "horizontal-ridge-augmentation-using-native-collagen-me-2020"
+ },
+ "cbn083": {
+  "title": "Esthetic outcome of immediately placed and nonfunctionally loaded implants in the anterior maxilla utilizing a definitive abutment: A pilot clinical trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "esthetic-outcome-of-immediately-placed-and-nonfunction-2020"
+ },
+ "cbn084": {
+  "title": "Implant stability in patients treated with platelet -rich fibrin and bovine bone substitute for alveolar ridge preservation is associated with peripheral blood cells and coagulation factors",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "implant-stability-in-patients-treated-with-platelet-ri-2020"
+ },
+ "cbn085": {
+  "title": "Three-dimensional analysis of dimensional changes after alveolar ridge preservation with bone substitutes or plasma rich in growth factors: Randomized and controlled clinical trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "three-dimensional-analysis-of-dimensional-changes-afte-2021"
+ },
+ "cbn086": {
+  "title": "Evaluation Of Anterior Maxillary Horizontal Ridge Augmentation With Simultaneous Implant Placement Using Cerabone® Versus Cerabone® Combined With Platelet Rich Plasma – RCT",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "evaluation-of-anterior-maxillary-horizontal-ridge-augm-2020"
+ },
+ "cbn087": {
+  "title": "Stability of Tissue Augmented with Deproteinized Bovine Bone Mineral Particles Associated with Implant Placement in Anterior Maxilla",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "stability-of-tissue-augmented-with-deproteinized-bovin-2019"
+ },
+ "cbn088": {
+  "title": "Regeneration of Peri-implantitis Infrabony Defects: Report on Three Cases",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "regeneration-of-peri-implantitis-infrabony-defects-rep-2019"
+ },
+ "cbn089": {
+  "title": "Digitalized CAD/CAM protocol for the fabrication of customized sealing socket healing abutments in immediate implants in molar sites.*",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "digitalized-cad-cam-protocol-for-the-fabrication-of-cu-2019"
+ },
+ "cbn090": {
+  "title": "Buccal fat pad-derived stem cells with anorganic bovine bone mineral scaffold for augmentation of atrophic posterior mandible: An exploratory prospective clinical study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "buccal-fat-pad-derived-stem-cells-with-anorganic-bovin-2019"
+ },
+ "cbn091": {
+  "title": "Can placement of an immediate bone level tapered implant and subperiosteal xenograft help maintain bone architecture in esthetic areas?",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "can-placement-of-an-immediate-bone-level-tapered-impla-2019"
+ },
+ "cbn092": {
+  "title": "Bone Graft Displacement After Maxillary Sinus Floor Augmentation With or Without Covering Barrier Membrane: A Retrospective Computed Tomographic Image Evaluation",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "bone-graft-displacement-after-maxillary-sinus-floor-au-2019"
+ },
+ "cbn093": {
+  "title": "Nonincised Papillae Surgical Approach (NIPSA) in Periodontal Regeneration: Preliminary Results of a Case Series. Moreno",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "nonincised-papillae-surgical-approach-nipsa-in-periodo-2018"
+ },
+ "cbn094": {
+  "title": "Dimensional changes in the sinus membrane following maxillary sinus augmentation",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "dimensional-changes-in-the-sinus-membrane-following-ma-2018"
+ },
+ "cbn095": {
+  "title": "Buccal fat pad-derived stem cells in three-dimensional rehabilitation of large alveolar defects: A report of two cases",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "buccal-fat-pad-derived-stem-cells-in-three-dimensional-2019"
+ },
+ "cbn096": {
+  "title": "Sinus Floor Elevation Using the Lateral Approach and Window Repositioning and a Xenogeneic Bone Substitute as a Grafting Material: A Histologic, Histomorphometric, and Radiographic Analysis",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "sinus-floor-elevation-using-the-lateral-approach-and-w-2018"
+ },
+ "cbn097": {
+  "title": "Periosteal Envelope Flap as a Technique for Horizontal Bone Augmentation: A Case Series Study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "periosteal-envelope-flap-as-a-technique-for-horizontal-2018"
+ },
+ "cbn098": {
+  "title": "Effectiveness of naturally derived bovine hydroxyapatite (CeraboneTM) combined with platelet-rich fibrin matrix in socket preservation: A randomized controlled clinical trial",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "effectiveness-of-naturally-derived-bovine-hydroxyapati-2018"
+ },
+ "cbn099": {
+  "title": "The influence of initial alveolar ridge defect morphology on the outcome of implants in augmented atrophic posterior mandible: an exploratory retrospective study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "the-influence-of-initial-alveolar-ridge-defect-morphol-2017"
+ },
+ "cbn100": {
+  "title": "Cortical lamina technique: A therapeutic approach for lateral ridge augmentation using guided bone regeneration",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "cortical-lamina-technique-a-therapeutic-approach-for-l-2017"
+ },
+ "cbn101": {
+  "title": "Presurgical Cone Beam Computed Tomography Bone Quality Evaluation for Predictable Immediate Implant Placement and Restoration in Esthetic Zone",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "presurgical-cone-beam-computed-tomography-bone-quality-2017"
+ },
+ "cbn102": {
+  "title": "Histological and radiological evaluation of sintered and non-sintered deproteinized bovine bone substitute materials in sinus augmentation procedures. A prospective, randomized-controlled, clinical multicenter study.*",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "histological-and-radiological-evaluation-of-sintered-a-2017"
+ },
+ "cbn103": {
+  "title": "Tuberosity-alveolar block as a donor site for localised augmentation of the maxilla: a retrospective clinical study",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "tuberosity-alveolar-block-as-a-donor-site-for-localise-2016"
+ },
+ "cbn104": {
+  "title": "Management of acute maxillary sinusitis after sinus bone grafting procedures with simultaneous dental implants placement-a retrospective study. Chirilă L",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "management-of-acute-maxillary-sinusitis-after-sinus-bo-2016"
+ },
+ "cbn105": {
+  "title": "Histological and histomorphometric study using an ultrasonic crestal sinus grafting procedure. A multicenter case study.*",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "histological-and-histomorphometric-study-using-an-ultr-2016"
+ },
+ "cbn106": {
+  "title": "Comparison of two different xenografts in bilateral sinus augmentation: Radiographic and histologic findings",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "comparison-of-two-different-xenografts-in-bilateral-si-2015"
+ },
+ "cbn107": {
+  "title": "Sinus floor elevation using a sintered, natural bone mineral - A histological case report study.*# Rothamel, D, Smeets, R, Happe, A, Fienitz, T, Mazor, Z, Schwarz, F",
+  "product": "cerabone (sintered bovine bone)",
+  "was": "sinus-floor-elevation-using-a-sintered-natural-bone-mi-2011"
+ },
  "cbp001": {
   "title": "Early Osteogenic and Stromal Marker Responses of Osteoblast -like and Bone - Marrow Stromal Cell Lines to a Hyaluronic Acid -Coated Xenogeneic Bone Graft: An Exploratory In Vitro Analysis",
   "product": "cerabone plus (bovine bone with hyaluronate)",
@@ -22,17 +557,17 @@
  "cbp005": {
   "title": "Hyaluronic Acid with Bone Substitutes Enhance Angiogenesis In Vivo",
   "product": "cerabone plus (bovine bone with hyaluronate)",
-  "was": "hyaluronic-acid-with-bone-substitutes-enhance-angiogen-2022"
+  "was": "hyaluronic-acid-with-bone-substitutes-enhance-angiogen-2022-2"
  },
  "cbp006": {
   "title": "In Vivo Analysis of the Biocompatibility and Bone Healing Capacity of a Novel Bone Grafting Material Combined with Hyaluronic Acid",
   "product": "cerabone plus (bovine bone with hyaluronate)",
-  "was": "in-vivo-analysis-of-the-biocompatibility-and-bone-heal-2021"
+  "was": "in-vivo-analysis-of-the-biocompatibility-and-bone-heal-2021-2"
  },
  "cbp007": {
   "title": "The Influence of Hyaluronic Acid Biofunctionalization of a Bovine Bone Substitute on Osteoblast Activity In Vitro",
   "product": "cerabone plus (bovine bone with hyaluronate)",
-  "was": "the-influence-of-hyaluronic-acid-biofunctionalization-2021"
+  "was": "the-influence-of-hyaluronic-acid-biofunctionalization-2021-2"
  },
  "cbp008": {
   "title": "Histomorphometric Evaluation of Socket Preservation Healing Using Xenogeneic Bone Substitute Combined with Statin: A Prospective Split -Mouth Clinical Pilot Study",
@@ -82,7 +617,7 @@
  "cbp017": {
   "title": "Reconstructive Peri-Implantitis Therapy by Using Bovine Bone Substitute with or without Hyaluronic Acid: A Randomized Clinical Controlled Pilot Study Rakašević D, Šćepanović M, Mijailović I, Mišić T, Janjić B, Soldatović I, Marković A. J Funct Biomater",
   "product": "cerabone plus (bovine bone with hyaluronate)",
-  "was": "reconstructive-peri-implantitis-therapy-by-using-bovin-2023"
+  "was": "reconstructive-peri-implantitis-therapy-by-using-bovin-2023-2"
  },
  "cbp018": {
   "title": "Socket preservation, sinus lift and lateral augmentation by using natural bovine bone substitute with hyaluronate",
@@ -427,7 +962,7 @@
  "cop007": {
   "title": "Cytocompatibility of Bone Substitute Materials and Membranes",
   "product": "collprotect (porcine dermis)",
-  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021"
+  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021-2"
  },
  "cop008": {
   "title": "Collagen membranes of dermal and pericardial origin -In vivo evolvement of vascularization over time",
@@ -532,22 +1067,22 @@
  "cop028": {
   "title": "Osseointegration at Implants Installed in Composite Bone: A Randomized Clinical Trial on Sinus Floor Elevation",
   "product": "collprotect (porcine dermis)",
-  "was": "osseointegration-at-implants-installed-in-composite-bo-2022"
+  "was": "osseointegration-at-implants-installed-in-composite-bo-2022-2"
  },
  "cop029": {
   "title": "Comparison of Injectable Biphasic Calcium Phosphate and a Bovine Xenograft in Socket Preservation: Qualitative and Quantitative Histologic Study in Humans Čandrlić M",
   "product": "collprotect (porcine dermis)",
-  "was": "comparison-of-injectable-biphasic-calcium-phosphate-an-2022"
+  "was": "comparison-of-injectable-biphasic-calcium-phosphate-an-2022-2"
  },
  "cop030": {
   "title": "Preliminary Study with the Use of a Titanium Mesh as Space Maker and Implant Primary Stabilization for One -Stage Sinus Lift in Cases with Less Than 1.5 mm Residual Bone",
   "product": "collprotect (porcine dermis)",
-  "was": "preliminary-study-with-the-use-of-a-titanium-mesh-as-s-2021"
+  "was": "preliminary-study-with-the-use-of-a-titanium-mesh-as-s-2021-2"
  },
  "cop031": {
   "title": "Sinus Mucosa Thickness Changes and Ostium Involvement after Maxillary Sinus Floor Elevation in Sinus with Septa. A Cone Beam Computed Tomography Study",
   "product": "collprotect (porcine dermis)",
-  "was": "sinus-mucosa-thickness-changes-and-ostium-involvement-2021"
+  "was": "sinus-mucosa-thickness-changes-and-ostium-involvement-2021-2"
  },
  "cop032": {
   "title": "Influence of Anatomical Parameters on the Dimensions of the Subantral Space and Sinus Mucosa Thickening after Sinus Floor Elevation. A Retrospective Cone Beam Computed Tomography Study",
@@ -557,22 +1092,22 @@
  "cop033": {
   "title": "Effect of systemic antibiotics on the outcomes of regenerative periodontal surgery in intrabony defects: a randomized, controlled, clinical study",
   "product": "collprotect (porcine dermis)",
-  "was": "effect-of-systemic-antibiotics-on-the-outcomes-of-rege-2021"
+  "was": "effect-of-systemic-antibiotics-on-the-outcomes-of-rege-2021-2"
  },
  "cop034": {
   "title": "Two-Year Follow-Up of 4-mm-Long Implants Used as Distal Support of Full -Arch FDPs Compared to 10 -mm Implants Installed after Sinus Floor Elevation. A Randomized Clinical Trial",
   "product": "collprotect (porcine dermis)",
-  "was": "two-year-follow-up-of-4-mm-long-implants-used-as-dista-2021"
+  "was": "two-year-follow-up-of-4-mm-long-implants-used-as-dista-2021-2"
  },
  "cop035": {
   "title": "Reconstructive surgical treatment of isolated deep intrabony defects with guided tissue regeneration using entire papilla preservation technique: A prospective case series",
   "product": "collprotect (porcine dermis)",
-  "was": "reconstructive-surgical-treatment-of-isolated-deep-int-2021"
+  "was": "reconstructive-surgical-treatment-of-isolated-deep-int-2021-2"
  },
  "cop036": {
   "title": "Alveolar ridge preservation in defect sockets in the maxillary aesthetic zone followed by single -tooth bone level tapered implants with immediate provisionalization: a 1-year prospective case series",
   "product": "collprotect (porcine dermis)",
-  "was": "alveolar-ridge-preservation-in-defect-sockets-in-the-m-2021"
+  "was": "alveolar-ridge-preservation-in-defect-sockets-in-the-m-2021-2"
  },
  "cop037": {
   "title": "Effect of systemic antibiotics on the outcomes of regenerative periodontal surgery in intrabony defects: a randomized, controlled, clinical study",
@@ -582,7 +1117,7 @@
  "cop038": {
   "title": "Tomographic Assessment on the Influence of the Use of a Collagen Membrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
   "product": "collprotect (porcine dermis)",
-  "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020"
+  "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020-3"
  },
  "cop039": {
   "title": "Rehabilitation of an extremely edentulous atrophic maxilla with a pseudoskeletal class III relationship",
@@ -592,7 +1127,7 @@
  "cop040": {
   "title": "Bone Graft Displacement After Maxillary Sinus Floor Augmentation With or Without Covering Barrier Membrane: A Retrospective Computed Tomographic Image Evaluation",
   "product": "collprotect (porcine dermis)",
-  "was": "bone-graft-displacement-after-maxillary-sinus-floor-au-2019"
+  "was": "bone-graft-displacement-after-maxillary-sinus-floor-au-2019-2"
  },
  "cop041": {
   "title": "Effect of Deproteinized Bovine Bone Mineral at Implant Dehiscence Defects Grafted by the Sandwich Bone Augmentation Technique",
@@ -607,7 +1142,7 @@
  "cop043": {
   "title": "Comparison of two different xenografts in bilateral sinus augmentation: radiographic and histologic findings",
   "product": "collprotect (porcine dermis)",
-  "was": "comparison-of-two-different-xenografts-in-bilateral-si-2015"
+  "was": "comparison-of-two-different-xenografts-in-bilateral-si-2015-2"
  },
  "cop044": {
   "title": "The concept of Screw -Guided Bone Regeneration (S -GBR). Part 2: S -GBR in the severely resorbed preimplant posterior mandible using bone xenograft and Leukocyteand Platelet-Rich Fibrin (L-PRF): a 5-year follow-up",
@@ -672,7 +1207,7 @@
  "jas012": {
   "title": "Critical-size Defect Augmentation Using Sintered and Non -Sintered Bovine Bone Matrix - An Experimental Controlled Study in Minipigs",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "critical-size-defect-augmentation-using-sintered-and-n-2021"
+  "was": "critical-size-defect-augmentation-using-sintered-and-n-2021-2"
  },
  "jas013": {
   "title": "Comparative barrier membrane degradation over time: Pericardium versus dermal membranes",
@@ -692,22 +1227,22 @@
  "jas016": {
   "title": "Cytocompatibility of Bone Substitute Materials and Membranes",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021-2"
+  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021-3"
  },
  "jas017": {
   "title": "Osseointegration of different implant surfaces in areas grafted with deproteinized bovine bone associated or not with fresh bone marrow-Preclinical study in rabbits",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "osseointegration-of-different-implant-surfaces-in-area-2021"
+  "was": "osseointegration-of-different-implant-surfaces-in-area-2021-2"
  },
  "jas018": {
   "title": "In Vivo Analysis of the Biocompatibility and Bone Healing Capacity of a Novel Bone Grafting Material Combined with Hyaluronic Acid",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "in-vivo-analysis-of-the-biocompatibility-and-bone-heal-2021-2"
+  "was": "in-vivo-analysis-of-the-biocompatibility-and-bone-heal-2021-3"
  },
  "jas019": {
   "title": "Microtomographic reconstruction of mandibular defects treated with xenografts and collagen-based membranes: A pre-clinical minipig model",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "microtomographic-reconstruction-of-mandibular-defects-2021"
+  "was": "microtomographic-reconstruction-of-mandibular-defects-2021-2"
  },
  "jas020": {
   "title": "Expression of TNF-and MMP -13 Following Subcutaneous Implantation of Demineralized Freeze Dried Bovine Cortical Bone Membrane in Rat’s Dorsum",
@@ -717,7 +1252,7 @@
  "jas021": {
   "title": "Evaluation of air polishing with a sterile powder and mechanical debridement during regenerative surgical periimplantitis treatment: a study in dogs",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "evaluation-of-air-polishing-with-a-sterile-powder-and-2021"
+  "was": "evaluation-of-air-polishing-with-a-sterile-powder-and-2021-2"
  },
  "jas022": {
   "title": "Collagen membranes of dermal and pericardial origin -In vivo evolvement of vascularization over time",
@@ -727,7 +1262,7 @@
  "jas023": {
   "title": "A Novel Xenograft Bone Substitute Supports Stable Bone Formation in Circumferential Defects Around Dental Implants in Minipigs",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "a-novel-xenograft-bone-substitute-supports-stable-bone-2020"
+  "was": "a-novel-xenograft-bone-substitute-supports-stable-bone-2020-2"
  },
  "jas024": {
   "title": "In Vitro and In Vivo Biocompatibility Analysis of a New Transparent Collagen-based Wound Membrane for Tissue Regeneration in Different Clinical Indications",
@@ -737,7 +1272,7 @@
  "jas025": {
   "title": "The Impact of Compaction Force on Graft Consolidation in a Guided Bone Regeneration Model",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "the-impact-of-compaction-force-on-graft-consolidation-2020"
+  "was": "the-impact-of-compaction-force-on-graft-consolidation-2020-2"
  },
  "jas026": {
   "title": "Biofunctionalization of porcine-derived collagen matrices with platelet rich fibrin: influence on angiogenesis in vitro and in vivo",
@@ -782,7 +1317,7 @@
  "jas034": {
   "title": "Osseointegration of Superhydrophilic Implants Placed in Defect Grafted Bones. El",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "osseointegration-of-superhydrophilic-implants-placed-i-2019"
+  "was": "osseointegration-of-superhydrophilic-implants-placed-i-2019-2"
  },
  "jas035": {
   "title": "Comparison of autogenous and allograft bone rings in surgically created vertical bone defects around implants in a sheep model",
@@ -817,7 +1352,7 @@
  "jas041": {
   "title": "Biocompatibility and Biodegradation of a Native, Porcine Pericardium Membrane. Results from in vitro/in vivo Examination",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "biocompatibility-and-biodegradation-of-a-native-porcin-2012"
+  "was": "biocompatibility-and-biodegradation-of-a-native-porcin-2012-2"
  },
  "jas042": {
   "title": "Clinical aspects of novel types of collagen membranes and matrices: Current issues in soft-and hard-tissue augmentation",
@@ -937,7 +1472,7 @@
  "jas065": {
   "title": "Alveolar ridge augmentation using the shell technique with allogeneic and autogenous bone plates in a split‐mouth design —A retrospective case report from five patients",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "alveolar-ridge-augmentation-using-the-shell-technique-2020"
+  "was": "alveolar-ridge-augmentation-using-the-shell-technique-2020-2"
  },
  "jas066": {
   "title": "Immediate Implant Placement and Provisionalization in the Esthetic Zone Revisited: The Marginal Migration Concept (MMC)",
@@ -962,7 +1497,7 @@
  "jas070": {
   "title": "Horizontal ridge augmentation using native collagen membrane vs titanium mesh in atrophic maxillary ridges: Randomized clinical trial",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "horizontal-ridge-augmentation-using-native-collagen-me-2020"
+  "was": "horizontal-ridge-augmentation-using-native-collagen-me-2020-2"
  },
  "jas071": {
   "title": "Alveolar ridge preservation in the esthesic zone: predictable decisions in a severly affected site",
@@ -977,7 +1512,7 @@
  "jas073": {
   "title": "Tomographic Assessment on the Influence of the Use of a Collagen Membrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020-2"
+  "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020-4"
  },
  "jas074": {
   "title": "Customized allogeneic bone grafts for maxillary horizontal augmentation: A 5 - year follow-up radiographic and histologic evaluation",
@@ -1017,7 +1552,7 @@
  "jas081": {
   "title": "Sinus Floor Elevation Using the Lateral Approach and Window Repositioning and a Xenogeneic Bone Substitute as a Grafting Material: A Histologic, Histomorphometric, and Radiographic Analysis",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "sinus-floor-elevation-using-the-lateral-approach-and-w-2018"
+  "was": "sinus-floor-elevation-using-the-lateral-approach-and-w-2018-2"
  },
  "jas082": {
   "title": "A preliminary randomized clinical trial comparing diode laser and scalpel periosteal incision during implant surgery: impact on postoperative morbidity and implant survival",
@@ -1052,7 +1587,7 @@
  "jas088": {
   "title": "Histological and histomorphometric study using an ultrasonic crestal sinus grafting procedure. A multicenter case study",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "histological-and-histomorphometric-study-using-an-ultr-2016"
+  "was": "histological-and-histomorphometric-study-using-an-ultr-2016-2"
  },
  "jas089": {
   "title": "Application of buccal fat pad-derived stem cells in combination with autogenous iliac bone graft in the treatment of maxillomandibular atrophy: a preliminary human study",
@@ -1092,12 +1627,247 @@
  "jas096": {
   "title": "Sinus floor elevation using a sintered, natural bone mineral - A histological case report study",
   "product": "Jason membrane (porcine pericardium)",
-  "was": "sinus-floor-elevation-using-a-sintered-natural-bone-mi-2011"
+  "was": "sinus-floor-elevation-using-a-sintered-natural-bone-mi-2011-2"
  },
  "jas097": {
   "title": "Regeneration of Horizontal Bone Defect in Edentulous Maxilla Using the Allogenic Bone-Plate Shell Technique and a Composite Bone Graft-A Case Report",
   "product": "Jason membrane (porcine pericardium)",
   "was": "regeneration-of-horizontal-bone-defect-in-edentulous-m-2023"
+ },
+ "mgr001": {
+  "title": "Bone Allograft Acid Lysates Change the Genetic Signature of Gingival",
+  "product": "maxgraft (processed human allograft)",
+  "was": "bone-allograft-acid-lysates-change-the-genetic-signatu-2023"
+ },
+ "mgr002": {
+  "title": "In vitro comparison of the osteogenic capability of human pulp stem cells on alloplastic, allogeneic, and xenogeneic bone scaffolds",
+  "product": "maxgraft (processed human allograft)",
+  "was": "in-vitro-comparison-of-the-osteogenic-capability-of-hu-nd"
+ },
+ "mgr003": {
+  "title": "Correlations between radiological and histological findings of bone remodelling and root resorption in a rodent cleft model",
+  "product": "maxgraft (processed human allograft)",
+  "was": "correlations-between-radiological-and-histological-fin-nd"
+ },
+ "mgr004": {
+  "title": "Lyophilized Human Bone Allograft as an Antibiotic Carrier: An In Vitro and In Vivo Study",
+  "product": "maxgraft (processed human allograft)",
+  "was": "lyophilized-human-bone-allograft-as-an-antibiotic-carr-2022"
+ },
+ "mgr005": {
+  "title": "Evaluation of different grafting materials for alveolar cleft repair in the context of orthodontic tooth movement in rats",
+  "product": "maxgraft (processed human allograft)",
+  "was": "evaluation-of-different-grafting-materials-for-alveola-2021"
+ },
+ "mgr006": {
+  "title": "Does Platelet-Rich Fibrin Enhance the Early Angiogenetic Potential of Different Bone Substitute Materials? An In Vitro and In Vivo Analysis",
+  "product": "maxgraft (processed human allograft)",
+  "was": "does-platelet-rich-fibrin-enhance-the-early-angiogenet-2021-2"
+ },
+ "mgr007": {
+  "title": "Influence of Different Rehydration Protocols on Biomechanical Properties of Allogeneic Cortical Bone Plates: A Combined in-vitro/in-vivo",
+  "product": "maxgraft (processed human allograft)",
+  "was": "influence-of-different-rehydration-protocols-on-biomec-2021"
+ },
+ "mgr008": {
+  "title": "Combination of an allogenic and a xenogenic bone substitute material with injectable platelet-rich fibrin – A comparative in vitro study",
+  "product": "maxgraft (processed human allograft)",
+  "was": "combination-of-an-allogenic-and-a-xenogenic-bone-subst-2020"
+ },
+ "mgr009": {
+  "title": "Balancing Purification and Ultrastructure of Naturally Derived Bone Blocks for Bone Regeneration: Report of the Purification Effort of Two Bone Blocks",
+  "product": "maxgraft (processed human allograft)",
+  "was": "balancing-purification-and-ultrastructure-of-naturally-2019"
+ },
+ "mgr010": {
+  "title": "Beneficial Effects of Vitamins K and D3 on Redox Balance of Human Osteoblasts Cultured with Hydroxyapatite-Based Biomaterials Ambrożewicz E, Muszyńska M",
+  "product": "maxgraft (processed human allograft)",
+  "was": "beneficial-effects-of-vitamins-k-and-d3-on-redox-balan-2019"
+ },
+ "mgr011": {
+  "title": "Comparison of autogenous and allograft bone rings in surgically created vertical bone defects around implants in a sheep model",
+  "product": "maxgraft (processed human allograft)",
+  "was": "comparison-of-autogenous-and-allograft-bone-rings-in-s-2018-2"
+ },
+ "mgr012": {
+  "title": "Three-dimensional scanning electron microscopy of maxillofacial biomaterials",
+  "product": "maxgraft (processed human allograft)",
+  "was": "three-dimensional-scanning-electron-microscopy-of-maxi-2017"
+ },
+ "mgr013": {
+  "title": "Alveolar Ridge Preservation Procedures Performed with a Freeze-Dried Bone Allograft: Clinical and Histologic Outcomes in a Case Series: Part II",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "alveolar-ridge-preservation-procedures-performed-with-2024-2"
+ },
+ "mgr014": {
+  "title": "Evaluation of crestal sinus floor elevation in cases exhibiting an oblique sinus floor with a residual bone height of 4.0-7.0 mm using Densah burs with simultaneous implant placement: a prospective clinical study",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "evaluation-of-crestal-sinus-floor-elevation-in-cases-e-2023-2"
+ },
+ "mgr015": {
+  "title": "Comparision between cortico-cancellous allograft and bovine xenograft for sinus augmentation: a radiographic, histologic and histomorphometric clinical study",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "comparision-between-cortico-cancellous-allograft-and-b-2023"
+ },
+ "mgr016": {
+  "title": "Alveolar Ridge Preservation Procedures Performed with a Freeze-Dried Bone Allograft: Histologic Outcomes in a Cohort",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "alveolar-ridge-preservation-procedures-performed-with-2023-2"
+ },
+ "mgr017": {
+  "title": "Full mouth oral rehabilitation of a severely worn dentition based on a fully digital workflow",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "full-mouth-oral-rehabilitation-of-a-severely-worn-dent-2023"
+ },
+ "mgr018": {
+  "title": "First Clinical Case Report of a Xenograft-Allograft Combination for Alveolar Ridge Augmentation Using a Bovine Bone Substitute Material with Hyaluronate (Cerabone® Plus) Combined with Allogeneic Bone Granules (Maxgraft®)",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "first-clinical-case-report-of-a-xenograft-allograft-co-2023"
+ },
+ "mgr019": {
+  "title": "Resorbable magnesium metal membrane for sinus lift procedures: a case series",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "resorbable-magnesium-metal-membrane-for-sinus-lift-pro-2023"
+ },
+ "mgr020": {
+  "title": "Retrospective analysis of dental implants immediately placed in extraction sockets with periapical pathology: immediate implant placement in infected areas",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "retrospective-analysis-of-dental-implants-immediately-2023-2"
+ },
+ "mgr021": {
+  "title": "Histological and immunohistochemical comparison of two different allogeneic bone grafting materials for alveolar ridge reconstruction: A prospective randomized trial in humans Solakoglu Ö",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "histological-and-immunohistochemical-comparison-of-two-2019"
+ },
+ "mgr022": {
+  "title": "Four-year post-loading results of full-arch rehabilitation with immediate placement and immediate loading implants: A retrospective controlled study",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "four-year-post-loading-results-of-full-arch-rehabilita-2017"
+ },
+ "mgr023": {
+  "title": "A 3-year prospective randomized clinical trial of alveolar bone crest response and clinical parameters through 1, 2, and 3 years of clinical function of implants placed 4 months after alveolar ridge preservation using two different allogeneic bone-grafting materials Solakoglu Ö, Ofluoğlu D",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "a-3-year-prospective-randomized-clinical-trial-of-alve-2022-2"
+ },
+ "mgr024": {
+  "title": "Connective tissue graft vs porcine collagen matrix after immediate implant placement in esthetic area: A randomized clinical trial",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "connective-tissue-graft-vs-porcine-collagen-matrix-aft-2022"
+ },
+ "mgr025": {
+  "title": "Decompression technique — A modified approach for lateral alveolar ridge augmentation: A case report",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "decompression-technique-a-modified-approach-for-latera-2021"
+ },
+ "mgr026": {
+  "title": "Time analysis of alveolar ridge preservation using a combination of mineralized bone-plug and dense-polytetrafluoroethylene membrane: A histomorphometric study",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "time-analysis-of-alveolar-ridge-preservation-using-a-c-2020-2"
+ },
+ "mgr027": {
+  "title": "Lateral bone augmentation in narrow posterior mandibles, description of a novel approach, and analysis of results",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "lateral-bone-augmentation-in-narrow-posterior-mandible-2018"
+ },
+ "mgr028": {
+  "title": "The use of mineralized bone allograft as a single grafting material in maxillary sinus lifting with severely atrophied alveolar ridge (1-3 mm) and immediately inserted dental implants. A 3- up to 8-year retrospective study",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "the-use-of-mineralized-bone-allograft-as-a-single-graf-2018"
+ },
+ "mgr029": {
+  "title": "Bone augmentation and simultaneous soft tissue thickening with collagen tissue matrix derivate membrane in an aesthetic area. A case report Puišys A, Žukauskas S",
+  "product": "maxgraft granules (processed human allograft)",
+  "was": "bone-augmentation-and-simultaneous-soft-tissue-thicken-2017"
+ },
+ "mgr030": {
+  "title": "Regeneration of Horizontal Bone Defect in Edentulous Maxilla Using the Allogenic Bone-Plate Shell Technique and a Composite Bone Graft-A Case",
+  "product": "maxgraft cortico (processed human allograft)",
+  "was": "regeneration-of-horizontal-bone-defect-in-edentulous-m-2023-2"
+ },
+ "mgr031": {
+  "title": "Comparison of Allogeneic Bone Plate and Guided Bone Regeneration Efficiency in Horizontally Deficient Maxillary Alveolar Ridges",
+  "product": "maxgraft cortico (processed human allograft)",
+  "was": "comparison-of-allogeneic-bone-plate-and-guided-bone-re-2022-2"
+ },
+ "mgr032": {
+  "title": "Allogeneic cortical struts and bone granules for challenging alveolar reconstructions: An innovative approach toward an established technique Würdinger R and",
+  "product": "maxgraft cortico (processed human allograft)",
+  "was": "allogeneic-cortical-struts-and-bone-granules-for-chall-2020"
+ },
+ "mgr033": {
+  "title": "Alveolar ridge augmentation using the shell technique with allogeneic and autogenous bone plates in a split-mouth design—A retrospective case report from five patients",
+  "product": "maxgraft cortico (processed human allograft)",
+  "was": "alveolar-ridge-augmentation-using-the-shell-technique-2020-3"
+ },
+ "mgr034": {
+  "title": "Clinical and Biological Validation of an Allogeneous Cancellous Bone Block for Alveolar Maxillary Ridge Reconstruction: A Case",
+  "product": "maxgraft blocks (processed human allograft)",
+  "was": "clinical-and-biological-validation-of-an-allogeneous-c-2024"
+ },
+ "mgr035": {
+  "title": "Risk Factors for Complications Following Staged Alveolar Ridge Augmentation and Dental Implantation: A Retrospective Evaluation of 151 Cases with Allogeneic and 70 Cases with Autogenous Bone",
+  "product": "maxgraft blocks (processed human allograft)",
+  "was": "risk-factors-for-complications-following-staged-alveol-2022-2"
+ },
+ "mgr036": {
+  "title": "Comparison of allogeneic and autogenous bone grafts for augmentation of alveolar ridge defects – a 12-month retrospective radiographic evaluation",
+  "product": "maxgraft blocks (processed human allograft)",
+  "was": "comparison-of-allogeneic-and-autogenous-bone-grafts-fo-2018-2"
+ },
+ "mgr037": {
+  "title": "A Novel Approach to Assess and Measure Resorption of Allograft Cancellous Blocks. A Clinical Pilot",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "a-novel-approach-to-assess-and-measure-resorption-of-a-2024"
+ },
+ "mgr038": {
+  "title": "Efficacy and volume stability of a customized allogeneic bone block for the reconstruction of advanced alveolar ridge deficiencies at the anterior maxillary region: a retrospective radiographic evaluation",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "efficacy-and-volume-stability-of-a-customized-allogene-2023"
+ },
+ "mgr039": {
+  "title": "Volumetric Changes of a Customized Allogeneic Bone Block Measured by Two Image Matching Tools: Introduction of a Novel Assessment Technique for Graft Resorption",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "volumetric-changes-of-a-customized-allogeneic-bone-blo-2021"
+ },
+ "mgr040": {
+  "title": "Ridge Augmentation Using Customized Allogeneic Bone Block: A 3-Year Follow-up of Two Case Reports",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "ridge-augmentation-using-customized-allogeneic-bone-bl-2020-2"
+ },
+ "mgr041": {
+  "title": "Customized allogeneic bone grafts for maxillary horizontal augmentation: A 5-year follow-up radiographic and histologic evaluation",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "customized-allogeneic-bone-grafts-for-maxillary-horizo-2020-2"
+ },
+ "mgr042": {
+  "title": "Bilateral maxillary augmentation using CAD/CAM manufactured allogenic bone blocks for restoration of congenitally missing teeth: A case report",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "bilateral-maxillary-augmentation-using-cad-cam-manufac-2019-2"
+ },
+ "mgr043": {
+  "title": "Reconstruction of a Unilateral Alveolar Cleft Using a Customized Allogenic Bone Block and Subsequent Dental Implant Placement in an Adult Patient",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "reconstruction-of-a-unilateral-alveolar-cleft-using-a-2019"
+ },
+ "mgr044": {
+  "title": "Custom-milled individual allogeneic bone grafts for alveolar cleft osteoplasty—A technical note",
+  "product": "maxgraft bonebuilder (processed human allograft)",
+  "was": "custom-milled-individual-allogeneic-bone-grafts-for-al-2017"
+ },
+ "mgr045": {
+  "title": "Vertical alveolar bone augmentation of atrophied posterior mandibular regions with simultaneous dental implant placement using allogeneic bone rings vs autogenous bone rings: a randomized controlled clinical trial Ragab",
+  "product": "maxgraft bonering (processed human allograft)",
+  "was": "vertical-alveolar-bone-augmentation-of-atrophied-poste-2024"
+ },
+ "mgr046": {
+  "title": "One Stage Vertical Ridge Augmentation and Dental Implantation with Allograft Bonerings: Results One Year after Surgery",
+  "product": "maxgraft bonering (processed human allograft)",
+  "was": "one-stage-vertical-ridge-augmentation-and-dental-impla-2019"
+ },
+ "mgr047": {
+  "title": "Vertical bone augmentation in a single-tooth gap with an allogenic bone ring: Clinical considerations",
+  "product": "maxgraft bonering (processed human allograft)",
+  "was": "vertical-bone-augmentation-in-a-single-tooth-gap-with-2018"
  },
  "mxr001": {
   "title": "Establishing a new periodontitis -like intrabony maxillary defect in rats for investigation on bone regeneration",
@@ -1127,7 +1897,7 @@
  "mxr006": {
   "title": "Cytocompatibility of Bone Substitute Materials and Membranes",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021-3"
+  "was": "cytocompatibility-of-bone-substitute-materials-and-mem-2021-4"
  },
  "mxr007": {
   "title": "Establishing a new alveolar cleft model in rats to investigate the influence of jaw reconstructions on orthodontic tooth movement",
@@ -1137,7 +1907,7 @@
  "mxr008": {
   "title": "Evaluation of different grafting materials for alveolar cleft repair in the context of orthodontic tooth movement in rats",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "evaluation-of-different-grafting-materials-for-alveola-2021"
+  "was": "evaluation-of-different-grafting-materials-for-alveola-2021-2"
  },
  "mxr009": {
   "title": "Maxillary Sinus Augmentation Using Ceramic Alloplastic Granules or Paste: An Experimental Study in Rabbits",
@@ -1147,12 +1917,12 @@
  "mxr010": {
   "title": "Effects of Different Bone Substitutes on Reactive Oxygen Species Release in Leukocytes in Vitro: A Pilot Study",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "effects-of-different-bone-substitutes-on-reactive-oxyg-2021"
+  "was": "effects-of-different-bone-substitutes-on-reactive-oxyg-2021-2"
  },
  "mxr011": {
   "title": "Possible Implications for Improved Osteogenesis? The Combination of Platelet - Rich Fibrin With Different Bone Substitute Materials",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "possible-implications-for-improved-osteogenesis-the-co-2021"
+  "was": "possible-implications-for-improved-osteogenesis-the-co-2021-2"
  },
  "mxr012": {
   "title": "Histological Comparison between Biphasic Calcium Phosphate and Deproteinized Bovine Bone on Critical-Size Bone Defects",
@@ -1162,7 +1932,7 @@
  "mxr013": {
   "title": "Does Platelet-Rich Fibrin Enhance the Early Angiogenetic Potential of Different Bone Substitute Materials? An In Vitro and In Vivo Analysis",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "does-platelet-rich-fibrin-enhance-the-early-angiogenet-2021"
+  "was": "does-platelet-rich-fibrin-enhance-the-early-angiogenet-2021-3"
  },
  "mxr014": {
   "title": "Tissue response to biphasic calcium phosphate covalently modified with either heparin or hyaluronic acid in a mouse subcutaneous implantation model Stojanović S",
@@ -1202,7 +1972,7 @@
  "mxr021": {
   "title": "Bone substitute material composition and morphology differentially modulate calcium and phosphate release through osteoclast-like cells",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "bone-substitute-material-composition-and-morphology-di-2014"
+  "was": "bone-substitute-material-composition-and-morphology-di-2014-2"
  },
  "mxr022": {
   "title": "Donor age-related biological properties of human dental pulp stem cells change in nanostructured scaffolds.*",
@@ -1242,7 +2012,7 @@
  "mxr029": {
   "title": "Comparison of Injectable Biphasic Calcium Phosphate and a Bovine Xenograft in Socket Preservation: Qualitative and Quantitative Histologic Study in Humans Čandrlić M",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "comparison-of-injectable-biphasic-calcium-phosphate-an-2022-2"
+  "was": "comparison-of-injectable-biphasic-calcium-phosphate-an-2022-3"
  },
  "mxr030": {
   "title": "Synthetic Injectable Biomaterials for Alveolar Bone Regeneration in Animal and Human Studies",
@@ -1262,7 +2032,7 @@
  "mxr033": {
   "title": "Influence of the type of bone substitute materials on the rates of bone regeneration in sinus lift grafting with lateral approach and delayed implant placement",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
-  "was": "influence-of-the-type-of-bone-substitute-materials-on-2020"
+  "was": "influence-of-the-type-of-bone-substitute-materials-on-2020-2"
  },
  "mxr034": {
   "title": "Evaluation of Efficacy of Surgical Periodontal Therapy with the Use of Bone Graft in the Treatment of Periodontal Intrabony Defects",
@@ -1427,12 +2197,12 @@
  "muc029": {
   "title": "Reconstructive Peri-Implantitis Therapy by Using Bovine Bone Substitute with or without Hyaluronic Acid: A Randomized Clinical Controlled Pilot Study Rakašević D, Šćepanović M, Mijailović I, Mišić T, Janjić B, Soldatović I, Marković A. J Funct Biomater",
   "product": "mucoderm (porcine collagen soft-tissue matrix)",
-  "was": "reconstructive-peri-implantitis-therapy-by-using-bovin-2023-2"
+  "was": "reconstructive-peri-implantitis-therapy-by-using-bovin-2023-3"
  },
  "muc030": {
   "title": "Alveolar ridge and keratinized gingiva preservation using collagen matrix and inorganic bone substitute in flapless extractions: A case series of exposed biomaterials De",
   "product": "mucoderm (porcine collagen soft-tissue matrix)",
-  "was": "alveolar-ridge-and-keratinized-gingiva-preservation-us-2022"
+  "was": "alveolar-ridge-and-keratinized-gingiva-preservation-us-2022-2"
  },
  "muc031": {
   "title": "Soft tissue healing outcomes in dentistry with acellular dermal collagen matrix",
@@ -1442,7 +2212,7 @@
  "muc032": {
   "title": "Connective tissue graft vs porcine collagen matrix after immediate implant placement in esthetic area: A randomized clinical trial",
   "product": "mucoderm (porcine collagen soft-tissue matrix)",
-  "was": "connective-tissue-graft-vs-porcine-collagen-matrix-aft-2022"
+  "was": "connective-tissue-graft-vs-porcine-collagen-matrix-aft-2022-2"
  },
  "muc033": {
   "title": "Peri-implant soft-tissue esthetic outcome after immediate implant placement in conjunction with xenogeneic acellular dermal matrix or connective tissue graft: A randomized controlled clinical study",
@@ -1607,7 +2377,7 @@
  "muc065": {
   "title": "Bone augmentation and simultaneous soft tissue thickening with collagen tissue matrix derivate membrane in an aesthetic area. A case report. Puišys A, Žukauskas S",
   "product": "mucoderm (porcine collagen soft-tissue matrix)",
-  "was": "bone-augmentation-and-simultaneous-soft-tissue-thicken-2017"
+  "was": "bone-augmentation-and-simultaneous-soft-tissue-thicken-2017-2"
  },
  "muc066": {
   "title": "Use of Collagen Matrix for Augmentation of the Peri-implant Soft Tissue at the Time of Immediate Implant Placement. Zafiropoulos GG and",
@@ -1737,7 +2507,7 @@
  "nov019": {
   "title": "Resorbable magnesium metal membrane for sinus lift procedures: a case series",
   "product": "NOVAMag (magnesium membrane, screw, SHIELD)",
-  "was": "resorbable-magnesium-metal-membrane-for-sinus-lift-pro-2023"
+  "was": "resorbable-magnesium-metal-membrane-for-sinus-lift-pro-2023-2"
  },
  "per001": {
   "title": "In Vitro Microbial Adhesion on the Surfaces of Various Polytetrafluoroethylene Membranes Used in Guided Bone Regeneration",
@@ -1797,7 +2567,7 @@
  "per012": {
   "title": "Reconstruction of vertical alveolar ridge deficiencies utilizing a high -density polytetrafluoroethylene membrane /clinical impact of flap dehiscence on treatment outcomes: case series/",
   "product": "permamem (dense PTFE)",
-  "was": "reconstruction-of-vertical-alveolar-ridge-deficiencies-2022"
+  "was": "reconstruction-of-vertical-alveolar-ridge-deficiencies-2022-2"
  },
  "per013": {
   "title": "The use of synthetic non -resorbable barrier membrane in alveolar ridge preservation technique: A case series K.N",
@@ -1822,7 +2592,7 @@
  "per017": {
   "title": "Open-Healing Socket Preservation with a Novel Dense Polytetrafluoroethylene (dPTFE) Membrane: A Retrospective Clinical Study",
   "product": "permamem (dense PTFE)",
-  "was": "open-healing-socket-preservation-with-a-novel-dense-po-2020"
+  "was": "open-healing-socket-preservation-with-a-novel-dense-po-2020-2"
  },
  "per018": {
   "title": "The Use of a Non -Absorbable Membrane as an Occlusive Barrier for Alveolar Ridge Preservation: A One Year Follow-Up Prospective Cohort Study",

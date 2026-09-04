@@ -1,14 +1,14 @@
 {
-  "authors": "Heimes et al.",
-  "identifier": "doi:10.1111/cid.13242 · 26(1):170-182",
-  "journal": "Clin Implant Dent Relat Res",
-  "product": "maxgraft cortico vs autologous bone shells",
-  "rep": "Branko T. · imported from botiss decks",
-  "studyType": "Comparative clinical, maxgraft cortico n=20 vs autologous n=16, patient-reported outcomes",
-  "supports": "Patient-experience evidence: higher morbidity and more side effects in the autologous group; would repeat the procedure 20/20 allogeneic vs 14/16 autologous. This is the safest ground for the \"no second surgical site\" argument because the endpoint is morbidity, not bone. Published data, cited in the botiss training decks and approved by botiss Medical Affairs.",
-  "title": "Allogeneic cortical shells versus autologous shells from the patient perspective",
-  "ts": 1788462414965,
-  "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.)",
-  "via": "import",
-  "year": "2024"
+ "authors": "Heimes et al.",
+ "identifier": "doi:10.1111/cid.13242 · 26(1):170-182",
+ "journal": "Clin Implant Dent Relat Res",
+ "product": "maxgraft cortico vs autologous bone shells",
+ "rep": "Branko T. · imported from botiss decks",
+ "studyType": "Comparative clinical, maxgraft cortico n=20 vs autologous n=16, patient-reported outcomes",
+ "supports": "Patient-experience evidence: higher morbidity and more side effects in the autologous group; would repeat the procedure 20/20 allogeneic vs 14/16 autologous. This is the safest ground for the \"no second surgical site\" argument because the endpoint is morbidity, not bone. Published data, cited in the botiss training decks and approved by botiss Medical Affairs. — Also in the botiss product literature list. Authors' conclusion, verbatim: “The swelling was the main reason for patients' discomfort in both groups and was significantly higher after autologous bone augmentation. Since this side effect seems to be a highly relevant factor for patients' comfort and satisfaction, it needs to be discussed during preoperative consultation to allow shared decision-making considering the anticipated morbidity”",
+ "title": "Allogeneic cortical shells versus autologous shells from the patient perspective",
+ "ts": 1788462414965,
+ "verifiedBy": "botiss Medical Affairs (confirmed by Branko T.); also on the botiss product literature list",
+ "via": "import",
+ "year": "2024"
 }

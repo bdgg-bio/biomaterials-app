@@ -1,15 +1,17 @@
 # botiss literature lists — parsed
 
-Publications parsed: **377**  ·  flagged for review: **9**
+Publications parsed: **541**  ·  flagged for review: **11**
 
 Every entry is Medical Affairs curated (it came from an official product literature list),
 and `supports` holds the authors' own conclusion verbatim. Nothing is paraphrased.
 
 ## By product
 
+- cerabone (sintered bovine bone) — **112**
 - Jason membrane (porcine pericardium) — **99**
 - mucoderm (porcine collagen soft-tissue matrix) — **72**
 - collacone / collafleece (collagen cone and fleece) — **59**
+- maxgraft (processed human allograft) — **52**
 - collprotect (porcine dermis) — **44**
 - maxresorb / maxresorb inject (biphasic CaP) — **38**
 - permamem (dense PTFE) — **24**
@@ -18,22 +20,22 @@ and `supports` holds the authors' own conclusion verbatim. Nothing is paraphrase
 
 ## By section (the list's own classification)
 
-- Clinical — **239**
-- Pre-clinical — **138**
+- Clinical — **346**
+- Pre-clinical — **195**
 
 ## By refined study design
 
-- Animal / in vivo preclinical — **82**
-- Randomised controlled trial — **56**
-- Clinical, design not stated — **53**
-- In vitro / cell culture — **46**
-- Case report — **30**
-- Prospective clinical study — **23**
-- Retrospective clinical study — **23**
-- Case series — **19**
-- Histological / histomorphometric — **15**
-- Preclinical, design not stated — **8**
+- Animal / in vivo preclinical — **108**
+- Randomised controlled trial — **78**
+- Clinical, design not stated — **68**
+- In vitro / cell culture — **65**
+- Case report — **45**
+- Retrospective clinical study — **42**
+- Prospective clinical study — **36**
+- Case series — **30**
+- Histological / histomorphometric — **27**
+- Material characterisation — **12**
+- Preclinical, design not stated — **11**
+- Controlled clinical trial — **8**
 - Poster or congress abstract (not peer reviewed) — **7**
-- Controlled clinical trial — **6**
-- Material characterisation — **6**
-- Systematic review or meta-analysis — **3**
+- Systematic review or meta-analysis — **4**
