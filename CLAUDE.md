@@ -123,6 +123,17 @@ pip install pypdf
 python tools\ingest_papers.py "C:\path\to\Literature" --out out --existing reference\library-snapshot.json
 ```
 
+On Linux or macOS the same thing, with a virtualenv because recent
+distributions refuse a bare `pip install` into the system Python:
+
+```
+sudo apt install -y python3-venv git nodejs      # Ubuntu; nodejs only for the JS tools
+python3 -m venv .venv && . .venv/bin/activate
+pip install pypdf
+python3 tools/ingest_papers.py ~/Literature --out out \
+        --existing reference/library-snapshot.json
+```
+
 Then hand over `out/all-entries.json` — one portable file, roughly 400 KB for
 300 papers, carrying no absolute paths. In the session that has the Artifact
 tool:
@@ -196,6 +207,33 @@ the parser, with:
 ```
 grep -ho '[a-z]\{4,\}[.,] [0-9]\{1,3\}”' reference/lit/*.json | wc -l   # want 0
 ```
+
+## Getting the project onto a machine without GitHub
+
+The repository is small (about 6 MB with its whole history), so it travels as
+one file. A **git bundle** carries every commit and branch, and clones like a
+remote, which is the version to prefer — the local copy keeps its history and
+can still be pointed at GitHub later:
+
+```
+git clone botiss-CI-Desk.bundle biomaterials-app
+cd biomaterials-app
+git remote set-url origin https://github.com/bdgg-bio/biomaterials-app   # optional
+```
+
+A plain `.tar.gz` of the working tree is the no-git alternative; it holds the
+same files without the history.
+
+What runs on a normal machine and what does not:
+
+- `dist/botiss-CI-Desk-preview.html` opens in any browser, offline. No JS.
+- `index.html` opens too, but the two desks will not answer. `claude.use()`
+  returns `null` outside the artifact runtime, so there is no `sample` and no
+  `db`: the page falls back to `localStorage` and renders the static knowledge
+  base. The desks only work at the published artifact URL.
+- The Python tools all run locally, and `tools/pubmed_watch.py` and
+  `tools/market_watch.py` **only** work somewhere with network access, which
+  is the whole reason they are scripts rather than page code.
 
 ## Why the agents have no internet, and what to do instead
 
