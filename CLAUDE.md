@@ -16,7 +16,11 @@ the runtime capabilities below.
 | `index.html` | The whole app. `KB` near the top of the script is the static knowledge base; both the UI and the agent briefings render from it, so they cannot drift. |
 | `tools/build-preview.js` | Builds `dist/botiss-CI-Desk-preview.html`, a no-JavaScript static copy for forwarding by email. |
 | `tools/ingest_papers.py` | Turns a folder of published-paper PDFs into evidence-library entries. |
+| `tools/parse_literature_lists.py` | Turns the botiss "Most Relevant Publications" list PDFs into evidence-library entries. |
+| `tools/compact-batches.js` | Re-keys parsed entries onto short product-prefixed ids and writes the `write_db` batch manifests. |
 | `reference/evidence-import/` | The 42 literature entries imported from the botiss training decks, as committed JSON. |
+| `reference/lit/` | The 372 entries from the eight product literature lists, plus `parse-report.md` and `parse-review.md`. |
+| `reference/library-snapshot.json` | Six fields per record for all 443 references. `ingest_papers.py --existing` dedupes against it. |
 | `reference/BotissCIWorkspace.jsx` | The original React workspace. Superseded, kept for provenance. |
 
 ## The two desks
@@ -152,6 +156,38 @@ Artifact(action="write_db", url=<artifact url>, db_op="batch",
 Check `out/review.md` before writing: scanned PDFs need OCR, and entries with
 no DOI, no design or several designs matched need a human.
 
+## Ingesting a botiss literature list
+
+The "Most Relevant Publications" list PDFs are a different shape from papers —
+one numbered entry per reference, each with the citation and the paper's own
+abstract:
+
+```
+python3 tools/parse_literature_lists.py <dir-of-txt> --out out
+node tools/compact-batches.js out/all-entries-deduped.json --out reference/lit
+```
+
+**Always reconcile before writing.** Count the numbered lines in the source,
+subtract the table-of-contents and section headings, and require the parsed
+total to match exactly. The eight lists reconcile as 397 numbered lines − 20
+headings = 377 entries. A count that is merely *close* is the signature of the
+two bugs this parser has already had: a citation wrapping mid-page-range splits
+one entry into two, and a title starting with a digit ("3D-Printed…",
+"2-year…") gets swallowed by the entry above it — which then carries the
+swallowed paper's DOI and PMID. Both put a real reference under the wrong
+identifier, which is the failure the desk's no-invented-citations rule exists
+to prevent.
+
+Two smaller things the extractor gets wrong if left alone: the page folio
+beside each running header lands inside the verbatim quote, and the merge will
+overwrite a `verifiedBy` set by a person with the weaker "product literature
+list". Both are handled now; both are worth re-checking after any change to
+the parser, with:
+
+```
+grep -ho '[a-z]\{4,\}[.,] [0-9]\{1,3\}”' reference/lit/*.json | wc -l   # want 0
+```
+
 ## Publishing
 
 ```
@@ -174,9 +210,15 @@ both briefings stay well inside 64 KiB. The preview build fails on its own if a
 
 - No viewer-identity capability, so the name on logged intel is self-declared
   per device and unverified.
-- Membranes (Jason, collprotect, permamem), mucoderm and NOVAMag have almost no
-  literature in the library yet. NOVAMag is the highest risk: a young evidence
-  base and the most enthusiastic audience.
+- No literature list yet for **cerabone** or **maxgraft** — the two products
+  the team sells hardest are the two whose lists have not been imported.
+- **NOVAMag has 19 references and is the highest risk**: the youngest evidence
+  base and the most enthusiastic audience. permamem (24) and cerabone plus (21)
+  are the next thinnest.
+- Nearly every imported entry still holds `SCOPE NOT YET WRITTEN` in `supports`,
+  wrapping the paper's own abstract or conclusion verbatim. The desk can cite
+  them, but nothing tells it what each one narrowly licenses until a person
+  writes the scope statement. Claim-critical papers first.
 - The maxgraft +HyA volumetric-stability numbers are presented in the deck
   without a citation. Get the reference from Medical Affairs before they are
   used externally.
