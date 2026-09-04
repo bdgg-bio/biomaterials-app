@@ -126,11 +126,50 @@ def slug(s, n=54):
     return (s[:n].rstrip("-") or "untitled")
 
 
-def split_entries(text):
-    """Yield (section, entry_text). Section tracks the list's own headings."""
-    lines = text.split("\n")
-    section, buf, num = "", [], None
+def strip_page_footers(lines):
+    """Drop the PDF page number that sits beside each running header.
+
+    It is a line of nothing but digits, and it lands directly against the
+    end of the previous sentence once the block is collapsed to one line —
+    so an abstract quoted verbatim ends "...confirmed histomorphometrically.
+    61". The quotes are presented as the authors' own words, so a stray
+    folio in one is a defect, not a cosmetic issue.
+
+    A bare number is only treated as a folio when the nearest non-blank
+    line on one side is the running header; a page range that happens to
+    wrap onto its own line keeps its digits.
+    """
+    def neighbour(i, step):
+        j = i + step
+        while 0 <= j < len(lines) and not lines[j].strip():
+            j += step
+        return lines[j] if 0 <= j < len(lines) else ""
+
     out = []
+    for i, line in enumerate(lines):
+        if re.fullmatch(r"\s*\d{1,4}\s*", line) and (
+                HEADER_RE.match(neighbour(i, -1)) or HEADER_RE.match(neighbour(i, 1))):
+            continue
+        out.append(line)
+    return out
+
+
+def split_entries(text):
+    """Yield (section, entry_text). Section tracks the list's own headings.
+
+    The hard part is telling an entry number from a citation that wraps
+    mid-page-range — "...173-" then "178. doi: 10.xxx" on the next line —
+    which reads as the start of entry 178 and silently cuts the real entry
+    in half, stripping its DOI and abstract onto a bogus fragment. See the
+    discriminator below.
+    """
+    lines = strip_page_footers(text.split("\n"))
+    section, buf, num, expected = "", [], None, 1
+    out = []
+
+    def flush():
+        if buf and num is not None:
+            out.append((section, "\n".join(buf)))
 
     for raw in lines:
         line = raw.rstrip()
@@ -138,25 +177,44 @@ def split_entries(text):
             continue
         m = SECTION_RE.match(line)
         if m and not PAGEREF_RE.search(line):
-            if buf and num is not None:
-                out.append((section, "\n".join(buf)))
-            buf, num = [], None
+            flush()
+            buf.clear()
+            num, expected = None, 1
             section = ("Pre-clinical" if re.match(r"pre-?clinical", m.group(1), re.I)
                        else "Clinical")
             continue
         em = ENTRY_RE.match(line)
-        # A new entry starts on a small number that is not a section heading
         if em and not SECTION_RE.match(line):
-            if buf and num is not None:
-                out.append((section, "\n".join(buf)))
-            num = int(em.group(1))
-            buf = [line[em.end():]]
-            continue
+            n = int(em.group(1))
+            rest = line[em.end():].lstrip()
+            # The discriminator is what FOLLOWS the number, not the number
+            # itself: a real entry is followed by a title, a wrapped citation
+            # by "doi:", a URL, or more of the citation. Requiring the numbers
+            # to run in sequence was tried and is worse — one number lost to a
+            # page break desynchronises the counter and swallows the rest of
+            # the list as body text.
+            #
+            # Rejecting every rest that starts with a digit was also tried and
+            # is wrong: "3D-Printed Soft Membrane" and "2-year follow-up" are
+            # titles. A digit only continues a citation when punctuation or
+            # another number follows it ("178. doi:", "173- 178", "16(4)"),
+            # never when a letter does.
+            plausible = not re.match(
+                r"(?:doi:|https?://|pp?\.\s"   # DOI, URL, explicit page marker
+                r"|\d+\s*[-–]\s*\d"           # "173- 178"  page range
+                r"|\d+\s*[.,;:()]"             # "178."  "16(4)"  volume/pages
+                r"|\d+\s*$)",                  # a bare number, alone on a line
+                rest, re.I)
+            if plausible:
+                flush()
+                buf = [rest]
+                num, expected = n, n + 1
+                continue
+            # otherwise it is a wrapped page range or volume: body text
         if num is not None:
             buf.append(line)
 
-    if buf and num is not None:
-        out.append((section, "\n".join(buf)))
+    flush()
     return out
 
 

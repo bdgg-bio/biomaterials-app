@@ -110,7 +110,7 @@
   "was": "material-dependent-effects-of-injectable-platelet-rich-2026"
  },
  "coc002": {
-  "title": "RNA-Seq of Gingival Fibroblasts Grown on Collagen Membranes and Hyaluronic Acid 3",
+  "title": "RNA-Seq of Gingival Fibroblasts Grown on Collagen Membranes and Hyaluronic Acid",
   "product": "collacone / collafleece (collagen cone and fleece)",
   "was": "rna-seq-of-gingival-fibroblasts-grown-on-collagen-memb-2026"
  },
@@ -495,7 +495,7 @@
   "was": "radiographic-periimplant-bone-changes-in-osteoporotic-2025"
  },
  "cop021": {
-  "title": "Comparative Clinical Evaluation of Subepithelial Connective Tissue Graft and Xenogeneic Collagen Matrix in Treatment of Miller’s Class I and II Gingival 15 Recession: A Randomized Split-Mouth Controlled Trial",
+  "title": "Comparative Clinical Evaluation of Subepithelial Connective Tissue Graft and Xenogeneic Collagen Matrix in Treatment of Miller’s Class I and II Gingival Recession: A Randomized Split-Mouth Controlled Trial",
   "product": "collprotect (porcine dermis)",
   "was": "comparative-clinical-evaluation-of-subepithelial-conne-2025"
  },
@@ -635,7 +635,7 @@
   "was": "the-influence-of-different-crosslinking-agents-onto-th-2025-2"
  },
  "jas005": {
-  "title": "Effect of Applying 1% Metformin on Guided Bone Regeneration Processes with Bovine-Derived Xenografts. 5",
+  "title": "Effect of Applying 1% Metformin on Guided Bone Regeneration Processes with Bovine-Derived Xenografts",
   "product": "Jason membrane (porcine pericardium)",
   "was": "effect-of-applying-1-metformin-on-guided-bone-regenera-2024-2"
  },
@@ -750,7 +750,7 @@
   "was": "the-condensation-of-collagen-leads-to-an-extended-stan-2020"
  },
  "jas028": {
-  "title": "A Comprehensive Comparison of Bovine and Porcine Decellularized Pericardia: New Insights for Surgical Applications 21",
+  "title": "A Comprehensive Comparison of Bovine and Porcine Decellularized Pericardia: New Insights for Surgical Applications",
   "product": "Jason membrane (porcine pericardium)",
   "was": "a-comprehensive-comparison-of-bovine-and-porcine-decel-2020"
  },
@@ -975,7 +975,7 @@
   "was": "the-effect-of-different-types-of-attachment-system-in-2020"
  },
  "jas073": {
-  "title": "Tomographic Assessment on the Influence of the Use of a Collagen Membrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial 52",
+  "title": "Tomographic Assessment on the Influence of the Use of a Collagen Membrane on Dimensional Variations to Protect the Antrostomy After Maxillary Sinus Floor Augmentation: A Randomized Clinical Trial",
   "product": "Jason membrane (porcine pericardium)",
   "was": "tomographic-assessment-on-the-influence-of-the-use-of-2020-2"
  },
@@ -1065,7 +1065,7 @@
   "was": "the-effect-of-a-platelet-rich-fibrin-conduit-on-neuros-2016"
  },
  "jas091": {
-  "title": "Comparison of the rates of bone regeneration of in sinus lift grafting with a calcium phosphate paste between the 6th and the 9th month-a clinical case. 64",
+  "title": "Comparison of the rates of bone regeneration of in sinus lift grafting with a calcium phosphate paste between the 6th and the 9th month-a clinical case",
   "product": "Jason membrane (porcine pericardium)",
   "was": "comparison-of-the-rates-of-bone-regeneration-of-in-sin-2015"
  },
@@ -1140,7 +1140,7 @@
   "was": "evaluation-of-different-grafting-materials-for-alveola-2021"
  },
  "mxr009": {
-  "title": "Maxillary Sinus Augmentation Using Ceramic Alloplastic Granules or Paste: An Experimental Study in Rabbits 7",
+  "title": "Maxillary Sinus Augmentation Using Ceramic Alloplastic Granules or Paste: An Experimental Study in Rabbits",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
   "was": "maxillary-sinus-augmentation-using-ceramic-alloplastic-2021"
  },
@@ -1270,7 +1270,7 @@
   "was": "evaluation-of-efficacy-of-surgical-periodontal-therapy-2017"
  },
  "mxr035": {
-  "title": "Investigation of peri-implant tissue conditions and peri-implant tissue stability in implants placed with simultaneous augmentation procedure: a 3-year 25 retrospective follow-up analysis of a newly developed bone level implant system",
+  "title": "Investigation of peri-implant tissue conditions and peri-implant tissue stability in implants placed with simultaneous augmentation procedure: a 3-year retrospective follow-up analysis of a newly developed bone level implant system",
   "product": "maxresorb / maxresorb inject (biphasic CaP)",
   "was": "investigation-of-peri-implant-tissue-conditions-and-pe-2017"
  },
@@ -1755,7 +1755,7 @@
   "was": "adhesion-of-oral-bacteria-to-commercial-d-ptfe-membran-2022"
  },
  "per004": {
-  "title": "Bacterial Growth on Three Non -Resorbable Polytetrafluoroethylene (PTFE) Membranes-An In Vitro Study. 4",
+  "title": "Bacterial Growth on Three Non -Resorbable Polytetrafluoroethylene (PTFE) Membranes-An In Vitro Study",
   "product": "permamem (dense PTFE)",
   "was": "bacterial-growth-on-three-non-resorbable-polytetrafluo-2022"
  },
@@ -1815,51 +1815,46 @@
   "was": "diode-laser-photocoagualtion-as-a-novel-method-for-soc-2021"
  },
  "per016": {
-  "title": "Doi: 10.21608/ADJALEXU.2020.28747.1066",
-  "product": "permamem (dense PTFE)",
-  "was": "doi-10-21608-adjalexu-2020-28747-1066-2020"
- },
- "per017": {
-  "title": "Use of NO-resorbable dPTFE membranes in preservation of the alveolar ridge-a case report 12",
+  "title": "Use of NO-resorbable dPTFE membranes in preservation of the alveolar ridge-a case report",
   "product": "permamem (dense PTFE)",
   "was": "use-of-no-resorbable-dptfe-membranes-in-preservation-o-2020"
  },
- "per018": {
+ "per017": {
   "title": "Open-Healing Socket Preservation with a Novel Dense Polytetrafluoroethylene (dPTFE) Membrane: A Retrospective Clinical Study",
   "product": "permamem (dense PTFE)",
   "was": "open-healing-socket-preservation-with-a-novel-dense-po-2020"
  },
- "per019": {
+ "per018": {
   "title": "The Use of a Non -Absorbable Membrane as an Occlusive Barrier for Alveolar Ridge Preservation: A One Year Follow-Up Prospective Cohort Study",
   "product": "permamem (dense PTFE)",
   "was": "the-use-of-a-non-absorbable-membrane-as-an-occlusive-b-2020"
  },
- "per020": {
+ "per019": {
   "title": "A Novel Double -Membrane Technique For Guided Bone Regeneration With Complete Preservation Of Keratinized Mucosa Mabel",
   "product": "permamem (dense PTFE)",
   "was": "a-novel-double-membrane-technique-for-guided-bone-rege-2020"
  },
- "per021": {
+ "per020": {
   "title": "Large horizontal bone augmentation using a xenogeneic bovine bone block and a non-resorbable (d-PTFE) membrane: a case report",
   "product": "permamem (dense PTFE)",
   "was": "large-horizontal-bone-augmentation-using-a-xenogeneic-2019"
  },
- "per022": {
+ "per021": {
   "title": "Guided bone regeneration using high density PTFE membranes. Case Series",
   "product": "permamem (dense PTFE)",
   "was": "guided-bone-regeneration-using-high-density-ptfe-membr-2019"
  },
- "per023": {
+ "per022": {
   "title": "Use of a new hd-PTFE membrane in alveolar socket preservation (Permamem®): a case series Jean",
   "product": "permamem (dense PTFE)",
   "was": "use-of-a-new-hd-ptfe-membrane-in-alveolar-socket-prese-2019"
  },
- "per024": {
+ "per023": {
   "title": "Lateral bone augmentation with xenograft blocks: What could we achieve?",
   "product": "permamem (dense PTFE)",
   "was": "lateral-bone-augmentation-with-xenograft-blocks-what-c-2018"
  },
- "per025": {
+ "per024": {
   "title": "Horizonto-vertical bone augmentation, with notable attachment gain at the periodontally compromised neighboring dentition; a clinical case report with 8 months follow up R",
   "product": "permamem (dense PTFE)",
   "was": "horizonto-vertical-bone-augmentation-with-notable-atta-2018"

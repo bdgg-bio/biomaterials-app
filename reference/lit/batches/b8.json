@@ -130,11 +130,5 @@
   "collection": "evidence",
   "doc_id": "per024",
   "file_path": "/home/user/biomaterials-app/reference/lit/per024.json"
- },
- {
-  "op": "set",
-  "collection": "evidence",
-  "doc_id": "per025",
-  "file_path": "/home/user/biomaterials-app/reference/lit/per025.json"
  }
 ]
