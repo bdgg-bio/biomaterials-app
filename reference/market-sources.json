@@ -1,0 +1,27 @@
+{
+  "_comment": [
+    "Pages tools/market_watch.py fetches, and the product names it looks for.",
+    "Empty by design: nothing is fetched until someone adds a URL here, and",
+    "pointing this at a competitor's shop is a commercial-compliance decision,",
+    "not a technical one. Public list prices are ordinary competitive",
+    "intelligence; automated collection touches a site's terms of use, so get",
+    "that cleared before adding third-party sources.",
+    "",
+    "Each source takes: name, url, and optionally country, brand, product and",
+    "owner. Set product where the page is a single product, and the watcher",
+    "will stop guessing which name a price belongs to.",
+    "",
+    "Our own shop and public price list are the uncontroversial place to start:",
+    "watching those catches our own pricing drifting out of step with what the",
+    "team is quoting, which is the failure the price layer exists to prevent."
+  ],
+  "watch_terms": [
+    "cerabone plus", "cerabone", "maxgraft bonebuilder", "maxgraft bonering",
+    "maxgraft cortico", "maxgraft", "maxresorb inject", "maxresorb",
+    "Jason membrane", "collprotect", "permamem", "mucoderm", "collacone",
+    "collafleece", "NOVAMag",
+    "Bio-Oss", "Bio-Gide", "mucograft", "Fibro-Gide", "creos", "Symbios",
+    "Puros", "cerasorb", "OsteoBiol", "Gen-Os", "Yxoss", "Cytoplast"
+  ],
+  "sources": []
+}

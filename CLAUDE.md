@@ -18,6 +18,9 @@ the runtime capabilities below.
 | `tools/ingest_papers.py` | Turns a folder of published-paper PDFs into evidence-library entries. |
 | `tools/parse_literature_lists.py` | Turns the botiss "Most Relevant Publications" list PDFs into evidence-library entries. |
 | `tools/compact-batches.js` | Re-keys parsed entries onto short product-prefixed ids and writes the `write_db` batch manifests. |
+| `tools/pubmed_watch.py` | Watches PubMed (or Europe PMC) for new literature and turns the hits into quarantined evidence entries. |
+| `tools/market_watch.py` | Fetches listed product and price pages and reports what changed since the last run. |
+| `reference/market-sources.json` | Which pages `market_watch.py` fetches. Empty by design. |
 | `reference/evidence-import/` | The 42 literature entries imported from the botiss training decks, as committed JSON. |
 | `reference/lit/` | The 526 entries from the ten product literature lists, plus `parse-report.md` and `parse-review.md`. |
 | `reference/library-snapshot.json` | Six fields per record for all 597 references. `ingest_papers.py --existing` dedupes against it. |
@@ -194,6 +197,61 @@ the parser, with:
 grep -ho '[a-z]\{4,\}[.,] [0-9]\{1,3\}”' reference/lit/*.json | wc -l   # want 0
 ```
 
+## Why the agents have no internet, and what to do instead
+
+Worth knowing before anyone tries again. **The page cannot make a network
+request.** The artifact runtime's CSP blocks fetch, XHR and WebSocket to every
+host, silently — so the desks cannot call PubMed, a shop, or any API, and no
+amount of in-page code changes that. The single route out is the `mcp`
+capability, which reaches **the viewer's own claude.ai connectors**; the ones
+on this organisation are Asana, Atlassian, Box, Canva, Figma, HubSpot,
+Intercom, Linear, monday.com, Notion and the Anthropic Economic Index, none of
+which serves literature or web search. `sample` asks Claude but grants it no
+tools of its own.
+
+So anything from outside arrives as a **pipeline**: a watcher runs where there
+is network access, and a Claude Code session writes the result into the store
+with the Artifact tool. That is also the safer arrangement — no language model
+sits in the citation path, so identifiers come out of the structured record and
+can be checked.
+
+Note that **this cloud session cannot run the watchers either**: the egress
+policy blocks `eutils.ncbi.nlm.nih.gov`, `www.ebi.ac.uk`, `api.crossref.org`
+and `doi.org`. Run them on a machine that can reach those hosts, the same
+Route A handoff the paper ingest already uses.
+
+```
+python3 tools/pubmed_watch.py --out out-watch --since 2026-08-01 \
+        --existing reference/library-snapshot.json
+python3 tools/market_watch.py --sources reference/market-sources.json --out out-market
+```
+
+### Two quarantines, and why they are not optional
+
+Both watchers write into collections the desks treat as authoritative, so both
+land in a tier the desks refuse to use:
+
+- **Evidence.** An entry carries `via: "pubmed"` and an empty `verifiedBy`.
+  `isAutoIngested()` routes it out of the briefing's index into an AWAITING
+  REVIEW block, and out of `search_evidence`'s `citable` into
+  `awaiting_review`. The desk may say the paper exists and offer to draft a
+  review request; it may not quote it, cite it, or state what it found.
+- **Prices.** A row carries `via: "web"` and `confirmed: false`, and
+  `search_price_intel` returns it under `web_candidates`, never `verified`.
+  Rows also carry an age, and anything over `PRICE_STALE_DAYS` is flagged
+  stale — a two-year-old list price quoted as today's is how a rep gets caught
+  out.
+
+The briefing used to open "All are Medical Affairs approved unless an entry
+says otherwise". That sentence was true only while every record came from a
+deck or a literature list, and the moment a feed writes to the library it
+becomes a lie the science desk would act on. If you add another source, add
+its `via` value to `AUTO_VIA` **before** the first write, not after.
+
+Reviewing an auto-ingested entry means reading the paper, setting `product` to
+what it was actually run on, writing the scope statement into `supports`, and
+setting `verifiedBy`. Only then is it citable.
+
 ## Publishing
 
 ```
@@ -231,3 +289,12 @@ both briefings stay well inside 64 KiB. The preview build fails on its own if a
 - The maxgraft +HyA volumetric-stability numbers are presented in the deck
   without a citation. Get the reference from Medical Affairs before they are
   used externally.
+- The watchers are written and tested but have **never run against the live
+  services** — this environment's egress is blocked, so the PubMed parser was
+  verified against a schema fixture and the price extractor against fixture
+  HTML, not against ncbi.nlm.nih.gov or a real shop. Expect the first real run
+  to need adjusting, and read `review.md` and `changes.md` before writing any
+  batch.
+- Nothing schedules the watchers yet. A Routine could wake a session to write
+  batches, but it cannot fetch from here, so the fetch step still has to run on
+  a machine with access.

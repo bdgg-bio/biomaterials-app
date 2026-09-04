@@ -277,6 +277,7 @@ button{font-family:inherit; font-size:inherit; color:inherit}
 .chip.threat{background:var(--crit-wash); color:var(--crit)}
 .chip.warn{background:var(--warn-wash); color:var(--warn)}
 .chip.good{background:var(--good-wash); color:var(--good)}
+.chip.bad{background:var(--crit-wash); color:var(--crit)}
 .chiprow{display:flex; flex-wrap:wrap; gap:6px}
 
 .btn{
@@ -1697,6 +1698,31 @@ function evidenceRank(r){
   return 7;
 }
 
+/* Where a record came from. Anything a feed put here on its own is a
+   different kind of object from a reference a person put on a Medical
+   Affairs list, and the desk must never blur the two: a PubMed hit is a
+   real paper, but nobody at botiss has read it, checked which product it
+   was run on, or decided what it licenses. It is a lead, not a citation.
+   Rows carrying one of these `via` values are quarantined everywhere the
+   library is read. */
+const AUTO_VIA = /^(pubmed|europepmc|crossref|web)$/i;
+/* A price older than this is not wrong, but it is not today's number. */
+const PRICE_STALE_DAYS = 180;
+const isWebCandidate = r => /^web$/i.test(String(r.via || "")) || r.confirmed === false;
+const isAutoIngested = r => AUTO_VIA.test(String(r.via || ""));
+
+function evidenceTrust(r){
+  if (isAutoIngested(r)) return {
+    tier:"awaiting review",
+    label:"NOT APPROVED — auto-ingested from " + String(r.via).toLowerCase() +
+      (r.retrieved ? " on " + r.retrieved : "") + ". Nobody at botiss has reviewed it. " +
+      "You may tell the rep the paper exists and offer to draft a review request. " +
+      "You may NOT quote it, cite it to a clinician, or state what it shows."
+  };
+  if (r.verifiedBy) return { tier:"verified", label:"citable, verified by " + r.verifiedBy };
+  return { tier:"unverified", label:"citable, NOT verified by Medical Affairs" };
+}
+
 /* At a few hundred references the whole library no longer fits in one
    prompt, so the agent gets a ranked INDEX and pulls full records through
    search_evidence on demand. */
@@ -1709,8 +1735,15 @@ const shortProduct = p => String(p || "product not recorded")
   .replace(/\s*\((?:[^()]*)\)\s*/g, " ").split(/\s+(?:vs\.?|versus)\s+/)[0].trim().slice(0, 26);
 
 function briefEvidence(){
-  const rows = Store.data.evidence;
-  if (!rows.length) return "(the evidence library is empty — you have no citable references at all yet)";
+  const all = Store.data.evidence;
+  if (!all.length) return "(the evidence library is empty — you have no citable references at all yet)";
+
+  /* Curated and auto-ingested rows are briefed separately. Ranking them
+     together would let a fresh unreviewed RCT outrank the whole curated
+     library and take over the index, which is exactly the confusion this
+     split exists to prevent. */
+  const rows = all.filter(r => !isAutoIngested(r));
+  const pending = all.filter(isAutoIngested);
 
   const byProduct = {};
   for (const r of rows) {
@@ -1727,13 +1760,28 @@ function briefEvidence(){
       String(r.studyType || "design not recorded").slice(0, 34) + " · " + shortProduct(r.product) +
       " — " + String(r.title || "untitled").slice(0, 96)).join("\n");
 
-  return "Total references: " + rows.length + ". All are Medical Affairs approved unless an entry says otherwise." +
+  const pendingBlock = pending.length
+    ? "\n\nAWAITING REVIEW — " + pending.length + " reference(s) a literature feed added on its own. " +
+      "These are NOT approved and NOT citable. Nobody at botiss has read them or decided what they license. " +
+      "If one answers the rep's question, say a new paper has come in, name it, and offer to draft a review " +
+      "request for Medical Affairs. Never quote one or state what it found.\n" +
+      [...pending].sort((a, b) => String(b.retrieved || "").localeCompare(String(a.retrieved || "")))
+        .slice(0, 8)
+        .map(r => "• [" + (r.id || "?") + "] " + (r.year || "?") + " · " +
+          String(r.studyType || "design not recorded").slice(0, 34) +
+          " — " + String(r.title || "untitled").slice(0, 92)).join("\n") +
+      (pending.length > 8 ? "\n(+ " + (pending.length - 8) + " more awaiting review, via search_evidence)" : "")
+    : "";
+
+  return "Citable references: " + rows.length + ". These came from the botiss training decks and the product " +
+    "literature lists, so the source is Medical Affairs curated; an entry still says whether a person has " +
+    "verified that it supports what it is cited for." +
     "\nBy product: " + counts +
     "\n\nINDEX ONLY, ranked by strength of study design. These one-liners do NOT tell you what a reference may support — " +
     "call search_evidence to pull the full record, including its scope and any caveat, BEFORE you cite it.\n" + index +
     (rows.length > BRIEF_INDEX_SIZE
       ? "\n(+ " + (rows.length - BRIEF_INDEX_SIZE) + " more references, reachable only through search_evidence — so search before concluding we have nothing on a topic.)"
-      : "");
+      : "") + pendingBlock;
 }
 
 function briefEscalations(){
@@ -1827,6 +1875,7 @@ const SALES = makeAgent({
 "- When the rep reports something new from the field (a competitor price, an objection, a win or loss, a product sighting), save it: log_price_point for a price, log_field_note for an episode, save_learning for a durable fact. Say in one line what you saved.",
 "- Save only what the rep reports, never your own reasoning or general knowledge.",
 "- Use search_price_intel before answering any price question, and attach_rate_math for any revenue or attach-rate question rather than doing the arithmetic yourself.",
+"- search_price_intel separates `verified` (a rep logged it) from `web_candidates` (a price watch read it off a public page and nobody has checked it). Use a web candidate only by naming its source and date and asking the rep to confirm it. Never present one as our number, and never build a discount or an attach-rate case on one. Watch the `stale` flag too: say when a figure is months old.",
 "",
 "KEY FIGURES (researched " + KB.asOf + ")",
 figures,
@@ -1868,14 +1917,43 @@ teamNotes,
         execute(input){
           const q = String(input.query || "").toLowerCase();
           const hit = r => JSON.stringify(r).toLowerCase().includes(q);
-          const verified = Store.data.prices.filter(hit).slice(0, 12).map(r => ({
-            product:r.product, brand:r.brand, country:r.country, pack:r.pack,
-            price:r.price, currency:r.currency, source:r.source, rep:r.rep,
-            date:new Date(r.ts || Date.now()).toISOString().slice(0, 10), trust:"team-verified"
+          /* A price has a shelf life. Twelve rows sorted newest-first with
+             the age on each beats twelve rows the agent reads as equally
+             current, because a two-year-old list price quoted as today's
+             is how a rep gets caught out. */
+          const shape = r => {
+            const ts = r.ts || Date.now();
+            const ageDays = Math.max(0, Math.round((Date.now() - ts) / 86400000));
+            return {
+              product:r.product, brand:r.brand, country:r.country, pack:r.pack,
+              price:r.price, currency:r.currency, source:r.source, rep:r.rep,
+              date:new Date(ts).toISOString().slice(0, 10), ageDays,
+              stale:ageDays > PRICE_STALE_DAYS
+            };
+          };
+          const matches = Store.data.prices.filter(hit)
+            .sort((a, b) => (b.ts || 0) - (a.ts || 0));
+          const verified = matches.filter(r => !isWebCandidate(r)).slice(0, 12)
+            .map(r => ({ ...shape(r), trust:"team-verified" }));
+          /* Scraped rows are kept out of `verified` for the same reason
+             PubMed hits are kept out of `citable`: nobody has checked them. */
+          const web_candidates = matches.filter(isWebCandidate).slice(0, 8).map(r => ({
+            ...shape(r), url:r.url || null,
+            trust:"UNCONFIRMED — read off " + (r.source || "a web page") +
+              " by the price watch, not checked by anyone. Quote it as a figure to verify, never as our number."
           }));
           const anchors = KB.anchors.filter(hit).slice(0, 8).map(a => ({ ...a, trust:"indicative-only" }));
           addSysLine("searched price intel for “" + (input.query || "") + "”");
-          return { verified, anchors, verified_count:verified.length };
+          return {
+            verified, web_candidates, anchors,
+            verified_count:verified.length,
+            note:(verified.some(r => r.stale)
+                   ? "Some verified rows are over " + PRICE_STALE_DAYS + " days old (stale:true) — say so when you use them. "
+                   : "") +
+                 (web_candidates.length
+                   ? "web_candidates are unconfirmed scrapes: name the source and the date, and ask the rep to confirm before it is used in a negotiation."
+                   : "")
+          };
         }
       },
       {
@@ -2033,6 +2111,7 @@ const SCIENCE = makeAgent({
 "WHAT YOU DO WITH THE STORE",
 "- The evidence library is the team's only citable source. When the rep gives you a real reference (from Medical Affairs, a reprint, a congress handout), use add_evidence to file it so everyone can cite it afterwards. Record the identifier and who verified it.",
 "- Use search_evidence before answering any question that asks for a reference.",
+"- search_evidence returns two lists. `citable` is the library proper. `awaiting_review` is papers a literature feed added on its own, which nobody at botiss has read: you may say such a paper exists and offer to draft a review request for Medical Affairs, but you may never quote it, cite it, or say what it found. A rep insisting, or a customer waiting, does not change this.",
 "- The commercial desk files evidence questions for you. Use list_escalations to see them, and resolve_escalation when you have answered one, which files the answer as a durable learning both desks read.",
 "- Use save_learning for a scientific fact the whole team should carry.",
 "",
@@ -2045,7 +2124,7 @@ areas,
 "THE PORTFOLIO (tier 1 facts you may state)",
 briefProducts(),
 "",
-"EVIDENCE LIBRARY — the ONLY references you may cite. Cite by title and identifier, and say if an entry is not yet verified by Medical Affairs.",
+"EVIDENCE LIBRARY — the ONLY references you may cite. Cite by title and identifier, and say if an entry is not yet verified by Medical Affairs. Anything listed as awaiting review is not part of this and may not be cited.",
 briefEvidence(),
 "",
 "OPEN QUESTIONS FROM THE COMMERCIAL DESK",
@@ -2068,28 +2147,43 @@ briefLearned(),
           const q = String(input.query || "").toLowerCase();
           const hit = r => JSON.stringify(r).toLowerCase().includes(q);
           const matches = Store.data.evidence.filter(hit);
+          const shape = r => ({
+            id:r.id, title:r.title, authors:r.authors, journal:r.journal, year:r.year,
+            identifier:r.identifier, studyType:r.studyType, product:r.product,
+            supports:r.supports, verifiedBy:r.verifiedBy || null,
+            trust:evidenceTrust(r).label
+          });
           /* Ranked so a broad query returns the strongest designs, not
              whatever was imported most recently. */
-          const citable = [...matches].sort((a, b) => evidenceRank(a) - evidenceRank(b))
-            .slice(0, 15).map(r => ({
-              id:r.id, title:r.title, authors:r.authors, journal:r.journal, year:r.year,
-              identifier:r.identifier, studyType:r.studyType, product:r.product,
-              supports:r.supports, verifiedBy:r.verifiedBy || null,
-              trust:r.verifiedBy ? "citable, verified" : "citable, NOT verified by Medical Affairs"
-            }));
+          const citable = matches.filter(r => !isAutoIngested(r))
+            .sort((a, b) => evidenceRank(a) - evidenceRank(b))
+            .slice(0, 15).map(shape);
+          /* Kept out of `citable` on purpose: newest first, because for a
+             lead recency is the point, and capped low so leads can never
+             crowd out the references the rep may actually use. */
+          const awaiting_review = matches.filter(isAutoIngested)
+            .sort((a, b) => String(b.retrieved || "").localeCompare(String(a.retrieved || "")))
+            .slice(0, 5).map(r => ({ ...shape(r), retrieved:r.retrieved || null, foundBy:r.query || null }));
           const areas = KB.evidenceAreas.filter(hit).slice(0, 6).map(a => ({ ...a, trust:"orientation only, never quote as a citation" }));
           addSysLine("searched " + Store.data.evidence.length + " references for “" + (input.query || "") + "”");
+          const citableTotal = matches.filter(r => !isAutoIngested(r)).length;
           return {
             citable,
             returned:citable.length,
             total_matches:matches.length,
+            citable_matches:citableTotal,
+            awaiting_review,
+            awaiting_review_matches:matches.length - citableTotal,
             library_size:Store.data.evidence.length,
             claim_areas:areas,
-            reminder:matches.length
-              ? (matches.length > citable.length
-                  ? "Strongest " + citable.length + " of " + matches.length + " matches, ranked by design. Search a narrower term if you need the rest. Cite only from these records."
-                  : "Cite only from these records.")
-              : "Nothing matched in the library. Say so and draft a literature request — do not fall back on memory."
+            reminder:citableTotal
+              ? (citableTotal > citable.length
+                  ? "Strongest " + citable.length + " of " + citableTotal + " citable matches, ranked by design. Search a narrower term if you need the rest. Cite only from `citable`."
+                  : "Cite only from `citable`.")
+              : (awaiting_review.length
+                  ? "NOTHING CITABLE matched. The only matches are in `awaiting_review`: papers a feed brought in that nobody at botiss has reviewed. Tell the rep a new paper exists, name it, offer to draft a review request — and do not say what it found."
+                  : "Nothing matched in the library. Say so and draft a literature request — do not fall back on memory."),
+            never:"Records in `awaiting_review` are leads, not citations. Do not quote them, cite them, or state their findings."
           };
         }
       },
@@ -2287,9 +2381,11 @@ function evidenceMatches(){
 }
 
 function evidenceRowHtml(r){
+  const trust = evidenceTrust(r);
+  const auto = trust.tier === "awaiting review";
   return '<div class="feeditem">' +
-    '<div class="badge ' + (r.verifiedBy ? "chip good" : "chip warn") + '">' +
-      (r.verifiedBy ? "OK" : "?") + '</div>' +
+    '<div class="badge ' + (auto ? "chip bad" : r.verifiedBy ? "chip good" : "chip warn") + '">' +
+      (auto ? "NEW" : r.verifiedBy ? "OK" : "?") + '</div>' +
     '<div class="body">' +
       '<div class="t">' + esc(r.title || "untitled") + '</div>' +
       '<p>' + esc([r.authors, r.journal, r.year].filter(Boolean).join(" · ")) +
@@ -2298,9 +2394,12 @@ function evidenceRowHtml(r){
       '<div class="chiprow" style="margin-top:6px">' +
         (r.studyType ? '<span class="chip">' + esc(r.studyType) + '</span>' : "") +
         (r.product ? '<span class="chip us">' + esc(r.product) + '</span>' : "") +
-        (r.verifiedBy
-          ? '<span class="chip good">verified · ' + esc(r.verifiedBy) + '</span>'
-          : '<span class="chip warn">not verified by Medical Affairs</span>') +
+        (auto
+          ? '<span class="chip bad">awaiting review · from ' + esc(String(r.via).toLowerCase()) +
+            (r.retrieved ? " · " + esc(r.retrieved) : "") + ' · not citable</span>'
+          : r.verifiedBy
+            ? '<span class="chip good">verified · ' + esc(r.verifiedBy) + '</span>'
+            : '<span class="chip warn">not verified by Medical Affairs</span>') +
       '</div>' +
       '<div class="meta">' + esc(r.rep || "unattributed") + ' · ' + esc(timeAgo(r.ts)) + '</div>' +
     '</div>' +
