@@ -98,8 +98,37 @@ The library is built for several hundred references:
 
 ## Ingesting a batch of paper PDFs
 
+A Claude Code session in the cloud cannot see a local disk — no drive letters,
+no mounts. For a folder of PDFs on someone's machine there are two routes.
+
+**Route A, run it where the PDFs are** (best for hundreds of files; the PDFs
+never leave the machine, only the extracted metadata does):
+
 ```
-pip install cffi pypdf                     # one-off; system cryptography is broken without cffi
+git clone https://github.com/bdgg-bio/biomaterials-app
+cd biomaterials-app
+pip install pypdf
+python tools\ingest_papers.py "C:\path\to\Literature" --out out --existing reference\library-snapshot.json
+```
+
+Then hand over `out/all-entries.json` — one portable file, roughly 400 KB for
+300 papers, carrying no absolute paths. In the session that has the Artifact
+tool:
+
+```
+node tools/materialise-entries.js all-entries.json --out inbox
+Artifact(action="write_db", url=<artifact url>, db_op="batch",
+         writes=<contents of inbox/batches/batch-1.json>)
+```
+
+All file I/O in the Python script is explicitly UTF-8, because Windows
+defaults to cp1252 and dies on umlauts and degree signs.
+
+**Route B, upload the PDFs** to a session that has the Artifact tool and run
+it there:
+
+```
+pip install cffi pypdf                     # cffi first: this container's system cryptography is broken without it
 python3 tools/ingest_papers.py <pdf-dir> --out out --existing reference/library-snapshot.json
 ```
 

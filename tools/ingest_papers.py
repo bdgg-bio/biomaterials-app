@@ -408,7 +408,7 @@ def main():
 
     existing_dois, existing_titles = set(), set()
     if args.existing and os.path.exists(args.existing):
-        for r in json.load(open(args.existing)):
+        for r in json.load(open(args.existing, encoding="utf-8")):
             ident = (r.get("identifier") or "").lower()
             m = DOI_RE.search(ident)
             if m:
@@ -437,11 +437,22 @@ def main():
             eid, n = "%s-%s-%d" % (base, year, n), n + 1
         used.add(eid)
 
-        (out / "entries" / (eid + ".json")).write_text(json.dumps(entry, indent=1, ensure_ascii=False))
+        (out / "entries" / (eid + ".json")).write_text(json.dumps(entry, indent=1, ensure_ascii=False), encoding="utf-8")
         entries.append((eid, entry))
         if issue:
             issue["id"] = eid
             review.append(issue)
+
+    # One portable file, so the extracted metadata can move between machines
+    # without carrying the PDFs or any absolute paths. This is the file to
+    # hand over after running the script locally.
+    (out / "all-entries.json").write_text(json.dumps(
+        [{"doc_id": eid, "data": {k: v for k, v in e.items()
+                                  if k not in ("sourceFile", "pages", "designsDetected",
+                                               "topics", "competitorsNamed")},
+          "extraction": {k: e[k] for k in ("sourceFile", "pages", "designsDetected",
+                                           "topics", "competitorsNamed") if k in e}}
+         for eid, e in entries], indent=1, ensure_ascii=False), encoding="utf-8")
 
     # write_db takes at most 50 writes per batch
     for i in range(0, len(entries), 50):
@@ -449,7 +460,7 @@ def main():
         (out / "batches" / ("batch-%d.json" % (i // 50 + 1))).write_text(json.dumps([{
             "op": "set", "collection": "evidence", "doc_id": eid,
             "file_path": str((out / "entries" / (eid + ".json")).resolve()),
-        } for eid, _ in chunk], indent=1))
+        } for eid, _ in chunk], indent=1), encoding="utf-8")
 
     by_design, by_product, by_topic = {}, {}, {}
     for _, e in entries:
@@ -477,8 +488,8 @@ def main():
         lines.append("- %s — **%d**" % (k, v))
     lines += ["", "## Batches to write", ""]
     for p in sorted((out / "batches").glob("*.json")):
-        lines.append("- `%s` (%d writes)" % (p.name, len(json.load(open(p)))))
-    (out / "report.md").write_text("\n".join(lines) + "\n")
+        lines.append("- `%s` (%d writes)" % (p.name, len(json.load(open(p, encoding="utf-8")))))
+    (out / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     rl = ["# Needs a human before use", ""]
     if failed:
@@ -488,7 +499,7 @@ def main():
         rl += ["## Extracted, but with gaps", ""]
         for r in review:
             rl.append("- **%s** (`%s`) — %s" % (r["file"], r["id"], "; ".join(r["issues"])))
-    (out / "review.md").write_text("\n".join(rl) + "\n")
+    (out / "review.md").write_text("\n".join(rl) + "\n", encoding="utf-8")
 
     print("entries: %d   unreadable: %d   need review: %d" % (len(entries), len(failed), len(review)))
     print("wrote %s/report.md, %s/review.md, %d batch file(s)"
