@@ -1,0 +1,302 @@
+[
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc044",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc044.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc045",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc045.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc046",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc046.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc047",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc047.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc048",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc048.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc049",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc049.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc050",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc050.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc051",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc051.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc052",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc052.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc053",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc053.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc054",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc054.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc055",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc055.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc056",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc056.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc057",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc057.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc058",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc058.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc059",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc059.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc060",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc060.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc061",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc061.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc062",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc062.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc063",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc063.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc064",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc064.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc065",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc065.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc066",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc066.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc067",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc067.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc068",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc068.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc069",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc069.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc070",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc070.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc071",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc071.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "muc072",
+  "file_path": "/home/user/biomaterials-app/reference/lit/muc072.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov001",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov001.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov002",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov002.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov003",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov003.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov004",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov004.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov005",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov005.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov006",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov006.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov007",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov007.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov008",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov008.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov009",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov009.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov010",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov010.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov011",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov011.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov012",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov012.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov013",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov013.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov014",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov014.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov015",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov015.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov016",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov016.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov017",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov017.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov018",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov018.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "nov019",
+  "file_path": "/home/user/biomaterials-app/reference/lit/nov019.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "per001",
+  "file_path": "/home/user/biomaterials-app/reference/lit/per001.json"
+ },
+ {
+  "op": "set",
+  "collection": "evidence",
+  "doc_id": "per002",
+  "file_path": "/home/user/biomaterials-app/reference/lit/per002.json"
+ }
+]

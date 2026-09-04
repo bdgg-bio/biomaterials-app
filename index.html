@@ -424,6 +424,9 @@ svg.chart text.name{fill:var(--ink); font-weight:500}
   display:flex; align-items:center; justify-content:center; font-family:var(--f-mono);
   font-size:10px; font-weight:500}
 .feeditem .body{flex:1; min-width:0}
+/* Citations carry long DOIs and URLs that would otherwise push the page
+   sideways on a phone. */
+.feeditem .body p,.feeditem .t{overflow-wrap:anywhere}
 .feeditem .body p{font-size:13px; color:var(--ink-2); line-height:1.45}
 .feeditem .meta{font-size:10.5px; color:var(--ink-3); margin-top:3px; font-family:var(--f-mono)}
 .feeditem .t{font-size:13px; font-weight:600}
@@ -720,10 +723,10 @@ const KB = {
       avoid:"Quoting resorption timelines as if they were patient-specific predictions.",
       ask:"What maxresorb's ratio was designed for and which clinical studies used that exact formulation." },
     { area:"Barrier duration versus soft-tissue integration", status:"Contested",
-      evidence:"The central trade-off in the membrane literature, and it is genuinely unresolved. Cross-linking extends barrier function but is associated in parts of the literature with slower integration and worse behaviour once exposed. Findings differ by material and by cross-linking method, so results do not transfer between products.",
-      say:"There is a real trade-off between how long a barrier lasts and how the soft tissue handles it, and it is specific to the material. Match the membrane to the defect and the closure, not to a longer number.",
-      avoid:"“Longer barrier function is better.” It is the most common membrane overclaim, a well-read periodontist will push back, and they are right to. Also avoid moving a finding from one collagen membrane onto another — cross-linking method matters.",
-      ask:"Barrier-duration data for Jason and collprotect, WITH the method used to measure it (histological, in vivo degradation, in vitro enzymatic), because the numbers are meaningless without it." },
+      evidence:"The central trade-off in the membrane literature, and genuinely unresolved. Cross-linking extends barrier function but is associated with slower integration and worse behaviour once exposed; several comparative integration studies on our own membranes sit in the library. The head-to-head pericardium against dermis comparison DOES exist (Bornert 2021, Clin Exp Dent Res, minipig): pericardium was statistically non-inferior to the control membrane on both resorption kinetics and barrier function, and the authors themselves say clinical evaluation is still needed.",
+      say:"There is a real trade-off between how long a barrier lasts and how the soft tissue handles it, and it is material-specific. On pericardium against dermis we have a preclinical non-inferiority result — cite it as the minipig study it is.",
+      avoid:"“Longer barrier function is better.” It is the most common membrane overclaim and a well-read periodontist will push back. Also do not turn non-inferiority in minipigs into a clinical superiority claim, and do not move a finding from one collagen membrane onto another — cross-linking method matters.",
+      ask:"Whether any CLINICAL barrier-duration comparison exists, since the strongest entry we hold is preclinical and its authors flag exactly that gap." },
     { area:"Membrane exposure and dehiscence", status:"Established",
       evidence:"Exposure is the practical driver of GBR failure and is reported across the literature for every membrane type. Rates depend far more on flap design, tension-free closure and case selection than on brand.",
       say:"Exposure is the main thing that costs you a graft, and it is mostly about closure and case selection. Ask what happened in their exposed cases before recommending anything.",
@@ -740,10 +743,15 @@ const KB = {
       avoid:"Positioning it as interchangeable with Jason. The two are an indication-matched pair and selling them as equivalent wastes the distinction.",
       ask:"The clinical evidence for collprotect specifically, and any data comparing it with Jason so the indication split can be stated properly." },
     { area:"dPTFE and intentionally exposed healing (permamem)", status:"Established",
-      evidence:"Open-healing socket and ridge protocols with dense PTFE are described in the literature and widely taught. The material property — no bacterial penetration at high density, removal without a second flap — is well characterised.",
-      say:"Dense PTFE supports protocols where the membrane is intentionally left exposed and removed later, without primary closure.",
-      avoid:"Extending that to our resorbable range: it is a property of dPTFE, not of botiss. And it still has to be removed, which is the honest cost against a resorbable option.",
-      ask:"Which exposed-healing protocols permamem is validated for, its recommended in-situ duration, and the removal timing evidence." },
+      evidence:"The open-healing principle is well described and widely taught, and the material property — no bacterial penetration at high density, removal without a second flap — is characterised in vitro. But check the permamem entries before you lean on them: SEVEN of the twenty-five in the library are congress posters rather than peer-reviewed papers, including one whose own title says case series. The published clinical base is thinner than the reference count suggests.",
+      say:"Dense PTFE supports protocols where the membrane is intentionally left exposed and removed later, without primary closure. The in vitro work on bacterial adhesion and surface properties is solid.",
+      avoid:"Quoting the poster material as published evidence, and presenting the reference count as the strength of the evidence. It still has to be removed, which is the honest cost against a resorbable option.",
+      ask:"Which exposed-healing protocols permamem is validated for, its recommended in-situ duration, the removal-timing evidence, and whether any of the poster work has since been published in full." },
+    { area:"Open healing with a magnesium membrane", status:"Emerging",
+      evidence:"New and worth knowing: open wound healing in GBR with a magnesium membrane is now documented (Tabanella 2025, J Biomed Mater Res B) — a four-case series, whose own framing notes that soft-tissue healing complications for this membrane had not previously been reported. So exposed healing is no longer a dPTFE-only story, but the magnesium evidence for it is four cases.",
+      say:"There is now published documentation of open healing with the magnesium membrane. Four cases, so describe it as early experience, not as an established protocol.",
+      avoid:"Presenting magnesium as validated for open healing, or comparing its exposure behaviour with dPTFE. Neither claim has the evidence behind it.",
+      ask:"Any larger magnesium series with exposure and dehiscence outcomes, and whether an exposed-healing protocol is formally supported." },
     { area:"Magnesium membranes (NOVAMag) against collagen and titanium", status:"Emerging",
       evidence:"A genuinely new category with small datasets and short follow-up. Degradation behaviour and gas formation are the live scientific questions, and one published in vitro plus two-patient report addresses compatibility with our own grafts rather than efficacy.",
       say:"Magnesium resorbs, so there is no removal surgery. It is a new category and we are open about the evidence being young — that honesty is worth more here than enthusiasm.",
@@ -768,7 +776,12 @@ const KB = {
       evidence:"Case series and cohorts rather than randomised comparison, on both sides of the comparison.",
       say:"A milled allograft block avoids a removal surgery and a donor site. The comparative literature is early.",
       avoid:"Presenting bonebuilder as proven superior to Yxoss. Neither side has that evidence.",
-      ask:"The bonebuilder case series, resorption behaviour, and reported complication rates." }
+      ask:"The bonebuilder case series, resorption behaviour, and reported complication rates." },
+    { area:"Titanium mesh against a collagen membrane in horizontal augmentation", status:"Established",
+      evidence:"Stop reaching for the trade-journal dehiscence figure: there is a randomised controlled trial (Atef 2020, Clin Implant Dent Relat Res) comparing a native collagen membrane with titanium mesh for horizontal augmentation of atrophic maxillary ridges. Both were viable techniques, but the authors conclude titanium mesh is more technique-sensitive, and that soft-tissue dehiscence and difficulty at second-stage removal should limit its use in that indication.",
+      say:"In horizontal maxillary augmentation there is randomised evidence that titanium mesh is more technique-sensitive, with dehiscence and removal difficulty limiting its use. That is the authors' own conclusion in a peer-reviewed RCT — use it instead of the poster and trade-journal numbers.",
+      avoid:"Stretching it beyond horizontal maxillary augmentation, or reading it as a verdict on a specific competitor product. It compared a category with a category, not Yxoss with bonebuilder.",
+      ask:"Nothing here. This is the best mesh comparison we hold, so the job is making sure the field knows it exists rather than quoting the 50% figure." }
   ],
 
   sources: [
@@ -1687,7 +1700,13 @@ function evidenceRank(r){
 /* At a few hundred references the whole library no longer fits in one
    prompt, so the agent gets a ranked INDEX and pulls full records through
    search_evidence on demand. */
-const BRIEF_INDEX_SIZE = 60;
+const BRIEF_INDEX_SIZE = 45;
+
+/* Product strings in the library are descriptive ("Jason membrane (porcine
+   pericardium)"). In the index they only need to identify, so trim to the
+   brand and keep the briefing inside its budget. */
+const shortProduct = p => String(p || "product not recorded")
+  .replace(/\s*\((?:[^()]*)\)\s*/g, " ").split(/\s+(?:vs\.?|versus)\s+/)[0].trim().slice(0, 26);
 
 function briefEvidence(){
   const rows = Store.data.evidence;
@@ -1695,7 +1714,7 @@ function briefEvidence(){
 
   const byProduct = {};
   for (const r of rows) {
-    const key = String(r.product || "unspecified").split(/[,;(]|\svs\.?\s/)[0].trim().slice(0, 44) || "unspecified";
+    const key = shortProduct(String(r.product || "unspecified").split(/[,;]/)[0]) || "unspecified";
     (byProduct[key] = byProduct[key] || []).push(r);
   }
   const counts = Object.entries(byProduct)
@@ -1705,8 +1724,8 @@ function briefEvidence(){
   const index = [...rows].sort((a, b) => evidenceRank(a) - evidenceRank(b))
     .slice(0, BRIEF_INDEX_SIZE)
     .map(r => "• [" + (r.id || "?") + "] " + (r.year || "?") + " · " +
-      (r.studyType || "design not recorded") + " · " + (r.product || "product not recorded") +
-      " — " + String(r.title || "untitled").slice(0, 110)).join("\n");
+      String(r.studyType || "design not recorded").slice(0, 34) + " · " + shortProduct(r.product) +
+      " — " + String(r.title || "untitled").slice(0, 96)).join("\n");
 
   return "Total references: " + rows.length + ". All are Medical Affairs approved unless an entry says otherwise." +
     "\nBy product: " + counts +
